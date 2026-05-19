@@ -3,77 +3,72 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ИИИзнанка — Спектр сигнала</title>
+<title>ИИИзнанка — Затухание сигнала</title>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;500;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 body {
-  background:#0a0510;
   font-family:'Inter',sans-serif;
   padding:64px 24px;
   color:#f0e8ff;
-  background-image:
-    radial-gradient(ellipse at 20% 0%, rgba(139,26,26,0.15), transparent 40%),
-    radial-gradient(ellipse at 80% 100%, rgba(107,40,144,0.18), transparent 40%);
   min-height:100vh;
+  background:linear-gradient(180deg,#0a0408 0%,#180820 35%,#3a2058 65%,#a888c8 90%,#f0e8ff 100%);
 }
-.kicker { text-align:center; font-size:11px; letter-spacing:6px; text-transform:uppercase; margin-bottom:8px; font-family:'JetBrains Mono',monospace; background:linear-gradient(90deg,#c84040,#b890d8); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
-.h1 { text-align:center; font-size:54px; font-weight:400; margin-bottom:8px; font-family:'Cormorant Garamond',serif; font-style:italic; letter-spacing:-1px; color:#f0e8ff; }
+.kicker { text-align:center; font-size:11px; letter-spacing:6px; text-transform:uppercase; margin-bottom:8px; font-family:'JetBrains Mono',monospace; color:#ff5050; }
+.h1 { text-align:center; font-size:54px; font-weight:400; margin-bottom:8px; font-family:'Cormorant Garamond',serif; font-style:italic; letter-spacing:-1px; color:#ffffff; }
 .h1 b { font-weight:700; font-style:normal; background:linear-gradient(90deg,#ff5050,#b890d8); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
-.lead { text-align:center; font-size:14px; color:#9080a8; margin-bottom:8px; font-family:'Cormorant Garamond',serif; font-style:italic; max-width:580px; margin-left:auto; margin-right:auto; line-height:1.6; }
-.divider { width:120px; height:2px; background:linear-gradient(90deg,transparent,#8b1a1a,#6b2890,transparent); margin:24px auto 64px; }
-.section-num { font-size:10px; letter-spacing:5px; color:#5a3a6a; font-family:'JetBrains Mono',monospace; margin-bottom:6px; text-align:center; }
-.section-name { font-size:18px; color:#b890d8; font-family:'Cormorant Garamond',serif; font-style:italic; margin-bottom:28px; text-align:center; font-weight:500; }
+.lead { text-align:center; font-size:14px; color:#a888c8; margin-bottom:8px; font-family:'Cormorant Garamond',serif; font-style:italic; max-width:600px; margin-left:auto; margin-right:auto; line-height:1.6; }
+.divider { width:120px; height:2px; background:linear-gradient(90deg,transparent,#ff5050,#b890d8,transparent); margin:24px auto 64px; }
+.section-num { font-size:10px; letter-spacing:5px; font-family:'JetBrains Mono',monospace; margin-bottom:6px; text-align:center; }
+.section-name { font-size:18px; font-family:'Cormorant Garamond',serif; font-style:italic; margin-bottom:28px; text-align:center; font-weight:500; }
 .row { display:flex; flex-wrap:wrap; gap:32px; justify-content:center; margin-bottom:80px; }
+.card { width:380px; height:380px; border-radius:14px; overflow:hidden; position:relative; flex-shrink:0; box-shadow:0 30px 80px rgba(0,0,0,0.7); }
+.noise { position:absolute; inset:0; opacity:0.2; background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><filter id=%22n%22><feTurbulence baseFrequency=%220.9%22/><feColorMatrix values=%220 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.18 0%22/></filter><rect width=%22100%22 height=%22100%22 filter=%22url(%23n)%22/></svg>'); mix-blend-mode:overlay; pointer-events:none; }
 </style>
 </head>
 <body>
-<div class="kicker">∙ vision · v2 · spectrum ∙</div>
-<div class="h1">внутри <b>сигнала</b></div>
-<div class="lead">От красного спайка к фиолетовому послесвечению.<br/>То, что светится внутри модели в момент мысли.</div>
+<div class="kicker">∙ vision · v4 · fade ∙</div>
+<div class="h1">затухание <b>сигнала</b></div>
+<div class="lead">Лента в Instagram как путешествие из спайка в послесвечение.<br/>От тёмно-красного жара — к светло-фиолетовой тишине.</div>
 <div class="divider"></div>
 
 
-<!-- ============ КАРТОЧКА 1: ОБЛОЖКА ============ -->
-<div class="section-num">— 01 —</div>
-<div class="section-name">обложка · «жерло»</div>
+
+<!-- ============ КАРТОЧКА 1: ГОРЯЧИЙ КРАСНЫЙ — ОБЛОЖКА ============ -->
+<div class="section-num" style="color:#ff5050;">— 01 / spike —</div>
+<div class="section-name" style="color:#ff8080;">обложка · красный пик</div>
 <div class="row">
-<div style="width:380px;height:380px;border-radius:14px;overflow:hidden;position:relative;flex-shrink:0;box-shadow:0 30px 80px rgba(0,0,0,0.7), 0 0 60px rgba(139,26,26,0.2);">
-  <!-- основной градиент: глубокий красный сверху → фиолетовый внизу -->
-  <div style="position:absolute;inset:0;background:linear-gradient(180deg,#1f0508 0%,#5a1020 25%,#8b1a3a 45%,#5a2080 70%,#3a1860 100%);"></div>
-  <!-- свечение в центре -->
-  <div style="position:absolute;top:30%;left:50%;transform:translate(-50%,-50%);width:300px;height:300px;background:radial-gradient(circle,rgba(255,80,80,0.35) 0%,rgba(200,60,120,0.2) 30%,transparent 70%);filter:blur(20px);"></div>
-  <div style="position:absolute;bottom:10%;left:20%;width:240px;height:240px;background:radial-gradient(circle,rgba(180,144,216,0.25) 0%,transparent 70%);filter:blur(30px);"></div>
-  <!-- зерно-плёнка -->
-  <div style="position:absolute;inset:0;opacity:0.25;background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><filter id=%22n%22><feTurbulence baseFrequency=%220.9%22/><feColorMatrix values=%220 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0%22/></filter><rect width=%22100%22 height=%22100%22 filter=%22url(%23n)%22/></svg>');mix-blend-mode:overlay;"></div>
-  <!-- частицы-нейроны -->
-  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.7;" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="80" cy="100" r="2" fill="#ff8080"/>
-    <circle cx="280" cy="80" r="2.5" fill="#ff5050"/>
-    <circle cx="160" cy="160" r="3" fill="#ff9090"/>
-    <circle cx="320" cy="200" r="2" fill="#c890e0"/>
-    <circle cx="60" cy="240" r="2.5" fill="#a880d0"/>
-    <circle cx="220" cy="280" r="2" fill="#9070c8"/>
-    <circle cx="140" cy="320" r="2.5" fill="#b890d8"/>
+<div class="card" style="background:linear-gradient(160deg,#0d0408 0%,#1f0510 60%,#2a0815 100%);">
+  <div class="noise"></div>
+  <!-- свечение -->
+  <div style="position:absolute;top:30%;left:50%;transform:translate(-50%,-50%);width:340px;height:240px;background:radial-gradient(ellipse,rgba(255,80,80,0.35) 0%,transparent 70%);filter:blur(20px);"></div>
+  <!-- частицы -->
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.6;" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="80" cy="100" r="2.5" fill="#ff5050"/>
+    <circle cx="280" cy="80" r="3" fill="#ff3030"/>
+    <circle cx="160" cy="160" r="2" fill="#ff7070"/>
+    <circle cx="320" cy="220" r="2.5" fill="#ff5050"/>
+    <circle cx="60" cy="260" r="2" fill="#ff3030"/>
+    <circle cx="220" cy="300" r="2.5" fill="#ff5050"/>
   </svg>
   <!-- контент -->
   <div style="position:relative;z-index:2;padding:34px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
     <div style="display:flex;justify-content:space-between;align-items:center;">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#ff9090;letter-spacing:3px;text-transform:uppercase;">// signal_042</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#ff5050;letter-spacing:3px;">// signal_042 · spike</div>
       <div style="display:flex;gap:4px;align-items:center;">
-        <div style="width:6px;height:6px;border-radius:50%;background:#ff5050;box-shadow:0 0 8px #ff5050;"></div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#ff9090;letter-spacing:2px;">LIVE</div>
+        <div style="width:6px;height:6px;border-radius:50%;background:#ff3030;box-shadow:0 0 10px #ff5050;"></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#ff5050;letter-spacing:2px;">LIVE</div>
       </div>
     </div>
     <div>
-      <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:#d8a0d8;margin-bottom:8px;letter-spacing:1px;">наблюдение №042</div>
-      <div style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:700;line-height:1.05;letter-spacing:-1px;color:#ffffff;text-shadow:0 0 30px rgba(255,80,80,0.4);">Что <span style="font-style:italic;font-weight:500;background:linear-gradient(90deg,#ff8080,#d090e8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">светится</span><br/>внутри одного<br/>токена</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:#ff8080;margin-bottom:8px;letter-spacing:1px;">наблюдение №042 ·</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:700;line-height:1.05;letter-spacing:-1px;color:#fff5f0;text-shadow:0 0 30px rgba(255,80,80,0.5);">Что <span style="font-style:italic;font-weight:500;color:#ff5050;">светится</span><br/>внутри одного<br/>токена</div>
     </div>
     <div>
-      <div style="height:1px;background:linear-gradient(90deg,#ff5050,#b890d8,transparent);margin-bottom:14px;opacity:0.5;"></div>
-      <div style="display:flex;justify-content:space-between;align-items:center;">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#b890d8;letter-spacing:3px;">ИИИзнанка</div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#ff8080;letter-spacing:1px;">▶ войти</div>
+      <div style="height:1px;background:linear-gradient(90deg,#ff3030,transparent);margin-bottom:14px;opacity:0.6;"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;">
+        <div style="color:#ff8080;">ИИИзнанка</div>
+        <div style="color:#ff3030;">▶ войти</div>
       </div>
     </div>
   </div>
@@ -81,147 +76,124 @@ body {
 </div>
 
 
-<!-- ============ КАРТОЧКА 2: ТЕПЛОВАЯ КАРТА АКТИВАЦИЙ ============ -->
-<div class="section-num">— 02 —</div>
-<div class="section-name">визуализация · «активации нейронов»</div>
+
+<!-- ============ КАРТОЧКА 2: КРАСНО-РОЗОВЫЙ — АКТИВАЦИИ ============ -->
+<div class="section-num" style="color:#ff6090;">— 02 / decay —</div>
+<div class="section-name" style="color:#ff8090;">визуализация · затухание начинается</div>
 <div class="row">
-<div style="width:380px;height:380px;border-radius:14px;overflow:hidden;position:relative;flex-shrink:0;box-shadow:0 30px 80px rgba(0,0,0,0.7);">
-  <!-- глубокий фон -->
-  <div style="position:absolute;inset:0;background:linear-gradient(135deg,#180820 0%,#0a0418 100%);"></div>
-  <!-- сетка-фон -->
-  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(180,144,216,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(180,144,216,0.05) 1px,transparent 1px);background-size:24px 24px;"></div>
-  <!-- "горячие" нейроны (красные) и "холодные" (фиолетовые) -->
+<div class="card" style="background:linear-gradient(160deg,#1a0814 0%,#3a0a30 60%,#4a1448 100%);">
+  <div class="noise"></div>
+  <!-- сетка фон -->
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,80,140,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,80,140,0.05) 1px,transparent 1px);background-size:24px 24px;"></div>
+  <!-- "горячие" нейроны -->
   <svg style="position:absolute;inset:0;width:100%;height:100%;" xmlns="http://www.w3.org/2000/svg">
     <defs>
-      <radialGradient id="hot"><stop offset="0%" stop-color="#ff5050" stop-opacity="0.9"/><stop offset="100%" stop-color="#ff5050" stop-opacity="0"/></radialGradient>
-      <radialGradient id="warm"><stop offset="0%" stop-color="#ff90c0" stop-opacity="0.7"/><stop offset="100%" stop-color="#ff90c0" stop-opacity="0"/></radialGradient>
-      <radialGradient id="cool"><stop offset="0%" stop-color="#b890d8" stop-opacity="0.6"/><stop offset="100%" stop-color="#b890d8" stop-opacity="0"/></radialGradient>
+      <radialGradient id="hot2"><stop offset="0%" stop-color="#ff5070" stop-opacity="0.9"/><stop offset="100%" stop-color="#ff5070" stop-opacity="0"/></radialGradient>
+      <radialGradient id="warm2"><stop offset="0%" stop-color="#ff80b0" stop-opacity="0.7"/><stop offset="100%" stop-color="#ff80b0" stop-opacity="0"/></radialGradient>
     </defs>
-    <!-- свечения -->
-    <circle cx="120" cy="180" r="35" fill="url(#hot)"/>
-    <circle cx="240" cy="140" r="40" fill="url(#hot)"/>
-    <circle cx="180" cy="220" r="28" fill="url(#warm)"/>
-    <circle cx="290" cy="260" r="32" fill="url(#cool)"/>
-    <circle cx="80" cy="280" r="25" fill="url(#cool)"/>
-    <circle cx="320" cy="80" r="22" fill="url(#warm)"/>
-    <!-- сами точки-нейроны -->
-    <circle cx="120" cy="180" r="4" fill="#ff5050"/>
-    <circle cx="240" cy="140" r="5" fill="#ff6060"/>
-    <circle cx="180" cy="220" r="3" fill="#ff90c0"/>
-    <circle cx="290" cy="260" r="3" fill="#b890d8"/>
-    <circle cx="80" cy="280" r="2.5" fill="#a880d0"/>
-    <circle cx="320" cy="80" r="3" fill="#ff90c0"/>
-    <!-- мелкие неактивные нейроны -->
-    <circle cx="60" cy="120" r="1.5" fill="#5a3a6a"/>
-    <circle cx="200" cy="80" r="1.5" fill="#5a3a6a"/>
-    <circle cx="340" cy="180" r="1.5" fill="#5a3a6a"/>
-    <circle cx="40" cy="200" r="1.5" fill="#5a3a6a"/>
-    <circle cx="160" cy="320" r="1.5" fill="#5a3a6a"/>
-    <circle cx="270" cy="320" r="1.5" fill="#5a3a6a"/>
-    <!-- связи между активными -->
-    <line x1="120" y1="180" x2="240" y2="140" stroke="#ff5050" stroke-width="0.6" opacity="0.4"/>
-    <line x1="240" y1="140" x2="320" y2="80" stroke="#ff80a0" stroke-width="0.5" opacity="0.4"/>
+    <circle cx="120" cy="180" r="38" fill="url(#hot2)"/>
+    <circle cx="240" cy="140" r="42" fill="url(#hot2)"/>
+    <circle cx="180" cy="220" r="30" fill="url(#warm2)"/>
+    <circle cx="290" cy="260" r="32" fill="url(#warm2)"/>
+    <circle cx="80" cy="280" r="26" fill="url(#warm2)"/>
+    <circle cx="320" cy="80" r="22" fill="url(#warm2)"/>
+    <circle cx="120" cy="180" r="4" fill="#ff5070"/>
+    <circle cx="240" cy="140" r="5" fill="#ff5070"/>
+    <circle cx="180" cy="220" r="3" fill="#ff80b0"/>
+    <circle cx="290" cy="260" r="3" fill="#ff80b0"/>
+    <circle cx="80" cy="280" r="2.5" fill="#ff80b0"/>
+    <circle cx="320" cy="80" r="3" fill="#ff80b0"/>
+    <line x1="120" y1="180" x2="240" y2="140" stroke="#ff5070" stroke-width="0.6" opacity="0.5"/>
+    <line x1="240" y1="140" x2="320" y2="80" stroke="#ff80b0" stroke-width="0.5" opacity="0.4"/>
     <line x1="180" y1="220" x2="240" y2="140" stroke="#ff90c0" stroke-width="0.5" opacity="0.4"/>
-    <line x1="180" y1="220" x2="290" y2="260" stroke="#b890d8" stroke-width="0.5" opacity="0.4"/>
-    <line x1="80" y1="280" x2="180" y2="220" stroke="#a880d0" stroke-width="0.5" opacity="0.4"/>
+    <line x1="180" y1="220" x2="290" y2="260" stroke="#ff80b0" stroke-width="0.5" opacity="0.4"/>
+    <line x1="80" y1="280" x2="180" y2="220" stroke="#ff80b0" stroke-width="0.5" opacity="0.4"/>
   </svg>
-  <!-- контент поверх -->
   <div style="position:relative;z-index:2;padding:30px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
-    <div style="display:flex;justify-content:space-between;align-items:flex-start;">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#ff90c0;letter-spacing:3px;">// activation_map</div>
-      <div style="display:flex;gap:4px;align-items:center;font-family:'JetBrains Mono',monospace;font-size:9px;">
-        <div style="width:8px;height:8px;background:#ff5050;border-radius:50%;box-shadow:0 0 6px #ff5050;"></div>
-        <span style="color:#ff90c0;margin-right:8px;">hot</span>
-        <div style="width:8px;height:8px;background:#b890d8;border-radius:50%;box-shadow:0 0 6px #b890d8;"></div>
-        <span style="color:#b890d8;">cool</span>
+    <div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;">
+      <div style="color:#ff80b0;">// activation_map</div>
+      <div style="display:flex;gap:4px;align-items:center;font-size:9px;">
+        <div style="width:8px;height:8px;background:#ff5070;border-radius:50%;box-shadow:0 0 6px #ff5070;"></div>
+        <span style="color:#ff80b0;">14%</span>
       </div>
     </div>
     <div>
-      <div style="font-family:'Cormorant Garamond',serif;font-size:24px;font-style:italic;color:#ffffff;line-height:1.25;margin-bottom:8px;text-shadow:0 0 20px rgba(180,144,216,0.4);">Слово &laquo;<span style="background:linear-gradient(90deg,#ff8080,#d090e8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:600;">любовь</span>&raquo;<br/>зажигает <span style="font-weight:700;color:#ff8080;">14%</span> нейронов</div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#9080a8;line-height:1.6;letter-spacing:0.5px;">layer 47 / 96 · slice 0.3ms</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:24px;font-style:italic;color:#ffffff;line-height:1.25;margin-bottom:8px;">Слово &laquo;<span style="color:#ff5070;font-weight:600;">любовь</span>&raquo;<br/>зажигает <span style="font-weight:700;color:#ff5070;">14%</span> нейронов</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#a888c8;letter-spacing:0.5px;">layer 47 / 96 · slice 0.3ms</div>
     </div>
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#7060a0;letter-spacing:3px;">ИИИзнанка</div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#b890d8;letter-spacing:1px;">смотреть →</div>
+    <div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;">
+      <div style="color:#a888c8;">ИИИзнанка</div>
+      <div style="color:#ff80b0;">смотреть →</div>
     </div>
   </div>
 </div>
 </div>
 
 
-<!-- ============ КАРТОЧКА 3: ТЕРМИН ============ -->
-<div class="section-num">— 03 —</div>
-<div class="section-name">термин · «сияющий объект»</div>
+
+<!-- ============ КАРТОЧКА 3: ПЕРЕХОДНЫЙ — ТЕРМИН ============ -->
+<div class="section-num" style="color:#d860a0;">— 03 / midpoint —</div>
+<div class="section-name" style="color:#e090c0;">термин · пересечение спектра</div>
 <div class="row">
-<div style="width:380px;height:380px;border-radius:14px;overflow:hidden;position:relative;flex-shrink:0;box-shadow:0 30px 80px rgba(0,0,0,0.7);">
-  <!-- глубокий фиолетовый фон с красным акцентом сверху -->
-  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,#5a1030 0%,#3a1050 40%,#180830 80%);"></div>
-  <!-- мощное свечение в центре -->
-  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:380px;height:200px;background:radial-gradient(ellipse,rgba(255,80,80,0.3) 0%,rgba(180,80,200,0.15) 40%,transparent 70%);filter:blur(15px);"></div>
-  <!-- зерно -->
-  <div style="position:absolute;inset:0;opacity:0.2;background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><filter id=%22n%22><feTurbulence baseFrequency=%220.9%22/><feColorMatrix values=%220 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.2 0%22/></filter><rect width=%22100%22 height=%22100%22 filter=%22url(%23n)%22/></svg>');"></div>
-  <!-- декоративная линия-спектр сверху -->
-  <div style="position:absolute;top:60px;left:30px;right:30px;height:1px;background:linear-gradient(90deg,transparent,#ff5050,#b890d8,transparent);"></div>
-  <!-- контент -->
+<div class="card" style="background:linear-gradient(180deg,#3a0a30 0%,#4a1850 50%,#5a2870 100%);">
+  <div class="noise"></div>
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:380px;height:200px;background:radial-gradient(ellipse,rgba(216,96,160,0.3) 0%,rgba(180,80,200,0.18) 50%,transparent 80%);filter:blur(15px);"></div>
+  <!-- спектр-линия -->
+  <div style="position:absolute;top:60px;left:30px;right:30px;height:1px;background:linear-gradient(90deg,transparent,#ff5070 30%,#d860a0 50%,#b890d8 70%,transparent);"></div>
   <div style="position:relative;z-index:2;padding:30px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#ff8080;letter-spacing:3px;">// dictionary</div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#b890d8;letter-spacing:3px;">№ 024</div>
+    <div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;">
+      <div style="color:#d860a0;">// dictionary</div>
+      <div style="color:#b890d8;">№ 024</div>
     </div>
     <div style="text-align:center;">
-      <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:#9080a8;margin-bottom:14px;letter-spacing:2px;">существительное · англ.</div>
-      <div style="font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:700;line-height:0.95;letter-spacing:-1px;background:linear-gradient(135deg,#ff8080 0%,#ff90c0 40%,#b890d8 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 0 60px rgba(255,80,80,0.4);margin-bottom:10px;">Hallucination</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:#a888c8;margin-bottom:14px;letter-spacing:2px;">существительное · англ.</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:50px;font-weight:700;line-height:0.95;letter-spacing:-1.5px;background:linear-gradient(135deg,#ff5070 0%,#d860a0 50%,#b890d8 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 0 60px rgba(216,96,160,0.4);margin-bottom:10px;">Hallucination</div>
       <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;">
-        <div style="width:40px;height:1px;background:#8b1a3a;"></div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#d8a0d8;letter-spacing:2px;">[hə-ˌlü-sə-ˈnā-shən]</div>
-        <div style="width:40px;height:1px;background:#6b2890;"></div>
+        <div style="width:40px;height:1px;background:#ff5070;"></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#e090c0;letter-spacing:2px;">[hə-ˌlü-sə-ˈnā-shən]</div>
+        <div style="width:40px;height:1px;background:#b890d8;"></div>
       </div>
-      <div style="font-family:'Cormorant Garamond',serif;font-size:17px;color:#f0e8ff;line-height:1.5;font-style:italic;">когда модель генерирует<br/>правдоподобную <span style="color:#ff8080;font-weight:600;font-style:normal;">ложь</span><br/>с уверенностью профессора</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:17px;color:#ffffff;line-height:1.5;font-style:italic;">когда модель генерирует<br/>правдоподобную <span style="color:#ff80a0;font-weight:600;font-style:normal;">ложь</span><br/>с уверенностью профессора</div>
     </div>
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#7060a0;letter-spacing:3px;">ИИИзнанка</div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#ff8080;letter-spacing:1px;">→ p.24</div>
+    <div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;">
+      <div style="color:#a888c8;">ИИИзнанка</div>
+      <div style="color:#e090c0;">→ p.24</div>
     </div>
   </div>
 </div>
 </div>
 
 
-<!-- ============ КАРТОЧКА 4: ФАКТ-ЧИСЛО ============ -->
-<div class="section-num">— 04 —</div>
-<div class="section-name">факт · «масса»</div>
+
+<!-- ============ КАРТОЧКА 4: СВЕТЛЕЕТ — ФАКТ ============ -->
+<div class="section-num" style="color:#9070b8;">— 04 / cooling —</div>
+<div class="section-name" style="color:#7050a0;">факт · переход в фиолет</div>
 <div class="row">
-<div style="width:380px;height:380px;border-radius:14px;overflow:hidden;position:relative;flex-shrink:0;box-shadow:0 30px 80px rgba(0,0,0,0.7);">
-  <!-- градиент: красный → фиолетовый по диагонали -->
-  <div style="position:absolute;inset:0;background:linear-gradient(160deg,#3a0818 0%,#5a1030 30%,#3a1858 70%,#1a0828 100%);"></div>
-  <!-- свечение -->
-  <div style="position:absolute;top:35%;left:50%;transform:translate(-50%,-50%);width:340px;height:240px;background:radial-gradient(ellipse,rgba(255,80,80,0.25) 0%,rgba(180,80,200,0.15) 50%,transparent 80%);filter:blur(10px);"></div>
-  <!-- частицы -->
-  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.5;" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="50" cy="100" r="1.5" fill="#ff8080"/>
-    <circle cx="320" cy="150" r="1.5" fill="#ff90c0"/>
-    <circle cx="40" cy="280" r="1.5" fill="#b890d8"/>
-    <circle cx="340" cy="320" r="1.5" fill="#9070c8"/>
-    <circle cx="100" cy="60" r="1" fill="#ff8080"/>
-    <circle cx="280" cy="40" r="1" fill="#ff90c0"/>
+<div class="card" style="background:linear-gradient(160deg,#5a3878 0%,#7858a0 50%,#a888c8 100%);color:#2a1040;">
+  <div class="noise"></div>
+  <div style="position:absolute;top:30%;left:50%;transform:translate(-50%,-50%);width:340px;height:200px;background:radial-gradient(ellipse,rgba(106,40,144,0.3) 0%,transparent 70%);filter:blur(20px);"></div>
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.4;" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="100" r="1.5" fill="#6b2890"/>
+    <circle cx="320" cy="150" r="1.5" fill="#6b2890"/>
+    <circle cx="40" cy="280" r="1.5" fill="#4a1a70"/>
+    <circle cx="340" cy="320" r="1.5" fill="#4a1a70"/>
   </svg>
-  <!-- контент -->
   <div style="position:relative;z-index:2;padding:30px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#ff90c0;letter-spacing:3px;">// fact_07</div>
-      <div style="border:1px solid rgba(255,80,80,0.4);padding:3px 10px;border-radius:12px;font-family:'JetBrains Mono',monospace;font-size:9px;color:#ff8080;letter-spacing:2px;background:rgba(139,26,26,0.2);">2024</div>
+    <div style="display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;">
+      <div style="color:#4a1a70;">// fact_07</div>
+      <div style="border:1px solid rgba(74,26,112,0.4);padding:3px 10px;border-radius:12px;font-size:9px;color:#4a1a70;letter-spacing:2px;background:rgba(255,255,255,0.15);">2024</div>
     </div>
     <div style="text-align:center;">
-      <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:#d8a0d8;letter-spacing:2px;margin-bottom:6px;">внутри GPT-4 живёт</div>
-      <div style="font-family:'Cormorant Garamond',serif;font-size:128px;font-weight:700;line-height:1;letter-spacing:-6px;background:linear-gradient(180deg,#ff5050 0%,#ff80a0 40%,#c890e0 80%,#9070c8 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 40px rgba(255,80,80,0.4));">1.8<span style="font-size:84px;font-style:italic;font-weight:400;">T</span></div>
-      <div style="height:1px;width:120px;background:linear-gradient(90deg,transparent,#ff5050,#b890d8,transparent);margin:6px auto 14px;"></div>
-      <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:#f0e8ff;font-style:italic;line-height:1.4;">параметров — синапсов<br/>искусственного мозга</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:#4a1a70;letter-spacing:2px;margin-bottom:6px;">внутри GPT-4 живёт</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:124px;font-weight:700;line-height:1;letter-spacing:-6px;color:#3a1058;text-shadow:0 4px 20px rgba(58,16,88,0.3);">1.8<span style="font-size:80px;font-style:italic;font-weight:400;">T</span></div>
+      <div style="height:1px;width:120px;background:linear-gradient(90deg,transparent,#4a1a70,transparent);margin:6px auto 14px;"></div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:#2a1040;font-style:italic;line-height:1.4;">параметров — синапсов<br/>искусственного мозга</div>
     </div>
     <div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#7060a0;line-height:1.6;letter-spacing:0.5px;margin-bottom:10px;">* по утечкам и оценкам SemiAnalysis</div>
-      <div style="display:flex;justify-content:space-between;align-items:center;">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#7060a0;letter-spacing:3px;">ИИИзнанка</div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#ff8080;letter-spacing:1px;">×10 за 3 года</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#5a3088;line-height:1.6;letter-spacing:0.5px;margin-bottom:10px;">* по утечкам и оценкам SemiAnalysis</div>
+      <div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;">
+        <div style="color:#5a3088;">ИИИзнанка</div>
+        <div style="color:#4a1a70;font-weight:700;">×10 за 3 года</div>
       </div>
     </div>
   </div>
@@ -229,175 +201,182 @@ body {
 </div>
 
 
-<!-- ============ КАРТОЧКА 5: ЦИТАТА — ВОЛНА ============ -->
-<div class="section-num">— 05 —</div>
-<div class="section-name">мысль · «осциллограмма»</div>
+
+<!-- ============ КАРТОЧКА 5: СВЕТЛЫЙ + ФИОЛЕТОВЫЙ — ЦИТАТА ============ -->
+<div class="section-num" style="color:#6b2890;">— 05 / settling —</div>
+<div class="section-name" style="color:#5a2080;">мысль · послесвечение</div>
 <div class="row">
-<div style="width:380px;height:380px;border-radius:14px;overflow:hidden;position:relative;flex-shrink:0;box-shadow:0 30px 80px rgba(0,0,0,0.7);">
-  <!-- фон -->
-  <div style="position:absolute;inset:0;background:linear-gradient(170deg,#2a0820 0%,#1a0830 50%,#0e0418 100%);"></div>
-  <!-- волна-осциллограмма по фону -->
+<div class="card" style="background:linear-gradient(170deg,#c8b8d8 0%,#e0d0e8 50%,#f0e8f4 100%);color:#2a0840;">
+  <div class="noise"></div>
+  <!-- волна осциллограмма -->
   <svg style="position:absolute;top:50%;left:0;right:0;width:100%;height:120px;transform:translateY(-50%);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 120" preserveAspectRatio="none">
     <defs>
-      <linearGradient id="wavegrad" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="#ff5050" stop-opacity="0.6"/>
-        <stop offset="40%" stop-color="#ff80a0" stop-opacity="0.5"/>
-        <stop offset="100%" stop-color="#b890d8" stop-opacity="0.4"/>
+      <linearGradient id="wavegrad2" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#6b2890" stop-opacity="0.4"/>
+        <stop offset="50%" stop-color="#8b4ab0" stop-opacity="0.5"/>
+        <stop offset="100%" stop-color="#6b2890" stop-opacity="0.3"/>
       </linearGradient>
     </defs>
-    <path d="M0,60 Q20,30 40,60 T80,60 Q100,15 120,60 T160,60 Q180,5 200,60 T240,60 Q260,30 280,60 T320,60 Q340,45 360,60 T380,60" stroke="url(#wavegrad)" stroke-width="1" fill="none" opacity="0.7"/>
-    <path d="M0,60 Q20,80 40,60 T80,60 Q100,100 120,60 T160,60 Q180,110 200,60 T240,60 Q260,80 280,60 T320,60 Q340,70 360,60 T380,60" stroke="url(#wavegrad)" stroke-width="1" fill="none" opacity="0.5"/>
+    <path d="M0,60 Q20,30 40,60 T80,60 Q100,15 120,60 T160,60 Q180,5 200,60 T240,60 Q260,30 280,60 T320,60 Q340,45 360,60 T380,60" stroke="url(#wavegrad2)" stroke-width="1" fill="none" opacity="0.7"/>
+    <path d="M0,60 Q20,80 40,60 T80,60 Q100,100 120,60 T160,60 Q180,110 200,60 T240,60 Q260,80 280,60 T320,60 Q340,70 360,60 T380,60" stroke="url(#wavegrad2)" stroke-width="1" fill="none" opacity="0.5"/>
   </svg>
-  <!-- свечение -->
-  <div style="position:absolute;top:50%;left:0;right:0;height:200px;transform:translateY(-50%);background:radial-gradient(ellipse at center,rgba(180,80,200,0.18) 0%,transparent 70%);filter:blur(20px);"></div>
-  <!-- контент -->
   <div style="position:relative;z-index:2;padding:30px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#ff8080;letter-spacing:3px;">// log_03</div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#9080a8;letter-spacing:2px;">14 / 03 · 03:42</div>
+    <div style="display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;">
+      <div style="color:#6b2890;">// log_03</div>
+      <div style="color:#7050a0;">14 / 03 · 03:42</div>
     </div>
     <div>
-      <div style="font-family:'Cormorant Garamond',serif;font-size:80px;color:#ff5050;line-height:0.4;font-style:italic;text-shadow:0 0 30px rgba(255,80,80,0.5);margin-bottom:14px;">«</div>
-      <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#ffffff;line-height:1.4;font-style:italic;font-weight:500;text-shadow:0 0 20px rgba(180,144,216,0.3);">Искусственный интеллект<br/>не <span style="text-decoration:line-through;text-decoration-color:#ff5050;text-decoration-thickness:2px;color:#9080a8;">умный</span>.<br/>Он невероятно<br/><span style="background:linear-gradient(90deg,#ff8080,#b890d8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:700;font-style:normal;">статистичный.</span></div>
-      <div style="font-family:'Cormorant Garamond',serif;font-size:80px;color:#b890d8;line-height:0.4;font-style:italic;text-align:right;margin-top:6px;text-shadow:0 0 30px rgba(180,144,216,0.5);">»</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:80px;color:#6b2890;line-height:0.4;font-style:italic;margin-bottom:14px;">«</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#2a0840;line-height:1.4;font-style:italic;font-weight:500;">Искусственный интеллект<br/>не <span style="text-decoration:line-through;text-decoration-color:#6b2890;text-decoration-thickness:1.5px;color:#8a70a0;">умный</span>.<br/>Он невероятно<br/><span style="background:linear-gradient(90deg,#6b2890,#a040b8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:700;font-style:normal;">статистичный.</span></div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:80px;color:#6b2890;line-height:0.4;font-style:italic;text-align:right;margin-top:6px;">»</div>
     </div>
     <div style="display:flex;justify-content:space-between;align-items:center;">
-      <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;color:#9080a8;">— из дневника наблюдений</div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#7060a0;letter-spacing:3px;">ИИИзнанка</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;color:#7050a0;">— из дневника наблюдений</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#6b2890;letter-spacing:3px;">ИИИзнанка</div>
     </div>
   </div>
 </div>
 </div>
 
 
-<!-- ============ КАРТОЧКА 6: ПУТЬ СИГНАЛА ============ -->
-<div class="section-num">— 06 —</div>
-<div class="section-name">процесс · «путь сигнала через слои»</div>
+
+<!-- ============ КАРТОЧКА 6: САМЫЙ СВЕТЛЫЙ — ПРОЦЕСС ============ -->
+<div class="section-num" style="color:#5a2080;">— 06 / silence —</div>
+<div class="section-name" style="color:#4a1870;">процесс · полная тишина</div>
 <div class="row">
-<div style="width:380px;height:380px;border-radius:14px;overflow:hidden;position:relative;flex-shrink:0;box-shadow:0 30px 80px rgba(0,0,0,0.7);">
-  <!-- вертикальный градиент: красный сверху → фиолетовый внизу -->
-  <div style="position:absolute;inset:0;background:linear-gradient(180deg,#3a0818 0%,#5a1030 20%,#5a2050 50%,#3a1858 75%,#1a0830 100%);"></div>
-  <!-- зерно -->
-  <div style="position:absolute;inset:0;opacity:0.18;background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><filter id=%22n%22><feTurbulence baseFrequency=%220.9%22/><feColorMatrix values=%220 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.2 0%22/></filter><rect width=%22100%22 height=%22100%22 filter=%22url(%23n)%22/></svg>');"></div>
-  <!-- контент -->
+<div class="card" style="background:linear-gradient(180deg,#f0e8f8 0%,#fafafe 100%);color:#2a0840;border:1px solid #d8c8e8;">
+  <div class="noise" style="opacity:0.1;"></div>
   <div style="position:relative;z-index:2;padding:28px 30px;height:100%;display:flex;flex-direction:column;">
-    <!-- хедер -->
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#ff90c0;letter-spacing:3px;">// pipeline</div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#b890d8;letter-spacing:2px;">84.3 ms</div>
+    <div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;margin-bottom:14px;">
+      <div style="color:#6b2890;">// pipeline</div>
+      <div style="color:#9070b8;">84.3 ms</div>
     </div>
-    <div style="font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:#ffffff;line-height:1.25;margin-bottom:18px;">путь от <span style="color:#ff8080;">вопроса</span><br/>до <span style="color:#b890d8;">ответа</span></div>
-
-    <!-- шаги -->
+    <div style="font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:#2a0840;line-height:1.25;margin-bottom:18px;">путь от <span style="color:#a040b8;">вспышки</span><br/>до <span style="color:#6b2890;">тишины</span></div>
     <div style="flex:1;display:flex;flex-direction:column;justify-content:space-around;">
-      <!-- шаг 1: ВХОД (горячий) -->
+      <!-- шаг 1: красный -->
       <div style="display:flex;align-items:center;gap:12px;">
-        <div style="width:28px;height:28px;border-radius:50%;background:radial-gradient(circle,#ff5050,#8b1a3a);box-shadow:0 0 14px #ff5050;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:13px;color:#fff;font-weight:700;font-style:italic;flex-shrink:0;">i</div>
+        <div style="width:28px;height:28px;border-radius:50%;background:radial-gradient(circle,#ff5050,#cc2030);box-shadow:0 0 14px rgba(255,80,80,0.5);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:13px;color:#fff;font-weight:700;font-style:italic;flex-shrink:0;">i</div>
         <div style="flex:1;">
-          <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:#ffffff;font-weight:600;line-height:1.1;">Tokenization</div>
-          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#d8a0d8;margin-top:2px;">текст → 12 токенов</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:#2a0840;font-weight:600;line-height:1.1;">Tokenization</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#7050a0;margin-top:2px;">текст → 12 токенов</div>
         </div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#ff8080;font-weight:700;">0.4ms</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#cc2030;font-weight:700;">0.4ms</div>
       </div>
-      <div style="width:1px;height:18px;margin-left:42px;background:linear-gradient(180deg,#ff5050,#ff80a0);"></div>
-      <!-- шаг 2 -->
+      <div style="width:1px;height:18px;margin-left:42px;background:linear-gradient(180deg,#ff5050,#d860a0);"></div>
+      <!-- шаг 2: розовый -->
       <div style="display:flex;align-items:center;gap:12px;">
-        <div style="width:28px;height:28px;border-radius:50%;background:radial-gradient(circle,#ff80a0,#a82060);box-shadow:0 0 12px #ff80a0;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:12px;color:#fff;font-weight:700;font-style:italic;flex-shrink:0;">ii</div>
+        <div style="width:28px;height:28px;border-radius:50%;background:radial-gradient(circle,#ff80a0,#c8408a);box-shadow:0 0 12px rgba(255,128,160,0.4);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:12px;color:#fff;font-weight:700;font-style:italic;flex-shrink:0;">ii</div>
         <div style="flex:1;">
-          <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:#ffffff;font-weight:600;line-height:1.1;">Embedding</div>
-          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#d8a0d8;margin-top:2px;">векторы [12288]</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:#2a0840;font-weight:600;line-height:1.1;">Embedding</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#7050a0;margin-top:2px;">векторы [12288]</div>
         </div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#ff90c0;font-weight:700;">2.1ms</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#c8408a;font-weight:700;">2.1ms</div>
       </div>
-      <div style="width:1px;height:18px;margin-left:42px;background:linear-gradient(180deg,#ff80a0,#c890e0);"></div>
-      <!-- шаг 3: главный, средний цвет -->
+      <div style="width:1px;height:18px;margin-left:42px;background:linear-gradient(180deg,#d860a0,#9070c8);"></div>
+      <!-- шаг 3: главный, малиновый -->
       <div style="display:flex;align-items:center;gap:12px;">
-        <div style="width:32px;height:32px;border-radius:50%;background:radial-gradient(circle,#d090e8,#6b2890);box-shadow:0 0 18px #c890e0;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:12px;color:#fff;font-weight:700;font-style:italic;flex-shrink:0;">iii</div>
+        <div style="width:32px;height:32px;border-radius:50%;background:radial-gradient(circle,#a040b8,#6b2890);box-shadow:0 0 18px rgba(160,64,184,0.5);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:12px;color:#fff;font-weight:700;font-style:italic;flex-shrink:0;">iii</div>
         <div style="flex:1;">
-          <div style="font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:#ffffff;font-weight:700;line-height:1.1;">96 × Transformer</div>
-          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#d8a0d8;margin-top:2px;">attention + ffn × 96</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:#6b2890;font-weight:700;line-height:1.1;">96 × Transformer</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#7050a0;margin-top:2px;">attention + ffn × 96</div>
         </div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#c890e0;font-weight:700;">81.2ms</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#6b2890;font-weight:700;">81.2ms</div>
       </div>
-      <div style="width:1px;height:18px;margin-left:42px;background:linear-gradient(180deg,#c890e0,#9070c8);"></div>
-      <!-- шаг 4: фиолетовый, холодный -->
+      <div style="width:1px;height:18px;margin-left:42px;background:linear-gradient(180deg,#9070c8,#6b2890);"></div>
+      <!-- шаг 4: глубокий фиолетовый -->
       <div style="display:flex;align-items:center;gap:12px;">
-        <div style="width:28px;height:28px;border-radius:50%;background:radial-gradient(circle,#b890d8,#3a1858);box-shadow:0 0 12px #b890d8;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:12px;color:#fff;font-weight:700;font-style:italic;flex-shrink:0;">iv</div>
+        <div style="width:28px;height:28px;border-radius:50%;background:radial-gradient(circle,#7050a0,#3a1858);box-shadow:0 0 12px rgba(112,80,160,0.4);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:12px;color:#fff;font-weight:700;font-style:italic;flex-shrink:0;">iv</div>
         <div style="flex:1;">
-          <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:#ffffff;font-weight:600;line-height:1.1;">Softmax → token</div>
-          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#d8a0d8;margin-top:2px;">argmax / 50K вариантов</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:#2a0840;font-weight:600;line-height:1.1;">Softmax → token</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#7050a0;margin-top:2px;">argmax / 50K вариантов</div>
         </div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#b890d8;font-weight:700;">0.6ms</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#3a1858;font-weight:700;">0.6ms</div>
       </div>
     </div>
-
-    <!-- футер -->
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px;">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#7060a0;letter-spacing:3px;">ИИИзнанка</div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#b890d8;letter-spacing:1px;">за 1 токен</div>
+    <div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;margin-top:14px;">
+      <div style="color:#7050a0;">ИИИзнанка</div>
+      <div style="color:#4a1870;">за 1 токен</div>
     </div>
   </div>
 </div>
 </div>
+
 
 
 <!-- ============ ОБЪЯСНЕНИЕ КОНЦЕПЦИИ ============ -->
-<div style="max-width:680px;margin:40px auto 60px;padding:48px 56px;border-radius:14px;color:#f0e8ff;position:relative;background:linear-gradient(160deg,#1a0820 0%,#180830 100%);box-shadow:0 30px 80px rgba(0,0,0,0.6),inset 0 1px 0 rgba(255,255,255,0.05);overflow:hidden;">
-  <!-- свечение по краю -->
-  <div style="position:absolute;top:-50px;right:-50px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,80,80,0.2),transparent 70%);"></div>
-  <div style="position:absolute;bottom:-50px;left:-50px;width:200px;height:200px;background:radial-gradient(circle,rgba(180,144,216,0.2),transparent 70%);"></div>
+<div style="max-width:680px;margin:40px auto 60px;padding:48px 56px;border-radius:14px;color:#2a0840;position:relative;background:linear-gradient(160deg,#fafafe 0%,#f0e8f4 100%);box-shadow:0 30px 80px rgba(58,16,88,0.3);overflow:hidden;border:1px solid #e0d0e8;">
+  <div style="position:absolute;top:-50px;left:-50px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,80,80,0.18),transparent 70%);"></div>
+  <div style="position:absolute;bottom:-50px;right:-50px;width:200px;height:200px;background:radial-gradient(circle,rgba(107,40,144,0.2),transparent 70%);"></div>
 
   <div style="position:relative;z-index:2;">
-    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:5px;margin-bottom:14px;font-weight:700;background:linear-gradient(90deg,#ff5050,#b890d8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">— философия —</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:5px;margin-bottom:14px;font-weight:700;background:linear-gradient(90deg,#ff5050,#6b2890);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">— философия —</div>
 
-    <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:30px;line-height:1.25;margin-bottom:28px;font-weight:500;">Изнанка — это <span style="background:linear-gradient(90deg,#ff8080,#b890d8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:700;">не оболочка.</span><br/>Это <em style="color:#ff8080;">вещество мысли.</em></div>
+    <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:30px;line-height:1.25;margin-bottom:28px;font-weight:500;color:#2a0840;">Лента — это <span style="background:linear-gradient(90deg,#ff5050,#6b2890);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:700;">прохождение сигнала</span> сверху вниз.</div>
 
-    <div style="font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.7;color:#d8c8e8;">
-      Когда нейрон активируется — он горит красным. Сигнал бежит сквозь 96 слоёв, теряет жар, становится фиолетовым свечением. Так и работает мысль модели: <span style="color:#ff8080;">вспышка</span> внимания → <span style="color:#b890d8;">холодный</span> ответ.<br/><br/>
-      Этот градиент <b>буквальный</b>: он показывает то, что обычно скрыто за интерфейсом ChatGPT. Не текст, не код — а <em>само вещество вычисления</em>.<br/><br/>
-      Бумага была про <em>как мы понимаем ИИ снаружи</em>. Спектр — про <em>что там внутри на самом деле</em>.
+    <div style="font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.7;color:#4a2868;">
+      Когда подписчик прокручивает сетку Instagram сверху вниз — он буквально <em>идёт по слоям нейросети</em>. На входе — <span style="color:#ff5050;">красный пик</span>: новости, факапы, горячее. В середине — <span style="color:#a040b8;">переход</span>: разборы, термины. Внизу — <span style="color:#6b2890;">фиолетовая тишина</span>: цитаты, философия, длинные мысли.<br/><br/>
+      Это <b>не одна обложка</b>, это <em>ритм всего канала</em>. Каждый формат знает своё место в спектре.<br/><br/>
+      ИИ возбуждается красным, остывает фиолетовым. Лента работает так же.
     </div>
 
-    <div style="height:1px;background:linear-gradient(90deg,transparent,#8b1a3a,#6b2890,transparent);margin:32px 0;"></div>
+    <div style="height:1px;background:linear-gradient(90deg,transparent,#ff5050,#a040b8,#6b2890,transparent);margin:32px 0;"></div>
+
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;margin-bottom:14px;color:#a040b8;font-weight:700;">— ШКАЛА КОНТЕНТА —</div>
+
+    <div style="display:flex;flex-direction:column;gap:10px;font-family:'Cormorant Garamond',serif;font-size:15px;line-height:1.4;">
+      <div style="display:flex;gap:14px;align-items:center;">
+        <div style="width:28px;height:28px;border-radius:50%;background:#ff3030;box-shadow:0 0 12px rgba(255,80,80,0.4);flex-shrink:0;"></div>
+        <div><b>Спайк</b> · новости, провалы ИИ, "WTF-моменты", споры</div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:center;">
+        <div style="width:28px;height:28px;border-radius:50%;background:#ff80a0;box-shadow:0 0 12px rgba(255,128,160,0.3);flex-shrink:0;"></div>
+        <div><b>Затухание</b> · разборы, инфографика, активации</div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:center;">
+        <div style="width:28px;height:28px;border-radius:50%;background:#d860a0;box-shadow:0 0 12px rgba(216,96,160,0.3);flex-shrink:0;"></div>
+        <div><b>Пересечение</b> · термины, словарь, концепты</div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:center;">
+        <div style="width:28px;height:28px;border-radius:50%;background:#a040b8;box-shadow:0 0 12px rgba(160,64,184,0.3);flex-shrink:0;"></div>
+        <div><b>Охлаждение</b> · факты, цифры, схемы</div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:center;">
+        <div style="width:28px;height:28px;border-radius:50%;background:#6b2890;box-shadow:0 0 12px rgba(107,40,144,0.3);flex-shrink:0;"></div>
+        <div><b>Послесвечение</b> · цитаты, философия, дневник</div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:center;">
+        <div style="width:28px;height:28px;border-radius:50%;background:#3a1858;flex-shrink:0;"></div>
+        <div><b>Тишина</b> · длинные процессы, лонгриды, медитации</div>
+      </div>
+    </div>
+
+    <div style="height:1px;background:linear-gradient(90deg,transparent,#ff5050,#a040b8,#6b2890,transparent);margin:28px 0;"></div>
 
     <!-- палитра -->
-    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;margin-bottom:14px;color:#ff8080;font-weight:700;">— ПАЛИТРА —</div>
-    <div style="display:flex;gap:0;border-radius:8px;overflow:hidden;margin-bottom:8px;">
-      <div style="flex:1;height:50px;background:#1f0508;"></div>
-      <div style="flex:1;height:50px;background:#5a1020;"></div>
-      <div style="flex:1;height:50px;background:#8b1a3a;"></div>
-      <div style="flex:1;height:50px;background:#c84060;"></div>
-      <div style="flex:1;height:50px;background:#a04088;"></div>
-      <div style="flex:1;height:50px;background:#6b2890;"></div>
-      <div style="flex:1;height:50px;background:#9070c8;"></div>
-      <div style="flex:1;height:50px;background:#b890d8;"></div>
-      <div style="flex:1;height:50px;background:#f0e8ff;"></div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;margin-bottom:14px;color:#6b2890;font-weight:700;">— ПОЛНАЯ ПАЛИТРА —</div>
+    <div style="display:flex;height:60px;border-radius:8px;overflow:hidden;margin-bottom:8px;box-shadow:0 4px 20px rgba(58,16,88,0.15);">
+      <div style="flex:1;background:#0d0408;"></div>
+      <div style="flex:1;background:#1f0510;"></div>
+      <div style="flex:1;background:#3a0a30;"></div>
+      <div style="flex:1;background:#5a1850;"></div>
+      <div style="flex:1;background:#ff5050;"></div>
+      <div style="flex:1;background:#ff80a0;"></div>
+      <div style="flex:1;background:#d860a0;"></div>
+      <div style="flex:1;background:#a040b8;"></div>
+      <div style="flex:1;background:#7050a0;"></div>
+      <div style="flex:1;background:#6b2890;"></div>
+      <div style="flex:1;background:#a888c8;"></div>
+      <div style="flex:1;background:#c8b8d8;"></div>
+      <div style="flex:1;background:#e0d0e8;"></div>
+      <div style="flex:1;background:#f0e8f8;"></div>
     </div>
-    <div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:9px;color:#7060a0;letter-spacing:1px;">
-      <span>спайк ▸</span>
-      <span>послесвечение ▸</span>
-      <span>свет</span>
-    </div>
-
-    <div style="height:1px;background:linear-gradient(90deg,transparent,#8b1a3a,#6b2890,transparent);margin:28px 0;"></div>
-
-    <!-- детали -->
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;font-family:'Cormorant Garamond',serif;font-size:14px;line-height:1.6;">
-      <div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#ff8080;letter-spacing:2px;margin-bottom:8px;font-weight:700;">ШРИФТЫ</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;line-height:1.4;color:#f0e8ff;">Cormorant<span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#9080a8;font-style:normal;"> заголовки · мысли</span></div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:13px;line-height:1.4;color:#f0e8ff;">JetBrains Mono<span style="font-size:10px;color:#9080a8;"> мета · числа</span></div>
-        <div style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.4;color:#f0e8ff;">Inter<span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#9080a8;"> описания</span></div>
-      </div>
-      <div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#b890d8;letter-spacing:2px;margin-bottom:8px;font-weight:700;">ЭФФЕКТЫ</div>
-        <div style="font-family:'Inter',sans-serif;font-size:13px;color:#d8c8e8;line-height:1.7;">· градиенты в тексте<br/>· свечения и блики<br/>· зерно-плёнка<br/>· glow вокруг чисел<br/>· перетекание цветов</div>
-      </div>
+    <div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:9px;color:#7050a0;letter-spacing:1px;">
+      <span>тьма</span><span>спайк</span><span>переход</span><span>остывание</span><span>свет</span>
     </div>
   </div>
 </div>
 
-<div style="text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:#5a3a6a;margin-bottom:60px;letter-spacing:1px;">— конец черновика v2 —</div>
+<div style="text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:#4a1870;margin-bottom:60px;letter-spacing:1px;">— тишина. конец передачи —</div>
 
 </body>
 </html>
