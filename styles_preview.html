@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ИИИзнанка — Визуальные стили</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0a0a0a; font-family: 'Inter', sans-serif; padding: 40px 20px; }
+  h1 { color: #fff; text-align: center; font-size: 28px; margin-bottom: 10px; letter-spacing: 2px; }
+  .subtitle { color: #666; text-align: center; margin-bottom: 50px; font-size: 14px; }
+  .grid { display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; }
+  .style-block { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .style-label { color: #aaa; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; }
+  .card { width: 320px; height: 320px; border-radius: 16px; overflow: hidden; position: relative; display: flex; flex-direction: column; justify-content: space-between; padding: 28px; }
+  .tag { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 5px 10px; border-radius: 4px; display: inline-block; width: fit-content; }
+  .card-title { font-size: 22px; font-weight: 900; line-height: 1.2; }
+  .card-body { font-size: 13px; line-height: 1.6; opacity: 0.8; }
+  .card-footer { font-size: 11px; opacity: 0.5; letter-spacing: 1px; }
+</style>
+</head>
+<body>
+<h1>ИИИзнанка</h1>
+<p class="subtitle">5 визуальных концепций для постов в Instagram и Telegram</p>
+<div class="grid">
+
+
+<!-- СТИЛЬ 1: АНАТОМИЯ МАШИНЫ -->
+<div class="style-block">
+  <div class="card" style="background: #050d1a; border: 1px solid #0d3b6e; font-family: 'JetBrains Mono', monospace;">
+    <!-- Blueprint grid -->
+    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(0,120,255,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(0,120,255,0.07) 1px,transparent 1px);background-size:24px 24px;border-radius:16px;"></div>
+    <!-- Corner marks -->
+    <div style="position:absolute;top:14px;left:14px;width:16px;height:16px;border-top:2px solid #0077ff;border-left:2px solid #0077ff;opacity:0.6;"></div>
+    <div style="position:absolute;top:14px;right:14px;width:16px;height:16px;border-top:2px solid #0077ff;border-right:2px solid #0077ff;opacity:0.6;"></div>
+    <div style="position:absolute;bottom:14px;left:14px;width:16px;height:16px;border-bottom:2px solid #0077ff;border-left:2px solid #0077ff;opacity:0.6;"></div>
+    <div style="position:absolute;bottom:14px;right:14px;width:16px;height:16px;border-bottom:2px solid #0077ff;border-right:2px solid #0077ff;opacity:0.6;"></div>
+    <div style="position:relative;z-index:2;">
+      <div class="tag" style="background:rgba(0,119,255,0.15);color:#4da6ff;border:1px solid #0077ff;">// РАЗБОР_01</div>
+    </div>
+    <div style="position:relative;z-index:2;">
+      <div class="card-title" style="color:#fff;font-size:19px;margin-bottom:10px;">Как работает<br/><span style="color:#4da6ff;">Attention</span><br/>в трансформере</div>
+      <div style="display:flex;align-items:center;gap:6px;margin-top:8px;">
+        <div style="height:1px;flex:1;background:linear-gradient(90deg,#0077ff,transparent);"></div>
+        <div style="font-size:10px;color:#4da6ff;letter-spacing:1px;">СХЕМА_ВНУТРИ</div>
+      </div>
+    </div>
+    <div style="position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;">
+      <div style="font-size:10px;color:#4da6ff;opacity:0.6;">ИИИзнанка</div>
+      <div style="font-size:10px;color:#4da6ff;opacity:0.6;">v1.0 · 2024</div>
+    </div>
+  </div>
+  <div class="style-label">1 — Анатомия машины</div>
+</div>
+
+
+
+<!-- СТИЛЬ 2: РЕНТГЕН -->
+<div class="style-block">
+  <div class="card" style="background: #080808; font-family: 'Inter', sans-serif; border: 1px solid #222;">
+    <!-- Xray glow effect -->
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:200px;height:200px;background:radial-gradient(circle,rgba(180,220,255,0.08) 0%,transparent 70%);border-radius:50%;"></div>
+    <!-- Scan line -->
+    <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(150,210,255,0.4),transparent);animation:none;opacity:0.7;"></div>
+    <div style="position:relative;z-index:2;">
+      <div style="font-size:10px;color:#7ab8d4;letter-spacing:3px;text-transform:uppercase;margin-bottom:4px;">X-RAY MODE</div>
+      <div style="height:1px;background:rgba(150,210,255,0.2);"></div>
+    </div>
+    <div style="position:relative;z-index:2;text-align:center;">
+      <!-- Xray brain/network illustration -->
+      <div style="font-size:60px;filter:brightness(0) invert(1);opacity:0.15;position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);">🧠</div>
+      <div class="card-title" style="color:#c8e8ff;font-size:21px;text-shadow:0 0 20px rgba(150,210,255,0.5);">Просвечиваем<br/>GPT насквозь</div>
+      <div style="margin-top:10px;font-size:12px;color:#6a9bb5;line-height:1.5;">Что скрыто внутри<br/>языковой модели</div>
+    </div>
+    <div style="position:relative;z-index:2;display:flex;justify-content:space-between;">
+      <div style="font-size:10px;color:#4a7a94;letter-spacing:2px;">ИИИзнанка</div>
+      <div style="font-size:10px;color:#4a7a94;letter-spacing:1px;">SCAN #07</div>
+    </div>
+  </div>
+  <div class="style-label">2 — Рентген</div>
+</div>
+
+
+
+<!-- СТИЛЬ 3: ИЗНАНКА ТКАНИ -->
+<div class="style-block">
+  <div class="card" style="background: #1a0e0a; font-family: 'Inter', sans-serif; border: 1px solid #3d1f10;">
+    <!-- Thread network SVG background -->
+    <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.25;" xmlns="http://www.w3.org/2000/svg">
+      <line x1="30" y1="30" x2="160" y2="120" stroke="#e07840" stroke-width="1"/>
+      <line x1="160" y1="120" x2="290" y2="60" stroke="#e07840" stroke-width="1"/>
+      <line x1="160" y1="120" x2="200" y2="260" stroke="#c85a20" stroke-width="1"/>
+      <line x1="30" y1="30" x2="200" y2="260" stroke="#a04010" stroke-width="0.7"/>
+      <line x1="290" y1="60" x2="200" y2="260" stroke="#e07840" stroke-width="1"/>
+      <line x1="80" y1="200" x2="160" y2="120" stroke="#c85a20" stroke-width="1"/>
+      <line x1="80" y1="200" x2="200" y2="260" stroke="#e07840" stroke-width="0.7"/>
+      <circle cx="30" cy="30" r="4" fill="#ff8c50"/>
+      <circle cx="160" cy="120" r="5" fill="#ff8c50"/>
+      <circle cx="290" cy="60" r="4" fill="#ff8c50"/>
+      <circle cx="200" cy="260" r="4" fill="#ff8c50"/>
+      <circle cx="80" cy="200" r="3" fill="#ff8c50"/>
+    </svg>
+    <div style="position:relative;z-index:2;">
+      <div class="tag" style="background:rgba(224,120,64,0.2);color:#ff9966;border:1px solid rgba(224,120,64,0.4);">нейросети</div>
+    </div>
+    <div style="position:relative;z-index:2;">
+      <div class="card-title" style="color:#f5e6d8;font-size:20px;margin-bottom:8px;">Нити смыслов:<br/>как ИИ <span style="color:#ff8c50;">понимает</span><br/>язык</div>
+    </div>
+    <div style="position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;">
+      <div style="font-size:11px;color:#a06040;letter-spacing:1px;">ИИИзнанка</div>
+      <div style="display:flex;gap:4px;">
+        <div style="width:6px;height:6px;border-radius:50%;background:#ff8c50;"></div>
+        <div style="width:6px;height:6px;border-radius:50%;background:#e07840;opacity:0.6;"></div>
+        <div style="width:6px;height:6px;border-radius:50%;background:#c85a20;opacity:0.4;"></div>
+      </div>
+    </div>
+  </div>
+  <div class="style-label">3 — Изнанка ткани</div>
+</div>
+
+
+
+<!-- СТИЛЬ 4: ТЕРМИНАЛ -->
+<div class="style-block">
+  <div class="card" style="background: #0c0c0c; font-family: 'JetBrains Mono', monospace; border: 1px solid #1a1a1a;">
+    <!-- Terminal header -->
+    <div style="position:absolute;top:0;left:0;right:0;height:28px;background:#1a1a1a;border-radius:16px 16px 0 0;display:flex;align-items:center;padding:0 14px;gap:6px;">
+      <div style="width:10px;height:10px;border-radius:50%;background:#ff5f56;"></div>
+      <div style="width:10px;height:10px;border-radius:50%;background:#ffbd2e;"></div>
+      <div style="width:10px;height:10px;border-radius:50%;background:#27c93f;"></div>
+      <div style="flex:1;text-align:center;font-size:10px;color:#555;letter-spacing:1px;">иии_знанка — bash</div>
+    </div>
+    <div style="position:relative;z-index:2;margin-top:18px;">
+      <div style="font-size:11px;color:#555;margin-bottom:6px;">$ run explain --model=gpt4</div>
+      <div style="font-size:11px;color:#27c93f;margin-bottom:2px;">&gt; Загрузка модели... <span style="opacity:0.5">████████</span> 100%</div>
+      <div style="font-size:11px;color:#27c93f;margin-bottom:2px;">&gt; Анализ слоёв... OK</div>
+      <div style="font-size:11px;color:#aaa;margin-bottom:2px;">&gt; Тема: <span style="color:#27c93f;">embeddings</span></div>
+    </div>
+    <div style="position:relative;z-index:2;">
+      <div style="font-size:11px;color:#555;margin-bottom:8px;">$ cat topic.txt</div>
+      <div style="font-size:18px;font-weight:700;color:#e8e8e8;line-height:1.3;">Как слова<br/>превращаются<br/>в <span style="color:#27c93f;">числа</span></div>
+    </div>
+    <div style="position:relative;z-index:2;font-size:11px;color:#27c93f;">
+      <span style="color:#555;">$ </span>иии_знанка<span style="animation:none;">█</span>
+    </div>
+  </div>
+  <div class="style-label">4 — Терминал</div>
+</div>
+
+
+
+<!-- СТИЛЬ 5: ПОП-НАУКА -->
+<div class="style-block">
+  <div class="card" style="background: linear-gradient(135deg, #2d1b69 0%, #1a0533 100%); font-family: 'Inter', sans-serif; border: 1px solid #4a2080;">
+    <!-- Decorative circles -->
+    <div style="position:absolute;top:-30px;right:-30px;width:140px;height:140px;border-radius:50%;background:rgba(255,210,0,0.08);"></div>
+    <div style="position:absolute;bottom:-20px;left:-20px;width:100px;height:100px;border-radius:50%;background:rgba(120,60,220,0.3);"></div>
+    <!-- Number accent -->
+    <div style="position:absolute;right:24px;top:50%;transform:translateY(-50%);font-size:96px;font-weight:900;color:rgba(255,255,255,0.04);line-height:1;font-family:'Inter',sans-serif;">#5</div>
+    <div style="position:relative;z-index:2;">
+      <div class="tag" style="background:rgba(255,210,0,0.15);color:#ffd200;border:1px solid rgba(255,210,0,0.3);">объясняю просто</div>
+    </div>
+    <div style="position:relative;z-index:2;">
+      <div style="font-size:11px;color:rgba(255,255,255,0.4);margin-bottom:8px;letter-spacing:1px;">ВЫПУСК 12</div>
+      <div class="card-title" style="color:#ffffff;font-size:22px;line-height:1.2;">Почему ИИ<br/><span style="color:#ffd200;">галлюцинирует</span><br/>и врёт?</div>
+    </div>
+    <div style="position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;">
+      <div style="font-size:12px;color:rgba(255,255,255,0.5);font-weight:700;letter-spacing:1px;">ИИИзнанка</div>
+      <div style="background:#ffd200;color:#1a0533;font-size:10px;font-weight:900;padding:4px 10px;border-radius:20px;letter-spacing:1px;">ЧИТАТЬ →</div>
+    </div>
+  </div>
+  <div class="style-label">5 — Поп-наука</div>
+</div>
+
+
+
+</div> <!-- end grid -->
+
+<!-- COLOR PALETTES -->
+<div style="max-width:1100px;margin:60px auto 0;padding:0 20px;">
+  <h2 style="color:#fff;text-align:center;font-size:18px;letter-spacing:2px;margin-bottom:30px;opacity:0.6;">ЦВЕТОВЫЕ ПАЛИТРЫ</h2>
+  <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;">
+
+    <!-- Palette 1 -->
+    <div style="text-align:center;">
+      <div style="display:flex;gap:4px;margin-bottom:8px;">
+        <div style="width:40px;height:40px;border-radius:8px;background:#050d1a;border:1px solid #333;"></div>
+        <div style="width:40px;height:40px;border-radius:8px;background:#0077ff;"></div>
+        <div style="width:40px;height:40px;border-radius:8px;background:#4da6ff;"></div>
+        <div style="width:40px;height:40px;border-radius:8px;background:#ffffff;border:1px solid #333;"></div>
+      </div>
+      <div style="color:#555;font-size:10px;letter-spacing:1px;">АНАТОМИЯ</div>
+    </div>
+
+    <!-- Palette 2 -->
+    <div style="text-align:center;">
+      <div style="display:flex;gap:4px;margin-bottom:8px;">
+        <div style="width:40px;height:40px;border-radius:8px;background:#080808;border:1px solid #333;"></div>
+        <div style="width:40px;height:40px;border-radius:8px;background:#7ab8d4;"></div>
+        <div style="width:40px;height:40px;border-radius:8px;background:#c8e8ff;"></div>
+        <div style="width:40px;height:40px;border-radius:8px;background:#4a7a94;"></div>
+      </div>
+      <div style="color:#555;font-size:10px;letter-spacing:1px;">РЕНТГЕН</div>
+    </div>
+
+    <!-- Palette 3 -->
+    <div style="text-align:center;">
+      <div style="display:flex;gap:4px;margin-bottom:8px;">
+        <div style="width:40px;height:40px;border-radius:8px;background:#1a0e0a;border:1px solid #333;"></div>
+        <div style="width:40px;height:40px;border-radius:8px;background:#ff8c50;"></div>
+        <div style="width:40px;height:40px;border-radius:8px;background:#e07840;"></div>
+        <div style="width:40px;height:40px;border-radius:8px;background:#f5e6d8;"></div>
+      </div>
+      <div style="color:#555;font-size:10px;letter-spacing:1px;">ИЗНАНКА</div>
+    </div>
+
+    <!-- Palette 4 -->
+    <div style="text-align:center;">
+      <div style="display:flex;gap:4px;margin-bottom:8px;">
+        <div style="width:40px;height:40px;border-radius:8px;background:#0c0c0c;border:1px solid #333;"></div>
+        <div style="width:40px;height:40px;border-radius:8px;background:#27c93f;"></div>
+        <div style="width:40px;height:40px;border-radius:8px;background:#e8e8e8;"></div>
+        <div style="width:40px;height:40px;border-radius:8px;background:#555555;"></div>
+      </div>
+      <div style="color:#555;font-size:10px;letter-spacing:1px;">ТЕРМИНАЛ</div>
+    </div>
+
+    <!-- Palette 5 -->
+    <div style="text-align:center;">
+      <div style="display:flex;gap:4px;margin-bottom:8px;">
+        <div style="width:40px;height:40px;border-radius:8px;background:#1a0533;border:1px solid #333;"></div>
+        <div style="width:40px;height:40px;border-radius:8px;background:#4a2080;"></div>
+        <div style="width:40px;height:40px;border-radius:8px;background:#ffd200;"></div>
+        <div style="width:40px;height:40px;border-radius:8px;background:#ffffff;border:1px solid #333;"></div>
+      </div>
+      <div style="color:#555;font-size:10px;letter-spacing:1px;">ПОП-НАУКА</div>
+    </div>
+
+  </div>
+</div>
+
+<div style="height:60px;"></div>
+</body>
+</html>
