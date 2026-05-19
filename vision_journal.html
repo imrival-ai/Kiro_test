@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ИИИзнанка — Журнал</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:'Inter',sans-serif;
+  padding:64px 24px;
+  color:#f0e8ff;
+  min-height:100vh;
+  background:linear-gradient(180deg,#0a0408 0%,#180820 35%,#3a2058 65%,#a888c8 90%,#f0e8f8 100%);
+}
+.kicker { text-align:center; font-size:11px; letter-spacing:6px; text-transform:uppercase; margin-bottom:8px; font-family:'JetBrains Mono',monospace; color:#ff5050; }
+.h1 { text-align:center; font-size:54px; font-weight:400; margin-bottom:8px; font-family:'Playfair Display',serif; font-style:italic; letter-spacing:-1px; color:#ffffff; }
+.h1 b { font-weight:900; font-style:normal; background:linear-gradient(90deg,#ff5050,#b890d8); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+.lead { text-align:center; font-size:14px; color:#a888c8; margin-bottom:8px; font-family:'Cormorant Garamond',serif; font-style:italic; max-width:600px; margin-left:auto; margin-right:auto; line-height:1.6; }
+.divider { width:120px; height:2px; background:linear-gradient(90deg,transparent,#ff5050,#b890d8,transparent); margin:24px auto 64px; }
+.section-num { font-size:10px; letter-spacing:5px; font-family:'JetBrains Mono',monospace; margin-bottom:6px; text-align:center; }
+.section-name { font-size:18px; font-family:'Cormorant Garamond',serif; font-style:italic; margin-bottom:28px; text-align:center; font-weight:500; }
+.row { display:flex; flex-wrap:wrap; gap:32px; justify-content:center; margin-bottom:80px; }
+.card { width:380px; height:380px; border-radius:8px; overflow:hidden; position:relative; flex-shrink:0; box-shadow:0 30px 80px rgba(0,0,0,0.6); }
+.noise { position:absolute; inset:0; opacity:0.18; background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><filter id=%22n%22><feTurbulence baseFrequency=%220.9%22/><feColorMatrix values=%220 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.18 0%22/></filter><rect width=%22100%22 height=%22100%22 filter=%22url(%23n)%22/></svg>'); mix-blend-mode:overlay; pointer-events:none; }
+</style>
+</head>
+<body>
+<div class="kicker">∙ vision · v5 · journal ∙</div>
+<div class="h1">журнал <b>ИИИзнанка</b></div>
+<div class="lead">Тот же спектр, но как страницы арт-журнала.<br/>Минимум декора, максимум типографики.</div>
+<div class="divider"></div>
+
+
+<!-- ============ КАРТОЧКА 1: ОБЛОЖКА НОМЕРА — КРАСНЫЙ ============ -->
+<div class="section-num" style="color:#ff5050;">— 01 / cover —</div>
+<div class="section-name" style="color:#ff8080;">обложка · выпуск №042</div>
+<div class="row">
+<div class="card" style="background:linear-gradient(180deg,#0d0408 0%,#1a0510 50%,#2a0815 100%);">
+  <div class="noise"></div>
+  <div style="position:absolute;top:30%;left:50%;transform:translate(-50%,-50%);width:340px;height:240px;background:radial-gradient(ellipse,rgba(255,80,80,0.25) 0%,transparent 70%);filter:blur(30px);"></div>
+  <!-- top bar -->
+  <div style="position:absolute;top:24px;left:30px;right:30px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,80,80,0.25);padding-bottom:12px;">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#ff5050;letter-spacing:4px;">ИИИЗНАНКА</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#ff8080;letter-spacing:2px;">№ 042 · WINTER</div>
+  </div>
+  <!-- огромная цифра -->
+  <div style="position:absolute;top:30px;right:24px;font-family:'Playfair Display',serif;font-size:200px;font-weight:900;color:rgba(255,80,80,0.08);line-height:0.85;letter-spacing:-12px;font-style:italic;">042</div>
+  <!-- центральный заголовок -->
+  <div style="position:absolute;top:50%;left:30px;right:30px;transform:translateY(-40%);z-index:2;">
+    <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:#ff8080;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;">— тема выпуска —</div>
+    <div style="font-family:'Playfair Display',serif;font-size:46px;font-weight:900;line-height:0.95;letter-spacing:-2px;color:#fff5f0;">Что<br/><i style="color:#ff5050;font-weight:400;">светится</i><br/>внутри</div>
+  </div>
+  <!-- bottom bar -->
+  <div style="position:absolute;bottom:24px;left:30px;right:30px;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(255,80,80,0.25);padding-top:12px;font-family:'JetBrains Mono',monospace;font-size:9px;color:#ff8080;letter-spacing:2px;">
+    <div>токен · трансформер · спайк</div>
+    <div style="color:#ff5050;">▶</div>
+  </div>
+</div>
+</div>
+
+
+<!-- ============ КАРТОЧКА 2: ЭССЕ — БОРДО ============ -->
+<div class="section-num" style="color:#ff6090;">— 02 / essay —</div>
+<div class="section-name" style="color:#ff8090;">эссе · открывающая цитата</div>
+<div class="row">
+<div class="card" style="background:linear-gradient(180deg,#1a0814 0%,#2a0a25 50%,#3a0a30 100%);">
+  <div class="noise"></div>
+  <!-- top header как в журнале -->
+  <div style="position:absolute;top:24px;left:30px;right:30px;display:flex;justify-content:space-between;align-items:baseline;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;">
+    <div style="color:#ff80b0;">ЭССЕ · 01</div>
+    <div style="color:#a888c8;">с. 12</div>
+  </div>
+  <!-- драматичная кавычка-капс -->
+  <div style="position:absolute;top:46px;left:24px;font-family:'Playfair Display',serif;font-size:180px;color:rgba(255,128,176,0.18);line-height:0.85;font-style:italic;font-weight:900;">"</div>
+  <!-- основной текст -->
+  <div style="position:absolute;top:50%;left:30px;right:30px;transform:translateY(-46%);z-index:2;">
+    <div style="font-family:'Playfair Display',serif;font-size:24px;font-style:italic;color:#fff5f0;line-height:1.35;font-weight:400;letter-spacing:-0.3px;">Каждое слово, попадая в модель, поднимает <i style="color:#ff80b0;font-weight:700;">бурю</i> из миллионов чисел &mdash; и оседает обратно одним токеном.</div>
+  </div>
+  <!-- автор -->
+  <div style="position:absolute;bottom:62px;left:30px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:#ff80b0;letter-spacing:1px;">— ИИИзнанка, наблюдение №042</div>
+  <!-- footer -->
+  <div style="position:absolute;bottom:24px;left:30px;right:30px;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(255,128,176,0.2);padding-top:12px;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:2px;color:#a888c8;">
+    <div>читать в Telegram</div>
+    <div style="color:#ff80b0;">↗</div>
+  </div>
+</div>
+</div>
+
+
+<!-- ============ КАРТОЧКА 3: ТЕРМИН — ПЕРЕХОД ============ -->
+<div class="section-num" style="color:#d860a0;">— 03 / lexicon —</div>
+<div class="section-name" style="color:#e090c0;">словарь · разворот в центре</div>
+<div class="row">
+<div class="card" style="background:linear-gradient(180deg,#3a0a30 0%,#4a1850 50%,#5a2870 100%);">
+  <div class="noise"></div>
+  <div style="position:absolute;top:24px;left:30px;right:30px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(216,96,160,0.25);padding-bottom:10px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;">
+    <div style="color:#d860a0;">СЛОВАРЬ</div>
+    <div style="color:#b890d8;">№ 024 · с. 47</div>
+  </div>
+  <div style="position:absolute;top:48px;right:20px;font-family:'Playfair Display',serif;font-size:200px;font-weight:900;color:rgba(216,96,160,0.07);line-height:0.85;letter-spacing:-12px;font-style:italic;">24</div>
+  <div style="position:absolute;top:50%;left:30px;right:30px;transform:translateY(-50%);z-index:2;">
+    <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:#a888c8;margin-bottom:8px;letter-spacing:2px;">сущ., англ.</div>
+    <div style="font-family:'Playfair Display',serif;font-size:54px;font-weight:900;line-height:0.95;letter-spacing:-2px;color:#fff5f0;font-style:italic;margin-bottom:6px;">Hallu&shy;<br/>cina<i style="color:#ff80a0;">tion</i></div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#e090c0;letter-spacing:2px;margin:14px 0 16px;">[hə-ˌlü-sə-ˈnā-shən]</div>
+    <div style="height:1px;width:60px;background:#d860a0;margin-bottom:16px;"></div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:17px;color:#fff5f0;line-height:1.45;font-style:italic;">правдоподобная <span style="color:#ff80a0;font-weight:600;font-style:normal;">ложь</span>,<br/>выданная с уверенностью.</div>
+  </div>
+  <div style="position:absolute;bottom:24px;left:30px;right:30px;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(216,96,160,0.25);padding-top:10px;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:2px;color:#a888c8;">
+    <div>см. также: bias, drift</div>
+    <div style="color:#e090c0;">→</div>
+  </div>
+</div>
+</div>
+
+
+<!-- ============ КАРТОЧКА 4: СТАТИСТИКА — ОХЛАЖДЕНИЕ ============ -->
+<div class="section-num" style="color:#9070b8;">— 04 / data —</div>
+<div class="section-name" style="color:#7050a0;">данные · крупная цифра</div>
+<div class="row">
+<div class="card" style="background:linear-gradient(180deg,#5a3878 0%,#7858a0 50%,#a888c8 100%);color:#2a1040;">
+  <div class="noise"></div>
+  <!-- top header -->
+  <div style="position:absolute;top:24px;left:30px;right:30px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(58,16,88,0.25);padding-bottom:10px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;">
+    <div style="color:#3a1058;">ДАННЫЕ · 07</div>
+    <div style="color:#5a2080;">2024 · с. 88</div>
+  </div>
+  <!-- крупная цифра как в журнале статистики -->
+  <div style="position:absolute;top:50%;left:30px;right:30px;transform:translateY(-52%);">
+    <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:#3a1058;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;">внутри одной модели</div>
+    <div style="font-family:'Playfair Display',serif;font-size:160px;font-weight:900;color:#2a0840;line-height:0.85;letter-spacing:-8px;font-style:italic;">1.8<i style="font-size:100px;font-weight:400;color:#5a2080;">T</i></div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:21px;color:#2a0840;line-height:1.4;font-style:italic;margin-top:12px;">параметров — синапсов<br/><i style="color:#5a2080;">искусственного мозга.</i></div>
+  </div>
+  <!-- footer как сноска -->
+  <div style="position:absolute;bottom:24px;left:30px;right:30px;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(58,16,88,0.25);padding-top:10px;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:2px;color:#5a2080;">
+    <div>* GPT-4 / SemiAnalysis</div>
+    <div style="color:#3a1058;font-weight:700;">×10 / 3 года</div>
+  </div>
+</div>
+</div>
+
+
+<!-- ============ КАРТОЧКА 5: КОЛОНКА — ПОСЛЕСВЕЧЕНИЕ ============ -->
+<div class="section-num" style="color:#6b2890;">— 05 / column —</div>
+<div class="section-name" style="color:#5a2080;">колонка · с дроп-капс</div>
+<div class="row">
+<div class="card" style="background:linear-gradient(180deg,#c8b8d8 0%,#e0d0e8 50%,#f0e8f4 100%);color:#2a0840;">
+  <div class="noise" style="opacity:0.12;"></div>
+  <!-- top header -->
+  <div style="position:absolute;top:24px;left:30px;right:30px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(74,26,112,0.3);padding-bottom:10px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;">
+    <div style="color:#6b2890;">КОЛОНКА</div>
+    <div style="color:#7050a0;">14 / 03</div>
+  </div>
+  <!-- название -->
+  <div style="position:absolute;top:60px;left:30px;right:30px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:#6b2890;letter-spacing:2px;text-transform:uppercase;">— из дневника —</div>
+  <!-- основная колонка с большой буквицей -->
+  <div style="position:absolute;top:104px;left:30px;right:30px;bottom:62px;">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.5;color:#2a0840;font-weight:400;">
+      <span style="font-family:'Playfair Display',serif;font-size:96px;font-weight:900;float:left;line-height:0.85;color:#6b2890;margin:6px 14px -8px 0;font-style:italic;">И</span>скусственный интеллект не <i style="text-decoration:line-through;text-decoration-color:#a040b8;color:#7050a0;">умный</i>. Он невероятно <i style="color:#6b2890;font-weight:700;">статистичный</i>. И, может быть, именно это нас в нём так пугает.
+    </div>
+  </div>
+  <!-- footer -->
+  <div style="position:absolute;bottom:24px;left:30px;right:30px;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(74,26,112,0.3);padding-top:10px;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:2px;color:#7050a0;">
+    <div>ИИИзнанка · колонка</div>
+    <div style="color:#6b2890;">читать дальше →</div>
+  </div>
+</div>
+</div>
+
+
+<!-- ============ КАРТОЧКА 6: СОДЕРЖАНИЕ — ТИШИНА ============ -->
+<div class="section-num" style="color:#5a2080;">— 06 / contents —</div>
+<div class="section-name" style="color:#4a1870;">оглавление · самый светлый</div>
+<div class="row">
+<div class="card" style="background:linear-gradient(180deg,#f0e8f8 0%,#fafafe 100%);color:#2a0840;border:1px solid #d8c8e8;">
+  <div class="noise" style="opacity:0.08;"></div>
+  <!-- top header -->
+  <div style="position:absolute;top:24px;left:30px;right:30px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(74,26,112,0.3);padding-bottom:10px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;">
+    <div style="color:#6b2890;">СОДЕРЖАНИЕ · №042</div>
+    <div style="color:#7050a0;">с. 03</div>
+  </div>
+  <!-- название -->
+  <div style="position:absolute;top:62px;left:30px;right:30px;font-family:'Playfair Display',serif;font-size:36px;font-weight:900;color:#2a0840;line-height:0.95;letter-spacing:-1.5px;font-style:italic;margin-bottom:18px;">в этом<br/>выпуске</div>
+  <!-- список -->
+  <div style="position:absolute;top:200px;left:30px;right:30px;font-family:'Cormorant Garamond',serif;font-size:14px;line-height:1.7;color:#2a0840;">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px dotted rgba(74,26,112,0.3);padding:6px 0;">
+      <div><i style="color:#6b2890;">Эссе</i> · что светится внутри</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#7050a0;">12</div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px dotted rgba(74,26,112,0.3);padding:6px 0;">
+      <div><i style="color:#6b2890;">Словарь</i> · Hallucination</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#7050a0;">47</div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px dotted rgba(74,26,112,0.3);padding:6px 0;">
+      <div><i style="color:#6b2890;">Данные</i> · 1.8T параметров</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#7050a0;">88</div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;padding:6px 0;">
+      <div><i style="color:#6b2890;">Колонка</i> · из дневника</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#7050a0;">112</div>
+    </div>
+  </div>
+  <!-- footer -->
+  <div style="position:absolute;bottom:24px;left:30px;right:30px;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(74,26,112,0.3);padding-top:10px;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:2px;color:#7050a0;">
+    <div>ИИИзнанка</div>
+    <div style="color:#4a1870;">— тишина —</div>
+  </div>
+</div>
+</div>
+
+
+<!-- ============ ОБЪЯСНЕНИЕ ============ -->
+<div style="max-width:680px;margin:40px auto 60px;padding:48px 56px;border-radius:8px;color:#2a0840;position:relative;background:linear-gradient(160deg,#fafafe 0%,#f0e8f4 100%);box-shadow:0 30px 80px rgba(58,16,88,0.3);overflow:hidden;border:1px solid #e0d0e8;">
+  <div style="position:absolute;top:-50px;left:-50px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,80,80,0.18),transparent 70%);"></div>
+  <div style="position:absolute;bottom:-50px;right:-50px;width:200px;height:200px;background:radial-gradient(circle,rgba(107,40,144,0.2),transparent 70%);"></div>
+  <div style="position:relative;z-index:2;">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:5px;margin-bottom:14px;font-weight:700;background:linear-gradient(90deg,#ff5050,#6b2890);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">— ЧТО ИЗМЕНИЛОСЬ —</div>
+    <div style="font-family:'Playfair Display',serif;font-style:italic;font-size:28px;line-height:1.25;margin-bottom:24px;font-weight:900;color:#2a0840;letter-spacing:-1px;">Журнал, а не дашборд.</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.7;color:#4a2868;">
+      То же затухание сигнала через ленту. Те же 6 этапов спектра. Но композиция совсем другая &mdash; <i>журнальный poster</i> вместо технического интерфейса.<br/><br/>
+      <b>Что осталось:</b> цвета, ритм спайк→тишина, контент-стратегия по этажам.<br/>
+      <b>Что изменилось:</b> вёрстка с верхней/нижней рамкой как у журнала, огромные цифры выпуска как фон, дроп-капс в колонках, тонкие пунктиры в оглавлении, Playfair Display курсивом вместо Cormorant.
+    </div>
+    <div style="height:1px;background:linear-gradient(90deg,transparent,#ff5050,#a040b8,#6b2890,transparent);margin:32px 0;"></div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:15px;line-height:1.6;color:#4a2868;">
+      <b style="color:#6b2890;">Когда выбирать этот стиль:</b> если хочешь, чтобы канал читался как культовое интеллектуальное издание — <i>The New Yorker</i> для нейросетей. Подписчик чувствует себя не пользователем приложения, а <i>читателем</i>.
+    </div>
+  </div>
+</div>
+
+<div style="text-align:center;font-family:'Playfair Display',serif;font-style:italic;font-size:14px;color:#4a1870;margin-bottom:60px;letter-spacing:1px;">— конец выпуска №042 —</div>
+
+</body>
+</html>
