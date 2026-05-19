@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ИИИзнанка — Вариации «Strange Things»</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#0a0808; font-family:'Inter',sans-serif; padding:48px 24px; color:#fff; }
+.title { text-align:center; font-size:11px; letter-spacing:5px; color:#663333; text-transform:uppercase; margin-bottom:6px; }
+.name { text-align:center; font-size:32px; font-weight:900; color:#f0e8e8; margin-bottom:4px; }
+.sub { text-align:center; font-size:13px; color:#442222; margin-bottom:60px; }
+.row-label { font-size:10px; letter-spacing:4px; color:#331111; text-transform:uppercase; margin-bottom:20px; text-align:center; }
+.row { display:flex; flex-wrap:wrap; gap:24px; justify-content:center; margin-bottom:60px; }
+</style>
+</head>
+<body>
+<div class="title">вариации стиля</div>
+<div class="name">Strange Things</div>
+<div class="sub">12 вариаций на тему «Очень странные дела» · красные акценты · тёмная наука</div>
+
+
+<!-- ROW 1: Разборы — обложки постов -->
+<div class="row-label">Обложки разборов</div>
+<div class="row">
+
+<!-- V1: Классика с нумерацией файлов -->
+<div style="width:340px;height:340px;border-radius:12px;overflow:hidden;position:relative;background:#0d0a0f;flex-shrink:0;">
+  <div style="position:absolute;bottom:0;left:0;right:0;height:180px;background:linear-gradient(to top,rgba(180,0,0,0.35),transparent);"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#cc0000,#ff4444,#cc0000,transparent);opacity:0.8;"></div>
+  <div style="position:relative;z-index:2;padding:28px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
+    <div>
+      <div style="font-size:10px;color:#cc3333;letter-spacing:4px;text-transform:uppercase;margin-bottom:16px;font-family:'JetBrains Mono',monospace;">// ФАЙЛ_042</div>
+      <div style="font-size:25px;font-weight:900;line-height:1.15;color:#f0e8e8;text-shadow:0 0 30px rgba(200,0,0,0.4);">Что происходит<br/>когда ты пишешь<br/><span style="color:#ff3333;">промпт</span></div>
+    </div>
+    <div>
+      <div style="height:1px;background:linear-gradient(90deg,#cc0000,transparent);margin-bottom:12px;"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <div style="font-size:11px;color:#663333;letter-spacing:2px;font-family:'JetBrains Mono',monospace;">ИИИзнанка</div>
+        <div style="font-size:10px;color:#cc3333;font-family:'JetBrains Mono',monospace;">▶ читать</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- V2: С крупным номером выпуска -->
+<div style="width:340px;height:340px;border-radius:12px;overflow:hidden;position:relative;background:#0a0608;flex-shrink:0;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 70% 80%,rgba(150,0,0,0.25) 0%,transparent 60%);"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:#cc0000;opacity:0.6;"></div>
+  <!-- Крупный номер -->
+  <div style="position:absolute;right:20px;top:20px;font-size:120px;font-weight:900;color:rgba(200,0,0,0.06);line-height:1;font-family:'Inter',sans-serif;">07</div>
+  <div style="position:relative;z-index:2;padding:28px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
+    <div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px;">
+        <div style="width:6px;height:6px;background:#cc0000;border-radius:50%;box-shadow:0 0 6px #cc0000;"></div>
+        <div style="font-size:10px;color:#883333;letter-spacing:3px;font-family:'JetBrains Mono',monospace;">ВЫПУСК 07</div>
+      </div>
+      <div style="font-size:24px;font-weight:900;line-height:1.2;color:#f0e8e8;">Токенизация:<br/>как ИИ <span style="color:#ff4444;">режет</span><br/>текст на куски</div>
+    </div>
+    <div>
+      <div style="font-size:11px;color:#553333;line-height:1.6;margin-bottom:12px;">Почему «tokenization» — это фундамент<br/>работы любой языковой модели</div>
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <div style="font-size:10px;color:#442222;letter-spacing:2px;font-family:'JetBrains Mono',monospace;">ИИИзнанка</div>
+        <div style="font-size:10px;color:#cc3333;letter-spacing:1px;font-family:'JetBrains Mono',monospace;">5 мин →</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- V3: Горизонтальные полоски-помехи -->
+<div style="width:340px;height:340px;border-radius:12px;overflow:hidden;position:relative;background:#080508;flex-shrink:0;">
+  <div style="position:absolute;bottom:0;left:0;right:0;height:200px;background:linear-gradient(to top,rgba(120,0,0,0.3),transparent);"></div>
+  <!-- Помехи -->
+  <div style="position:absolute;top:60px;left:0;right:0;height:1px;background:rgba(255,0,0,0.15);"></div>
+  <div style="position:absolute;top:62px;left:0;right:0;height:1px;background:rgba(255,0,0,0.08);"></div>
+  <div style="position:absolute;top:180px;left:0;right:0;height:2px;background:rgba(255,0,0,0.1);"></div>
+  <div style="position:absolute;top:280px;left:0;width:60%;height:1px;background:rgba(255,0,0,0.12);"></div>
+  <div style="position:relative;z-index:2;padding:28px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
+    <div>
+      <div style="font-size:9px;color:#993333;letter-spacing:5px;text-transform:uppercase;font-family:'JetBrains Mono',monospace;margin-bottom:4px;">СЕКРЕТНЫЙ РАЗБОР</div>
+      <div style="height:1px;width:60px;background:#cc0000;margin-bottom:20px;"></div>
+      <div style="font-size:26px;font-weight:900;line-height:1.15;color:#ede4e4;text-shadow:0 0 40px rgba(200,0,0,0.3);">Fine-tuning:<br/><span style="color:#ff3333;">перепрошивка</span><br/>нейросети</div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div style="font-size:10px;color:#553333;font-family:'JetBrains Mono',monospace;letter-spacing:2px;">ИИИзнанка</div>
+      <div style="display:flex;gap:4px;">
+        <div style="width:4px;height:4px;background:#cc0000;border-radius:50%;"></div>
+        <div style="width:4px;height:4px;background:#880000;border-radius:50%;"></div>
+        <div style="width:4px;height:4px;background:#440000;border-radius:50%;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- V4: Рамка-досье -->
+<div style="width:340px;height:340px;border-radius:12px;overflow:hidden;position:relative;background:#0b0808;flex-shrink:0;border:1px solid #2a0a0a;">
+  <div style="position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(100,0,0,0.2) 0%,transparent 50%);"></div>
+  <!-- Угловые метки -->
+  <div style="position:absolute;top:12px;left:12px;width:20px;height:20px;border-top:2px solid #cc0000;border-left:2px solid #cc0000;opacity:0.5;"></div>
+  <div style="position:absolute;top:12px;right:12px;width:20px;height:20px;border-top:2px solid #cc0000;border-right:2px solid #cc0000;opacity:0.5;"></div>
+  <div style="position:absolute;bottom:12px;left:12px;width:20px;height:20px;border-bottom:2px solid #cc0000;border-left:2px solid #cc0000;opacity:0.5;"></div>
+  <div style="position:absolute;bottom:12px;right:12px;width:20px;height:20px;border-bottom:2px solid #cc0000;border-right:2px solid #cc0000;opacity:0.5;"></div>
+  <div style="position:relative;z-index:2;padding:32px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div style="font-size:9px;color:#993333;letter-spacing:3px;font-family:'JetBrains Mono',monospace;">ДОСЬЕ</div>
+      <div style="font-size:9px;color:#442222;font-family:'JetBrains Mono',monospace;">УРОВЕНЬ: СЛОЖНЫЙ</div>
+    </div>
+    <div>
+      <div style="font-size:10px;color:#883333;letter-spacing:2px;font-family:'JetBrains Mono',monospace;margin-bottom:10px;">ОБЪЕКТ ИССЛЕДОВАНИЯ:</div>
+      <div style="font-size:24px;font-weight:900;line-height:1.2;color:#f0e8e8;">Attention<br/>is All You<br/><span style="color:#ff3333;">Need</span></div>
+    </div>
+    <div>
+      <div style="height:1px;background:linear-gradient(90deg,#550000,transparent);margin-bottom:10px;"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <div style="font-size:10px;color:#442222;letter-spacing:2px;font-family:'JetBrains Mono',monospace;">ИИИзнанка</div>
+        <div style="font-size:10px;color:#cc3333;font-family:'JetBrains Mono',monospace;">ОТКРЫТЬ →</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+<!-- ROW 2: Нейронные сети / визуализации -->
+<div class="row-label">Инфографика · Нейронные связи</div>
+<div class="row">
+
+<!-- V5: Плотная сеть с пульсирующим центром -->
+<div style="width:340px;height:340px;border-radius:12px;overflow:hidden;position:relative;background:#0a0606;flex-shrink:0;">
+  <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(180,0,0,0.2) 0%,transparent 50%);"></div>
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.4;" xmlns="http://www.w3.org/2000/svg">
+    <!-- Центральный узел -->
+    <circle cx="170" cy="170" r="8" fill="#ff3333" opacity="0.8"/>
+    <circle cx="170" cy="170" r="20" fill="none" stroke="#cc0000" stroke-width="0.5" opacity="0.4"/>
+    <circle cx="170" cy="170" r="40" fill="none" stroke="#880000" stroke-width="0.3" opacity="0.3"/>
+    <!-- Периферия -->
+    <circle cx="60" cy="60" r="3" fill="#ff3333"/>
+    <circle cx="280" cy="80" r="4" fill="#cc0000"/>
+    <circle cx="300" cy="240" r="3" fill="#ff3333"/>
+    <circle cx="50" cy="260" r="3" fill="#cc0000"/>
+    <circle cx="170" cy="40" r="3" fill="#ff3333"/>
+    <circle cx="100" cy="150" r="3" fill="#cc0000"/>
+    <circle cx="250" cy="160" r="3" fill="#ff3333"/>
+    <circle cx="130" cy="280" r="3" fill="#cc0000"/>
+    <circle cx="230" cy="290" r="3" fill="#ff3333"/>
+    <!-- Связи к центру -->
+    <line x1="60" y1="60" x2="170" y2="170" stroke="#cc0000" stroke-width="0.6"/>
+    <line x1="280" y1="80" x2="170" y2="170" stroke="#880000" stroke-width="0.6"/>
+    <line x1="300" y1="240" x2="170" y2="170" stroke="#cc0000" stroke-width="0.6"/>
+    <line x1="50" y1="260" x2="170" y2="170" stroke="#880000" stroke-width="0.6"/>
+    <line x1="170" y1="40" x2="170" y2="170" stroke="#cc0000" stroke-width="0.6"/>
+    <line x1="100" y1="150" x2="170" y2="170" stroke="#880000" stroke-width="0.6"/>
+    <line x1="250" y1="160" x2="170" y2="170" stroke="#cc0000" stroke-width="0.6"/>
+    <line x1="130" y1="280" x2="170" y2="170" stroke="#880000" stroke-width="0.6"/>
+    <line x1="230" y1="290" x2="170" y2="170" stroke="#cc0000" stroke-width="0.6"/>
+    <!-- Побочные связи -->
+    <line x1="60" y1="60" x2="100" y2="150" stroke="#550000" stroke-width="0.4"/>
+    <line x1="280" y1="80" x2="250" y2="160" stroke="#550000" stroke-width="0.4"/>
+    <line x1="300" y1="240" x2="230" y2="290" stroke="#550000" stroke-width="0.4"/>
+    <line x1="50" y1="260" x2="130" y2="280" stroke="#550000" stroke-width="0.4"/>
+  </svg>
+  <div style="position:relative;z-index:2;padding:28px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+      <div style="font-size:10px;color:#883333;letter-spacing:3px;font-family:'JetBrains Mono',monospace;">ATTENTION MAP</div>
+      <div style="width:28px;height:28px;border:1px solid #440000;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+        <div style="width:6px;height:6px;background:#cc0000;border-radius:50%;box-shadow:0 0 8px #cc0000;"></div>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:22px;font-weight:700;color:#e8d8d8;line-height:1.3;margin-bottom:8px;">Все слова<br/>связаны со <span style="color:#ff4444;">всеми</span></div>
+      <div style="font-size:11px;color:#553333;line-height:1.6;">Визуализация Self-Attention<br/>в одном слое трансформера</div>
+    </div>
+    <div style="font-size:10px;color:#442222;letter-spacing:2px;font-family:'JetBrains Mono',monospace;">ИИИзнанка</div>
+  </div>
+</div>
+
+<!-- V6: Слои нейросети -->
+<div style="width:340px;height:340px;border-radius:12px;overflow:hidden;position:relative;background:#0b0708;flex-shrink:0;">
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(80,0,0,0.15) 0%,transparent 30%,transparent 70%,rgba(80,0,0,0.15) 100%);"></div>
+  <!-- Горизонтальные слои -->
+  <div style="position:absolute;top:70px;left:30px;right:30px;height:1px;background:linear-gradient(90deg,transparent,rgba(200,0,0,0.3),transparent);"></div>
+  <div style="position:absolute;top:130px;left:20px;right:20px;height:1px;background:linear-gradient(90deg,transparent,rgba(200,0,0,0.25),transparent);"></div>
+  <div style="position:absolute;top:190px;left:25px;right:25px;height:1px;background:linear-gradient(90deg,transparent,rgba(200,0,0,0.3),transparent);"></div>
+  <div style="position:absolute;top:250px;left:35px;right:35px;height:1px;background:linear-gradient(90deg,transparent,rgba(200,0,0,0.2),transparent);"></div>
+  <!-- Узлы на слоях -->
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.5;" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="100" cy="70" r="3" fill="#ff3333"/><circle cx="170" cy="70" r="3" fill="#ff3333"/><circle cx="240" cy="70" r="3" fill="#ff3333"/>
+    <circle cx="80" cy="130" r="3" fill="#cc0000"/><circle cx="140" cy="130" r="4" fill="#cc0000"/><circle cx="200" cy="130" r="3" fill="#cc0000"/><circle cx="260" cy="130" r="3" fill="#cc0000"/>
+    <circle cx="120" cy="190" r="3" fill="#ff3333"/><circle cx="170" cy="190" r="5" fill="#ff3333"/><circle cx="220" cy="190" r="3" fill="#ff3333"/>
+    <circle cx="140" cy="250" r="3" fill="#cc0000"/><circle cx="200" cy="250" r="3" fill="#cc0000"/>
+    <!-- Вертикальные связи -->
+    <line x1="100" y1="70" x2="80" y2="130" stroke="#660000" stroke-width="0.5"/>
+    <line x1="100" y1="70" x2="140" y2="130" stroke="#660000" stroke-width="0.5"/>
+    <line x1="170" y1="70" x2="140" y2="130" stroke="#660000" stroke-width="0.5"/>
+    <line x1="170" y1="70" x2="200" y2="130" stroke="#660000" stroke-width="0.5"/>
+    <line x1="240" y1="70" x2="200" y2="130" stroke="#660000" stroke-width="0.5"/>
+    <line x1="240" y1="70" x2="260" y2="130" stroke="#660000" stroke-width="0.5"/>
+    <line x1="140" y1="130" x2="170" y2="190" stroke="#660000" stroke-width="0.5"/>
+    <line x1="200" y1="130" x2="170" y2="190" stroke="#660000" stroke-width="0.5"/>
+    <line x1="170" y1="190" x2="140" y2="250" stroke="#660000" stroke-width="0.5"/>
+    <line x1="170" y1="190" x2="200" y2="250" stroke="#660000" stroke-width="0.5"/>
+  </svg>
+  <div style="position:relative;z-index:2;padding:28px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
+    <div style="display:flex;justify-content:space-between;">
+      <div style="font-size:10px;color:#993333;letter-spacing:3px;font-family:'JetBrains Mono',monospace;">СЛОИ</div>
+      <div style="font-size:10px;color:#442222;font-family:'JetBrains Mono',monospace;">depth: 96</div>
+    </div>
+    <div>
+      <div style="font-size:21px;font-weight:700;color:#e8d8d8;line-height:1.3;margin-bottom:8px;">96 слоёв между<br/>вводом и<br/><span style="color:#ff4444;">ответом</span></div>
+      <div style="font-size:11px;color:#553333;line-height:1.6;">Как информация трансформируется<br/>на пути через GPT-4</div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div style="font-size:10px;color:#442222;letter-spacing:2px;font-family:'JetBrains Mono',monospace;">ИИИзнанка</div>
+      <div style="display:flex;gap:3px;align-items:center;">
+        <div style="width:12px;height:2px;background:#cc0000;border-radius:1px;"></div>
+        <div style="width:8px;height:2px;background:#880000;border-radius:1px;"></div>
+        <div style="width:4px;height:2px;background:#440000;border-radius:1px;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- V7: Матрица весов -->
+<div style="width:340px;height:340px;border-radius:12px;overflow:hidden;position:relative;background:#080606;flex-shrink:0;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%,rgba(120,0,0,0.2) 0%,transparent 60%);"></div>
+  <!-- Сетка как матрица -->
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(200,0,0,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(200,0,0,0.04) 1px,transparent 1px);background-size:20px 20px;"></div>
+  <!-- Случайные «горячие» ячейки -->
+  <div style="position:absolute;top:80px;left:120px;width:18px;height:18px;background:rgba(255,50,50,0.2);border:1px solid rgba(255,50,50,0.3);"></div>
+  <div style="position:absolute;top:100px;left:140px;width:18px;height:18px;background:rgba(255,50,50,0.35);border:1px solid rgba(255,50,50,0.4);"></div>
+  <div style="position:absolute;top:100px;left:160px;width:18px;height:18px;background:rgba(255,50,50,0.15);border:1px solid rgba(255,50,50,0.2);"></div>
+  <div style="position:absolute;top:120px;left:140px;width:18px;height:18px;background:rgba(255,50,50,0.25);border:1px solid rgba(255,50,50,0.3);"></div>
+  <div style="position:absolute;top:160px;left:200px;width:18px;height:18px;background:rgba(255,50,50,0.3);border:1px solid rgba(255,50,50,0.35);"></div>
+  <div style="position:absolute;top:180px;left:220px;width:18px;height:18px;background:rgba(255,50,50,0.4);border:1px solid rgba(255,50,50,0.5);"></div>
+  <div style="position:relative;z-index:2;padding:28px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div style="font-size:10px;color:#993333;letter-spacing:3px;font-family:'JetBrains Mono',monospace;">WEIGHTS</div>
+      <div style="padding:3px 8px;border:1px solid #440000;border-radius:4px;font-size:9px;color:#883333;font-family:'JetBrains Mono',monospace;">LIVE</div>
+    </div>
+    <div>
+      <div style="font-size:22px;font-weight:700;color:#e8d8d8;line-height:1.3;margin-bottom:8px;">Матрица весов:<br/><span style="color:#ff4444;">тепловая карта</span><br/>внимания</div>
+      <div style="font-size:11px;color:#553333;line-height:1.6;">Какие связи «горят»<br/>когда модель читает текст</div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div style="font-size:10px;color:#442222;letter-spacing:2px;font-family:'JetBrains Mono',monospace;">ИИИзнанка</div>
+      <div style="font-size:10px;color:#cc3333;font-family:'JetBrains Mono',monospace;">▶ смотреть</div>
+    </div>
+  </div>
+</div>
+
+<!-- V8: Бинарный дождь -->
+<div style="width:340px;height:340px;border-radius:12px;overflow:hidden;position:relative;background:#080408;flex-shrink:0;">
+  <div style="position:absolute;bottom:0;left:0;right:0;height:180px;background:linear-gradient(to top,rgba(150,0,0,0.3),transparent);"></div>
+  <!-- Числа-матрица фон -->
+  <div style="position:absolute;top:0;left:0;right:0;padding:20px;font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(200,0,0,0.12);line-height:2;overflow:hidden;height:200px;">
+    0.013 0.847 0.221 0.996 0.103 0.567<br/>
+    0.445 0.012 0.998 0.334 0.876 0.001<br/>
+    0.667 0.123 0.009 0.887 0.234 0.998<br/>
+    0.111 0.999 0.445 0.002 0.777 0.333<br/>
+    0.888 0.034 0.567 0.901 0.012 0.654<br/>
+    0.223 0.776 0.001 0.445 0.998 0.112
+  </div>
+  <div style="position:relative;z-index:2;padding:28px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
+    <div style="font-size:10px;color:#993333;letter-spacing:4px;font-family:'JetBrains Mono',monospace;">ВЕРОЯТНОСТИ</div>
+    <div>
+      <div style="font-size:23px;font-weight:700;color:#e8d8d8;line-height:1.3;margin-bottom:8px;">Следующее<br/>слово — это<br/><span style="color:#ff4444;">вероятность</span></div>
+      <div style="font-size:11px;color:#553333;line-height:1.6;">Как модель выбирает<br/>из тысяч вариантов</div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div style="font-size:10px;color:#442222;letter-spacing:2px;font-family:'JetBrains Mono',monospace;">ИИИзнанка</div>
+      <div style="font-size:9px;color:#883333;font-family:'JetBrains Mono',monospace;">p=0.97 ▌</div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+<!-- ROW 3: Факты и термины -->
+<div class="row-label">Факты · Термины · Карусели</div>
+<div class="row">
+
+<!-- V9: Термин с подчёркиванием -->
+<div style="width:340px;height:340px;border-radius:12px;overflow:hidden;position:relative;background:#0c0808;flex-shrink:0;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 70%,rgba(140,0,0,0.15) 0%,transparent 60%);"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#880000,#cc0000,#880000);opacity:0.5;"></div>
+  <div style="position:relative;z-index:2;padding:30px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div style="font-size:9px;color:#993333;letter-spacing:4px;font-family:'JetBrains Mono',monospace;">// СЛОВАРЬ</div>
+      <div style="font-size:9px;color:#442222;font-family:'JetBrains Mono',monospace;">#024</div>
+    </div>
+    <div style="text-align:center;">
+      <div style="font-size:13px;color:#553333;letter-spacing:2px;margin-bottom:12px;text-transform:uppercase;">что такое</div>
+      <div style="font-size:36px;font-weight:900;color:#ff3333;letter-spacing:-1px;text-shadow:0 0 40px rgba(255,0,0,0.3);margin-bottom:4px;">Hallucination</div>
+      <div style="height:2px;width:80px;background:#cc0000;margin:8px auto;border-radius:1px;"></div>
+      <div style="font-size:13px;color:#998888;line-height:1.6;margin-top:12px;">когда ИИ генерирует<br/>правдоподобную ложь</div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div style="font-size:10px;color:#442222;letter-spacing:2px;font-family:'JetBrains Mono',monospace;">ИИИзнанка</div>
+      <div style="font-size:10px;color:#883333;font-family:'JetBrains Mono',monospace;">словарь →</div>
+    </div>
+  </div>
+</div>
+
+<!-- V10: Число-факт крупно -->
+<div style="width:340px;height:340px;border-radius:12px;overflow:hidden;position:relative;background:#0a0608;flex-shrink:0;">
+  <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 55%,rgba(180,0,0,0.18) 0%,transparent 50%);"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#cc0000,transparent);opacity:0.6;"></div>
+  <div style="position:relative;z-index:2;padding:28px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
+    <div style="font-size:9px;color:#883333;letter-spacing:4px;font-family:'JetBrains Mono',monospace;">ФАКТ</div>
+    <div style="text-align:center;">
+      <div style="font-size:72px;font-weight:900;color:#ff3333;line-height:1;text-shadow:0 0 60px rgba(255,0,0,0.4);margin-bottom:8px;">1.8T</div>
+      <div style="font-size:14px;color:#998888;letter-spacing:1px;">параметров в GPT-4</div>
+      <div style="font-size:12px;color:#553333;margin-top:6px;">(предположительно)</div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div style="font-size:10px;color:#442222;letter-spacing:2px;font-family:'JetBrains Mono',monospace;">ИИИзнанка</div>
+      <div style="display:flex;gap:4px;">
+        <div style="width:16px;height:3px;background:#cc0000;border-radius:2px;"></div>
+        <div style="width:16px;height:3px;background:#440000;border-radius:2px;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- V11: Сравнение / vs -->
+<div style="width:340px;height:340px;border-radius:12px;overflow:hidden;position:relative;background:#0b0808;flex-shrink:0;">
+  <div style="position:absolute;top:0;bottom:0;left:50%;width:1px;background:linear-gradient(180deg,transparent,#cc0000,transparent);opacity:0.4;"></div>
+  <div style="position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(to top,rgba(120,0,0,0.2),transparent);"></div>
+  <div style="position:relative;z-index:2;padding:28px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
+    <div style="font-size:9px;color:#993333;letter-spacing:4px;font-family:'JetBrains Mono',monospace;text-align:center;">СРАВНЕНИЕ</div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:20px;">
+      <div style="text-align:center;flex:1;">
+        <div style="font-size:28px;font-weight:900;color:#ff4444;margin-bottom:4px;">GPT-3</div>
+        <div style="font-size:11px;color:#553333;">175B params</div>
+        <div style="font-size:10px;color:#442222;margin-top:4px;">2020</div>
+      </div>
+      <div style="font-size:16px;color:#cc0000;font-weight:900;">VS</div>
+      <div style="text-align:center;flex:1;">
+        <div style="font-size:28px;font-weight:900;color:#f0e8e8;margin-bottom:4px;">GPT-4</div>
+        <div style="font-size:11px;color:#553333;">1.8T params</div>
+        <div style="font-size:10px;color:#442222;margin-top:4px;">2023</div>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:12px;color:#883333;text-align:center;margin-bottom:12px;">×10 параметров за 3 года</div>
+      <div style="display:flex;justify-content:center;">
+        <div style="font-size:10px;color:#442222;letter-spacing:2px;font-family:'JetBrains Mono',monospace;">ИИИзнанка</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- V12: Процесс / пошаговая -->
+<div style="width:340px;height:340px;border-radius:12px;overflow:hidden;position:relative;background:#0a0708;flex-shrink:0;">
+  <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(80,0,0,0.1) 0%,transparent 50%);"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:#880000;opacity:0.4;"></div>
+  <div style="position:relative;z-index:2;padding:28px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div style="font-size:9px;color:#993333;letter-spacing:4px;font-family:'JetBrains Mono',monospace;">ПРОЦЕСС</div>
+      <div style="font-size:9px;color:#442222;font-family:'JetBrains Mono',monospace;">1/5</div>
+    </div>
+    <div>
+      <div style="font-size:19px;font-weight:700;color:#e8d8d8;line-height:1.4;margin-bottom:16px;">Как GPT генерирует ответ:</div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:20px;height:20px;background:#cc0000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;color:#fff;font-weight:700;flex-shrink:0;">1</div>
+          <div style="font-size:11px;color:#998888;">Токенизация ввода</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:20px;height:20px;background:#990000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;color:#fff;font-weight:700;flex-shrink:0;">2</div>
+          <div style="font-size:11px;color:#998888;">Embedding слой</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:20px;height:20px;background:#660000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;color:#fff;font-weight:700;flex-shrink:0;">3</div>
+          <div style="font-size:11px;color:#998888;">96× Transformer блоков</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:20px;height:20px;background:#440000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;color:#fff;font-weight:700;flex-shrink:0;">4</div>
+          <div style="font-size:11px;color:#998888;">Softmax → вероятности</div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div style="font-size:10px;color:#442222;letter-spacing:2px;font-family:'JetBrains Mono',monospace;">ИИИзнанка</div>
+      <div style="font-size:10px;color:#cc3333;font-family:'JetBrains Mono',monospace;">листай →</div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>
