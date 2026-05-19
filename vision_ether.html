@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ИИИзнанка — Эфир</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#050505; font-family:'Inter',sans-serif; padding:64px 24px; color:#fff5e0; min-height:100vh; }
+.kicker { text-align:center; font-size:11px; letter-spacing:6px; text-transform:uppercase; margin-bottom:8px; font-family:'JetBrains Mono',monospace; color:#ff9020; }
+.h1 { text-align:center; font-size:54px; font-weight:400; margin-bottom:8px; font-family:'Space Grotesk',sans-serif; letter-spacing:-2px; color:#fff5e0; }
+.h1 b { font-weight:700; color:#ff9020; }
+.lead { text-align:center; font-size:14px; color:#5a4a30; margin-bottom:8px; font-family:'JetBrains Mono',monospace; max-width:580px; margin-left:auto; margin-right:auto; line-height:1.7; letter-spacing:1px; }
+.divider { width:140px; height:1px; background:linear-gradient(90deg,transparent,#ff9020,transparent); margin:24px auto 64px; box-shadow:0 0 8px #ff9020; }
+.section-num { font-size:10px; letter-spacing:5px; color:#3a2a10; font-family:'JetBrains Mono',monospace; margin-bottom:6px; text-align:center; }
+.section-name { font-size:14px; color:#aa6010; font-family:'JetBrains Mono',monospace; margin-bottom:28px; text-align:center; font-weight:400; letter-spacing:3px; text-transform:uppercase; }
+.row { display:flex; flex-wrap:wrap; gap:32px; justify-content:center; margin-bottom:80px; }
+</style>
+</head>
+<body>
+<div class="kicker">∙ vision · v3 · ether ∙</div>
+<div class="h1">настройся на <b>сигнал</b></div>
+<div class="lead">Радиоприёмник с янтарной подсветкой.<br/>Настраиваешь частоту — слышишь, как думает модель.</div>
+<div class="divider"></div>
+
+
+
+<!-- ============ КАРТОЧКА 1: ОБЛОЖКА — VU-METER ============ -->
+<div class="section-num">— 01 —</div>
+<div class="section-name">обложка · vu-meter</div>
+<div class="row">
+<div style="width:380px;height:380px;border-radius:6px;overflow:hidden;position:relative;flex-shrink:0;background:#080604;border:1px solid #1a1208;box-shadow:0 30px 80px rgba(0,0,0,0.8), inset 0 0 80px rgba(255,144,32,0.04);">
+  <!-- зерно "эфира" -->
+  <div style="position:absolute;inset:0;opacity:0.25;background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><filter id=%22n%22><feTurbulence baseFrequency=%221.2%22/><feColorMatrix values=%220 0 0 0 1 0 0 0 0 0.5 0 0 0 0 0 0 0 0 0.4 0%22/></filter><rect width=%22100%22 height=%22100%22 filter=%22url(%23n)%22/></svg>');"></div>
+  <!-- скан-линии -->
+  <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent 0,transparent 3px,rgba(255,144,32,0.025) 3px,rgba(255,144,32,0.025) 4px);pointer-events:none;"></div>
+  <!-- свечение -->
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:300px;height:200px;background:radial-gradient(ellipse,rgba(255,144,32,0.18) 0%,transparent 70%);filter:blur(20px);"></div>
+
+  <!-- хедер -->
+  <div style="position:absolute;top:18px;left:24px;right:24px;display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono',monospace;font-size:10px;color:#aa6010;letter-spacing:3px;z-index:3;">
+    <div>FREQ · 8.4 GHz</div>
+    <div style="display:flex;gap:4px;align-items:center;">
+      <div style="width:6px;height:6px;background:#ff9020;border-radius:50%;box-shadow:0 0 6px #ff9020;"></div>
+      <span style="color:#ff9020;">ON AIR</span>
+    </div>
+  </div>
+
+  <!-- VU-METER -->
+  <div style="position:absolute;top:62px;left:24px;right:24px;height:130px;border:1px solid #2a1a08;border-radius:4px;padding:14px 18px;background:linear-gradient(180deg,rgba(255,144,32,0.04),transparent);">
+    <!-- шкала VU -->
+    <div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:8px;color:#5a4a30;letter-spacing:1px;margin-bottom:6px;">
+      <span>−40</span><span>−20</span><span>−10</span><span>−5</span><span>0</span><span style="color:#ff9020;">+3</span>
+    </div>
+    <!-- столбики -->
+    <div style="display:flex;gap:2px;align-items:flex-end;height:60px;">
+      <div style="flex:1;background:#ff9020;height:30%;box-shadow:0 0 4px #ff9020;"></div>
+      <div style="flex:1;background:#ff9020;height:55%;box-shadow:0 0 4px #ff9020;"></div>
+      <div style="flex:1;background:#ff9020;height:42%;box-shadow:0 0 4px #ff9020;"></div>
+      <div style="flex:1;background:#ff9020;height:78%;box-shadow:0 0 6px #ff9020;"></div>
+      <div style="flex:1;background:#ff9020;height:90%;box-shadow:0 0 8px #ff9020;"></div>
+      <div style="flex:1;background:#ff9020;height:65%;box-shadow:0 0 4px #ff9020;"></div>
+      <div style="flex:1;background:#ff9020;height:88%;box-shadow:0 0 8px #ff9020;"></div>
+      <div style="flex:1;background:#ff9020;height:48%;box-shadow:0 0 4px #ff9020;"></div>
+      <div style="flex:1;background:#ff9020;height:72%;box-shadow:0 0 6px #ff9020;"></div>
+      <div style="flex:1;background:#ff9020;height:35%;box-shadow:0 0 4px #ff9020;"></div>
+      <div style="flex:1;background:#ff9020;height:60%;box-shadow:0 0 4px #ff9020;"></div>
+      <div style="flex:1;background:#ff9020;height:82%;box-shadow:0 0 6px #ff9020;"></div>
+      <div style="flex:1;background:#ff9020;height:25%;box-shadow:0 0 4px #ff9020;"></div>
+      <div style="flex:1;background:#ff9020;height:54%;box-shadow:0 0 4px #ff9020;"></div>
+    </div>
+    <div style="margin-top:6px;font-family:'JetBrains Mono',monospace;font-size:8px;color:#aa6010;letter-spacing:2px;text-align:right;">PEAK · 0.94</div>
+  </div>
+
+  <!-- заголовок снизу -->
+  <div style="position:absolute;bottom:62px;left:24px;right:24px;z-index:2;">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#aa6010;letter-spacing:4px;margin-bottom:8px;">⟶ TRANSMISSION 042</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:30px;font-weight:700;line-height:1.05;letter-spacing:-1px;color:#fff5e0;">Слушаем,<br/>как <span style="color:#ff9020;">думает</span><br/>GPT</div>
+  </div>
+
+  <!-- футер -->
+  <div style="position:absolute;bottom:18px;left:24px;right:24px;display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono',monospace;font-size:9px;color:#5a4a30;letter-spacing:3px;z-index:3;border-top:1px solid #2a1a08;padding-top:14px;">
+    <div>ИИИзнанка</div>
+    <div style="color:#ff9020;">▸ TUNE IN</div>
+  </div>
+</div>
+</div>
+
+
+
+<!-- ============ КАРТОЧКА 2: СПЕКТРОГРАММА ============ -->
+<div class="section-num">— 02 —</div>
+<div class="section-name">визуализация · spectrum</div>
+<div class="row">
+<div style="width:380px;height:380px;border-radius:6px;overflow:hidden;position:relative;flex-shrink:0;background:#080604;border:1px solid #1a1208;box-shadow:0 30px 80px rgba(0,0,0,0.8);">
+  <div style="position:absolute;inset:0;opacity:0.18;background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><filter id=%22n%22><feTurbulence baseFrequency=%221.2%22/><feColorMatrix values=%220 0 0 0 1 0 0 0 0 0.5 0 0 0 0 0 0 0 0 0.4 0%22/></filter><rect width=%22100%22 height=%22100%22 filter=%22url(%23n)%22/></svg>');"></div>
+  <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent 0,transparent 3px,rgba(255,144,32,0.02) 3px,rgba(255,144,32,0.02) 4px);"></div>
+
+  <!-- хедер -->
+  <div style="position:absolute;top:18px;left:24px;right:24px;display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;color:#aa6010;">
+    <div>// SPECTROGRAM</div>
+    <div style="color:#5a4a30;">96 layers</div>
+  </div>
+
+  <!-- спектрограмма -->
+  <div style="position:absolute;top:60px;left:24px;right:24px;height:170px;border-left:1px solid #2a1a08;border-bottom:1px solid #2a1a08;display:flex;align-items:flex-end;gap:1px;">
+    <div style="flex:1;background:linear-gradient(180deg,#ff9020,#aa4010);height:25%;"></div>
+    <div style="flex:1;background:linear-gradient(180deg,#ff9020,#aa4010);height:38%;"></div>
+    <div style="flex:1;background:linear-gradient(180deg,#ff9020,#aa4010);height:52%;"></div>
+    <div style="flex:1;background:linear-gradient(180deg,#ff9020,#aa4010);height:42%;"></div>
+    <div style="flex:1;background:linear-gradient(180deg,#fff5e0,#ff9020);height:88%;box-shadow:0 0 12px rgba(255,144,32,0.6);"></div>
+    <div style="flex:1;background:linear-gradient(180deg,#ff9020,#aa4010);height:65%;"></div>
+    <div style="flex:1;background:linear-gradient(180deg,#ff9020,#aa4010);height:48%;"></div>
+    <div style="flex:1;background:linear-gradient(180deg,#ff9020,#aa4010);height:72%;"></div>
+    <div style="flex:1;background:linear-gradient(180deg,#ff9020,#aa4010);height:58%;"></div>
+    <div style="flex:1;background:linear-gradient(180deg,#ff9020,#aa4010);height:35%;"></div>
+    <div style="flex:1;background:linear-gradient(180deg,#fff5e0,#ff9020);height:96%;box-shadow:0 0 14px rgba(255,144,32,0.7);"></div>
+    <div style="flex:1;background:linear-gradient(180deg,#ff9020,#aa4010);height:62%;"></div>
+    <div style="flex:1;background:linear-gradient(180deg,#ff9020,#aa4010);height:45%;"></div>
+    <div style="flex:1;background:linear-gradient(180deg,#ff9020,#aa4010);height:78%;"></div>
+    <div style="flex:1;background:linear-gradient(180deg,#ff9020,#aa4010);height:50%;"></div>
+    <div style="flex:1;background:linear-gradient(180deg,#ff9020,#aa4010);height:32%;"></div>
+    <div style="flex:1;background:linear-gradient(180deg,#ff9020,#aa4010);height:68%;"></div>
+    <div style="flex:1;background:linear-gradient(180deg,#ff9020,#aa4010);height:40%;"></div>
+    <div style="flex:1;background:linear-gradient(180deg,#fff5e0,#ff9020);height:84%;box-shadow:0 0 12px rgba(255,144,32,0.6);"></div>
+    <div style="flex:1;background:linear-gradient(180deg,#ff9020,#aa4010);height:55%;"></div>
+    <div style="flex:1;background:linear-gradient(180deg,#ff9020,#aa4010);height:28%;"></div>
+    <div style="flex:1;background:linear-gradient(180deg,#ff9020,#aa4010);height:48%;"></div>
+  </div>
+  <!-- метки оси X -->
+  <div style="position:absolute;top:236px;left:24px;right:24px;display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:8px;color:#5a4a30;letter-spacing:1px;">
+    <span>L01</span><span>L24</span><span>L48</span><span>L72</span><span>L96</span>
+  </div>
+
+  <!-- заголовок -->
+  <div style="position:absolute;bottom:62px;left:24px;right:24px;">
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:23px;font-weight:700;line-height:1.2;color:#fff5e0;letter-spacing:-0.5px;margin-bottom:6px;">Каждый слой — <span style="color:#ff9020;">своя частота</span></div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#5a4a30;line-height:1.7;letter-spacing:1px;">синтаксис → семантика → смысл</div>
+  </div>
+
+  <div style="position:absolute;bottom:18px;left:24px;right:24px;display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:9px;color:#5a4a30;letter-spacing:3px;border-top:1px solid #2a1a08;padding-top:14px;">
+    <div>ИИИзнанка</div>
+    <div style="color:#aa6010;">▸ ANALYZE</div>
+  </div>
+</div>
+</div>
+
+
+
+<!-- ============ КАРТОЧКА 3: ТЕРМИН — ЦИФРОВОЕ ТАБЛО ============ -->
+<div class="section-num">— 03 —</div>
+<div class="section-name">термин · readout</div>
+<div class="row">
+<div style="width:380px;height:380px;border-radius:6px;overflow:hidden;position:relative;flex-shrink:0;background:#080604;border:1px solid #1a1208;box-shadow:0 30px 80px rgba(0,0,0,0.8);">
+  <div style="position:absolute;inset:0;opacity:0.2;background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><filter id=%22n%22><feTurbulence baseFrequency=%221.2%22/><feColorMatrix values=%220 0 0 0 1 0 0 0 0 0.5 0 0 0 0 0 0 0 0 0.4 0%22/></filter><rect width=%22100%22 height=%22100%22 filter=%22url(%23n)%22/></svg>');"></div>
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:340px;height:160px;background:radial-gradient(ellipse,rgba(255,144,32,0.25) 0%,transparent 70%);filter:blur(15px);"></div>
+
+  <!-- хедер -->
+  <div style="position:absolute;top:18px;left:24px;right:24px;display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;color:#aa6010;">
+    <div>// LEX · 024</div>
+    <div style="display:flex;gap:6px;">
+      <div style="width:6px;height:6px;background:#ff9020;border-radius:50%;box-shadow:0 0 6px #ff9020;"></div>
+      <div style="width:6px;height:6px;background:#3a2a10;border-radius:50%;"></div>
+      <div style="width:6px;height:6px;background:#3a2a10;border-radius:50%;"></div>
+    </div>
+  </div>
+
+  <!-- центральное "цифровое табло" -->
+  <div style="position:absolute;top:58%;left:50%;transform:translate(-50%,-50%);text-align:center;width:100%;padding:0 24px;">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#5a4a30;letter-spacing:5px;margin-bottom:18px;text-transform:uppercase;">⟶ tuning to ⟵</div>
+    <!-- термин с лампой -->
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:54px;font-weight:700;color:#ff9020;letter-spacing:-2px;line-height:0.95;text-shadow:0 0 30px rgba(255,144,32,0.6),0 0 60px rgba(255,144,32,0.3);margin-bottom:6px;">Hallucina<span style="color:#fff5e0;">tion</span></div>
+    <!-- разделитель в духе радиоприёмника -->
+    <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin:14px 0;">
+      <div style="height:1px;width:30px;background:#aa6010;"></div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#aa6010;letter-spacing:2px;">[hə-ˌlü-sə-ˈnā-shən]</div>
+      <div style="height:1px;width:30px;background:#aa6010;"></div>
+    </div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#fff5e0;line-height:1.6;letter-spacing:0.5px;">сигнал, который модель<br/><span style="color:#ff9020;">принимает за смысл</span></div>
+  </div>
+
+  <!-- мини-индикаторы внизу как на радио -->
+  <div style="position:absolute;bottom:62px;left:24px;right:24px;">
+    <div style="display:flex;gap:8px;justify-content:center;align-items:center;">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#5a4a30;letter-spacing:2px;">SIGNAL</div>
+      <div style="display:flex;gap:2px;">
+        <div style="width:4px;height:8px;background:#ff9020;box-shadow:0 0 4px #ff9020;"></div>
+        <div style="width:4px;height:8px;background:#ff9020;box-shadow:0 0 4px #ff9020;"></div>
+        <div style="width:4px;height:8px;background:#ff9020;box-shadow:0 0 4px #ff9020;"></div>
+        <div style="width:4px;height:8px;background:#ff9020;box-shadow:0 0 4px #ff9020;"></div>
+        <div style="width:4px;height:8px;background:#aa6010;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="position:absolute;bottom:18px;left:24px;right:24px;display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:9px;color:#5a4a30;letter-spacing:3px;border-top:1px solid #2a1a08;padding-top:14px;">
+    <div>ИИИзнанка</div>
+    <div style="color:#ff9020;">▸ NEXT TERM</div>
+  </div>
+</div>
+</div>
+
+
+
+<!-- ============ КАРТОЧКА 4: ФАКТ — БОЛЬШОЕ ТАБЛО ============ -->
+<div class="section-num">— 04 —</div>
+<div class="section-name">факт · readout</div>
+<div class="row">
+<div style="width:380px;height:380px;border-radius:6px;overflow:hidden;position:relative;flex-shrink:0;background:#080604;border:1px solid #1a1208;box-shadow:0 30px 80px rgba(0,0,0,0.8);">
+  <div style="position:absolute;inset:0;opacity:0.18;background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><filter id=%22n%22><feTurbulence baseFrequency=%221.2%22/><feColorMatrix values=%220 0 0 0 1 0 0 0 0 0.5 0 0 0 0 0 0 0 0 0.4 0%22/></filter><rect width=%22100%22 height=%22100%22 filter=%22url(%23n)%22/></svg>');"></div>
+  <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent 0,transparent 3px,rgba(255,144,32,0.025) 3px,rgba(255,144,32,0.025) 4px);"></div>
+
+  <!-- хедер -->
+  <div style="position:absolute;top:18px;left:24px;right:24px;display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;color:#aa6010;">
+    <div>// FACT_07</div>
+    <div style="border:1px solid #2a1a08;padding:2px 8px;border-radius:2px;font-size:9px;letter-spacing:2px;color:#ff9020;background:rgba(255,144,32,0.05);">2024</div>
+  </div>
+
+  <!-- крупное число как на радио-табло -->
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-58%);text-align:center;width:100%;padding:0 24px;">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#5a4a30;letter-spacing:4px;margin-bottom:12px;text-transform:uppercase;">⟶ count ⟵</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:124px;font-weight:700;color:#ff9020;line-height:1;letter-spacing:-6px;text-shadow:0 0 40px rgba(255,144,32,0.5),0 0 80px rgba(255,144,32,0.25);">1.8<span style="font-size:80px;font-weight:400;">T</span></div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:6px;">
+      <div style="height:1px;width:50px;background:linear-gradient(90deg,transparent,#ff9020);"></div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#ff9020;letter-spacing:2px;">PARAMETERS</div>
+      <div style="height:1px;width:50px;background:linear-gradient(90deg,#ff9020,transparent);"></div>
+    </div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#fff5e0;line-height:1.5;margin-top:14px;letter-spacing:0.5px;">синапсов<br/>в искусственном мозге</div>
+  </div>
+
+  <!-- сноска как лента-бегущая строка -->
+  <div style="position:absolute;bottom:62px;left:24px;right:24px;font-family:'JetBrains Mono',monospace;font-size:9px;color:#5a4a30;line-height:1.6;letter-spacing:0.5px;border-top:1px dashed #2a1a08;padding-top:10px;">
+    ⟶ src: SemiAnalysis · OpenAI undisclosed · ×10 / 3y
+  </div>
+
+  <div style="position:absolute;bottom:18px;left:24px;right:24px;display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:9px;color:#5a4a30;letter-spacing:3px;">
+    <div>ИИИзнанка</div>
+    <div style="color:#ff9020;">▸ MORE FACTS</div>
+  </div>
+</div>
+</div>
+
+
+<!-- ============ КАРТОЧКА 5: ЦИТАТА — ЛОГ ============ -->
+<div class="section-num">— 05 —</div>
+<div class="section-name">мысль · log</div>
+<div class="row">
+<div style="width:380px;height:380px;border-radius:6px;overflow:hidden;position:relative;flex-shrink:0;background:#080604;border:1px solid #1a1208;box-shadow:0 30px 80px rgba(0,0,0,0.8);">
+  <div style="position:absolute;inset:0;opacity:0.18;background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><filter id=%22n%22><feTurbulence baseFrequency=%221.2%22/><feColorMatrix values=%220 0 0 0 1 0 0 0 0 0.5 0 0 0 0 0 0 0 0 0.4 0%22/></filter><rect width=%22100%22 height=%22100%22 filter=%22url(%23n)%22/></svg>');"></div>
+  <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent 0,transparent 3px,rgba(255,144,32,0.02) 3px,rgba(255,144,32,0.02) 4px);"></div>
+
+  <!-- хедер с временем -->
+  <div style="position:absolute;top:18px;left:24px;right:24px;display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;color:#aa6010;">
+    <div>// LOG_03</div>
+    <div style="color:#5a4a30;">03:42:18</div>
+  </div>
+
+  <!-- лог-блок -->
+  <div style="position:absolute;top:60px;left:24px;right:24px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#aa6010;line-height:1.7;letter-spacing:0.5px;">
+    <div style="color:#5a4a30;">[2024-03-14 03:42:18] &gt; init</div>
+    <div style="color:#5a4a30;">[2024-03-14 03:42:18] &gt; tuning... <span style="color:#ff9020;">found</span></div>
+    <div style="color:#5a4a30;">[2024-03-14 03:42:18] &gt; signal:</div>
+  </div>
+
+  <!-- цитата -->
+  <div style="position:absolute;top:148px;left:24px;right:24px;padding:18px;border:1px solid #2a1a08;background:rgba(255,144,32,0.03);border-left:3px solid #ff9020;">
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:21px;color:#fff5e0;line-height:1.35;font-weight:500;">Искусственный интеллект<br/>не <span style="text-decoration:line-through;text-decoration-color:#ff9020;text-decoration-thickness:1.5px;color:#5a4a30;">умный</span>.<br/>Он <span style="color:#ff9020;font-weight:700;">статистичный</span>.</div>
+  </div>
+
+  <!-- продолжение лога -->
+  <div style="position:absolute;bottom:62px;left:24px;right:24px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#5a4a30;line-height:1.7;letter-spacing:0.5px;">
+    <div>[2024-03-14 03:42:21] &gt; saved</div>
+    <div>[2024-03-14 03:42:21] &gt; <span style="color:#ff9020;">━</span></div>
+  </div>
+
+  <div style="position:absolute;bottom:18px;left:24px;right:24px;display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:9px;color:#5a4a30;letter-spacing:3px;border-top:1px solid #2a1a08;padding-top:14px;">
+    <div>ИИИзнанка</div>
+    <div style="color:#ff9020;">▸ MORE LOGS</div>
+  </div>
+</div>
+</div>
+
+
+
+<!-- ============ КАРТОЧКА 6: ПРОЦЕСС — ЧАСТОТНАЯ ШКАЛА ============ -->
+<div class="section-num">— 06 —</div>
+<div class="section-name">процесс · pipeline</div>
+<div class="row">
+<div style="width:380px;height:380px;border-radius:6px;overflow:hidden;position:relative;flex-shrink:0;background:#080604;border:1px solid #1a1208;box-shadow:0 30px 80px rgba(0,0,0,0.8);">
+  <div style="position:absolute;inset:0;opacity:0.18;background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><filter id=%22n%22><feTurbulence baseFrequency=%221.2%22/><feColorMatrix values=%220 0 0 0 1 0 0 0 0 0.5 0 0 0 0 0 0 0 0 0.4 0%22/></filter><rect width=%22100%22 height=%22100%22 filter=%22url(%23n)%22/></svg>');"></div>
+
+  <!-- хедер -->
+  <div style="position:absolute;top:18px;left:24px;right:24px;display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;color:#aa6010;">
+    <div>// PIPELINE · 84.3 ms</div>
+    <div style="color:#5a4a30;">SCAN</div>
+  </div>
+
+  <!-- заголовок -->
+  <div style="position:absolute;top:54px;left:24px;right:24px;">
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:#fff5e0;line-height:1.2;letter-spacing:-0.5px;">Сигнал проходит<br/>через <span style="color:#ff9020;">4 каскада</span></div>
+  </div>
+
+  <!-- частотные полосы как этапы -->
+  <div style="position:absolute;top:140px;left:24px;right:24px;bottom:80px;display:flex;flex-direction:column;justify-content:space-between;">
+    <!-- каскад 1 -->
+    <div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1px;">
+        <span style="color:#fff5e0;">[01] <span style="color:#aa6010;">Tokenization</span></span>
+        <span style="color:#ff9020;">0.4ms</span>
+      </div>
+      <div style="height:8px;background:#1a1208;border:1px solid #2a1a08;display:flex;">
+        <div style="width:4%;background:#ff9020;box-shadow:0 0 6px #ff9020;"></div>
+      </div>
+    </div>
+    <!-- каскад 2 -->
+    <div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1px;">
+        <span style="color:#fff5e0;">[02] <span style="color:#aa6010;">Embedding</span></span>
+        <span style="color:#ff9020;">2.1ms</span>
+      </div>
+      <div style="height:8px;background:#1a1208;border:1px solid #2a1a08;display:flex;">
+        <div style="width:18%;background:#ff9020;box-shadow:0 0 6px #ff9020;"></div>
+      </div>
+    </div>
+    <!-- каскад 3 - главный -->
+    <div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:1px;">
+        <span style="color:#ff9020;font-weight:700;">[03] 96 × Transformer</span>
+        <span style="color:#ff9020;font-weight:700;">81.2ms</span>
+      </div>
+      <div style="height:12px;background:#1a1208;border:1px solid #ff9020;display:flex;box-shadow:0 0 12px rgba(255,144,32,0.3);">
+        <div style="width:96%;background:linear-gradient(90deg,#ff9020,#fff5e0,#ff9020);box-shadow:0 0 10px #ff9020;"></div>
+      </div>
+    </div>
+    <!-- каскад 4 -->
+    <div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1px;">
+        <span style="color:#fff5e0;">[04] <span style="color:#aa6010;">Softmax</span></span>
+        <span style="color:#ff9020;">0.6ms</span>
+      </div>
+      <div style="height:8px;background:#1a1208;border:1px solid #2a1a08;display:flex;">
+        <div style="width:6%;background:#ff9020;box-shadow:0 0 6px #ff9020;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="position:absolute;bottom:18px;left:24px;right:24px;display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:9px;color:#5a4a30;letter-spacing:3px;border-top:1px solid #2a1a08;padding-top:14px;">
+    <div>ИИИзнанка</div>
+    <div style="color:#ff9020;">▸ DEEP DIVE</div>
+  </div>
+</div>
+</div>
+
+
+<!-- ============ ОБЪЯСНЕНИЕ КОНЦЕПЦИИ ============ -->
+<div style="max-width:680px;margin:40px auto 60px;padding:48px 56px;border-radius:6px;color:#fff5e0;position:relative;background:#080604;border:1px solid #1a1208;box-shadow:0 30px 80px rgba(0,0,0,0.8);">
+  <div style="position:absolute;inset:0;opacity:0.15;background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><filter id=%22n%22><feTurbulence baseFrequency=%221.2%22/><feColorMatrix values=%220 0 0 0 1 0 0 0 0 0.5 0 0 0 0 0 0 0 0 0.4 0%22/></filter><rect width=%22100%22 height=%22100%22 filter=%22url(%23n)%22/></svg>');pointer-events:none;border-radius:6px;"></div>
+  <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent 0,transparent 3px,rgba(255,144,32,0.015) 3px,rgba(255,144,32,0.015) 4px);pointer-events:none;border-radius:6px;"></div>
+
+  <div style="position:relative;z-index:2;">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#ff9020;letter-spacing:5px;margin-bottom:14px;">— PHILOSOPHY —</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-style:normal;font-size:28px;line-height:1.3;margin-bottom:24px;font-weight:700;letter-spacing:-1px;">Изнанка — это <span style="color:#ff9020;">сигнал</span>,<br/>а не картинка.</div>
+
+    <div style="font-family:'Inter',sans-serif;font-size:15px;line-height:1.7;color:#d8c8a8;font-weight:400;">
+      Радиоприёмник в темноте, янтарная лампа подсветки шкалы. Ты крутишь ручку — и сквозь шум проступает голос. Так и с нейросетью: <span style="color:#ff9020;">настраиваешься на её частоту</span> — и вместо текста начинаешь слышать математику внутри.<br/><br/>
+      Эстетика: <em>VU-метр, спектрограмма, бегущие строки лога, цифровое табло</em>. Минимум декора, максимум <span style="color:#ff9020;">точности</span>. Один акцентный янтарь на фоне абсолютной черноты.<br/><br/>
+      Это про <em>инструмент</em>, через который мы слышим то, чего нельзя увидеть.
+    </div>
+
+    <div style="height:1px;background:linear-gradient(90deg,transparent,#ff9020,transparent);margin:32px 0;"></div>
+
+    <!-- палитра -->
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#ff9020;letter-spacing:3px;margin-bottom:14px;">— PALETTE —</div>
+    <div style="display:flex;gap:8px;margin-bottom:8px;">
+      <div style="flex:1;text-align:center;">
+        <div style="height:50px;border-radius:4px;background:#050505;border:1px solid #1a1208;margin-bottom:6px;"></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#5a4a30;letter-spacing:1px;">#050505</div>
+      </div>
+      <div style="flex:1;text-align:center;">
+        <div style="height:50px;border-radius:4px;background:#080604;border:1px solid #1a1208;margin-bottom:6px;"></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#5a4a30;letter-spacing:1px;">#080604</div>
+      </div>
+      <div style="flex:1;text-align:center;">
+        <div style="height:50px;border-radius:4px;background:#aa6010;margin-bottom:6px;"></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#5a4a30;letter-spacing:1px;">#aa6010</div>
+      </div>
+      <div style="flex:1;text-align:center;">
+        <div style="height:50px;border-radius:4px;background:#ff9020;box-shadow:0 0 16px rgba(255,144,32,0.4);margin-bottom:6px;"></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#ff9020;letter-spacing:1px;">#ff9020</div>
+      </div>
+      <div style="flex:1;text-align:center;">
+        <div style="height:50px;border-radius:4px;background:#fff5e0;margin-bottom:6px;"></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#5a4a30;letter-spacing:1px;">#fff5e0</div>
+      </div>
+    </div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#5a4a30;letter-spacing:1px;margin-top:8px;">эфир ▸ темнота ▸ накал ▸ янтарь ▸ свет</div>
+
+    <div style="height:1px;background:linear-gradient(90deg,transparent,#ff9020,transparent);margin:28px 0;"></div>
+
+    <!-- технические детали -->
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#aa6010;letter-spacing:2px;line-height:1.9;">
+      <span style="color:#ff9020;font-weight:700;">▸ FONTS:</span><br/>
+      · Space Grotesk — заголовки (техно-точность)<br/>
+      · JetBrains Mono — мета, числа, лог<br/>
+      · Inter — описания<br/><br/>
+      <span style="color:#ff9020;font-weight:700;">▸ FX:</span><br/>
+      · скан-линии CRT-монитора<br/>
+      · радиочастотное зерно (turbulence noise)<br/>
+      · glow вокруг активных элементов<br/>
+      · сетки, рамки, индикаторы как в приёмнике<br/>
+      · никаких градиентов, только точечный накал
+    </div>
+  </div>
+</div>
+
+<div style="text-align:center;font-family:'JetBrains Mono',monospace;font-style:normal;font-size:11px;color:#3a2a10;margin-bottom:60px;letter-spacing:4px;">— END OF TRANSMISSION · v3 —</div>
+
+</body>
+</html>
