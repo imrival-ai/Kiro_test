@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI × UGC — Визуалы для Miro</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:'Inter',sans-serif;
+  padding:64px 24px;
+  color:#f0e8ff;
+  min-height:100vh;
+  background:linear-gradient(180deg,#0a0408 0%,#180820 35%,#3a2058 65%,#a888c8 90%,#f0e8ff 100%);
+}
+.kicker { text-align:center; font-size:11px; letter-spacing:6px; text-transform:uppercase; margin-bottom:8px; font-family:'JetBrains Mono',monospace; color:#ff5050; }
+.h1 { text-align:center; font-size:48px; font-weight:300; margin-bottom:8px; letter-spacing:-2px; color:#ffffff; }
+.h1 b { font-weight:800; background:linear-gradient(90deg,#ff5050,#b890d8); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+.lead { text-align:center; font-size:14px; color:#a888c8; margin-bottom:8px; max-width:620px; margin-left:auto; margin-right:auto; line-height:1.7; font-weight:400; }
+.divider { width:120px; height:2px; background:linear-gradient(90deg,transparent,#ff5050,#b890d8,transparent); margin:24px auto 64px; }
+.section-num { font-size:10px; letter-spacing:5px; font-family:'JetBrains Mono',monospace; margin-bottom:6px; text-align:center; }
+.section-name { font-size:15px; font-weight:500; margin-bottom:28px; text-align:center; letter-spacing:1px; }
+.row { display:flex; flex-wrap:wrap; gap:32px; justify-content:center; margin-bottom:80px; }
+.card { width:380px; height:380px; border-radius:16px; overflow:hidden; position:relative; flex-shrink:0; box-shadow:0 30px 80px rgba(0,0,0,0.6); }
+.card.wide { width:820px; height:420px; }
+.card.tall { width:420px; height:480px; }
+.card.xl { width:820px; height:520px; }
+.noise { position:absolute; inset:0; opacity:0.15; background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><filter id=%22n%22><feTurbulence baseFrequency=%220.9%22/><feColorMatrix values=%220 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0%22/></filter><rect width=%22100%22 height=%22100%22 filter=%22url(%23n)%22/></svg>'); mix-blend-mode:overlay; pointer-events:none; }
+.group-title { text-align:center; font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:8px; text-transform:uppercase; color:#ff8080; margin:120px 0 40px; padding-top:40px; border-top:1px solid rgba(184,144,216,0.15); }
+.group-title:first-of-type { margin-top:40px; padding-top:0; border-top:none; }
+.mono { font-family:'JetBrains Mono',monospace; }
+</style>
+</head>
+<body>
+
+<div class="kicker">· ai × ugc · stream visuals · v1 ·</div>
+<div class="h1">визуальные <b>блоки</b> для miro</div>
+<div class="lead">19 карточек по структуре стрима. Каждая — самостоятельная единица для доски.<br/>Скриншоть нужный блок и кидай в Miro по сценарию.</div>
+<div class="divider"></div>
+
+
+<!-- ════════════════ ГРУППА 1: ОБЛОЖКИ И ГЛАВНЫЕ ТЕЗИСЫ ════════════════ -->
+<div class="group-title">— group 01 / обложки —</div>
+
+
+<!-- ──────── 01: ОБЛОЖКА СТРИМА ──────── -->
+<div class="section-num" style="color:#ff5050;">— 01 / cover —</div>
+<div class="section-name" style="color:#ff8080;">обложка стрима</div>
+<div class="row">
+<div class="card" style="background:linear-gradient(160deg,#0d0408 0%,#1f0510 60%,#2a0815 100%);">
+  <div class="noise"></div>
+  <div style="position:absolute;top:30%;left:50%;transform:translate(-50%,-50%);width:340px;height:240px;background:radial-gradient(ellipse,rgba(255,80,80,0.3) 0%,transparent 70%);filter:blur(25px);"></div>
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.5;" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="80" cy="100" r="2" fill="#ff5050"/><circle cx="280" cy="80" r="2.5" fill="#ff3030"/>
+    <circle cx="160" cy="160" r="2" fill="#ff7070"/><circle cx="320" cy="220" r="2" fill="#ff5050"/>
+    <circle cx="60" cy="260" r="2" fill="#ff3030"/><circle cx="220" cy="300" r="2" fill="#ff5050"/>
+  </svg>
+  <div style="position:relative;z-index:2;padding:34px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div class="mono" style="font-size:10px;color:#ff5050;letter-spacing:3px;">// stream_001</div>
+      <div style="display:flex;gap:4px;align-items:center;">
+        <div style="width:6px;height:6px;border-radius:50%;background:#ff3030;box-shadow:0 0 8px #ff5050;"></div>
+        <div class="mono" style="font-size:9px;color:#ff5050;letter-spacing:2px;">LIVE</div>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:12px;color:#ff8080;letter-spacing:2px;margin-bottom:10px;font-weight:500;">ПРЯМОЙ ЭФИР · 2026</div>
+      <div style="font-size:38px;font-weight:800;line-height:1.05;letter-spacing:-1.5px;color:#fff5f0;">AI × <span style="color:#ff5050;font-weight:400;">UGC</span><br/>как делать<br/>контент в 10×</div>
+    </div>
+    <div>
+      <div style="height:1px;background:linear-gradient(90deg,#ff3030,transparent);margin-bottom:14px;opacity:0.5;"></div>
+      <div class="mono" style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:3px;">
+        <div style="color:#ff8080;">Александр</div>
+        <div style="color:#ff3030;">▶ войти</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- ──────── 02: ГЛАВНЫЙ ТЕЗИС × 10 ──────── -->
+<div class="section-num" style="color:#ff6090;">— 02 / thesis —</div>
+<div class="section-name" style="color:#ff8090;">главный тезис стрима</div>
+<div class="row">
+<div class="card" style="background:linear-gradient(160deg,#1a0814 0%,#3a0a30 60%,#4a1448 100%);">
+  <div class="noise"></div>
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,80,140,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,80,140,0.04) 1px,transparent 1px);background-size:24px 24px;"></div>
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:340px;height:240px;background:radial-gradient(ellipse,rgba(255,80,112,0.25) 0%,transparent 70%);filter:blur(30px);"></div>
+  <div style="position:relative;z-index:2;padding:34px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;">
+      <div style="color:#ff80b0;">// core_thesis</div>
+      <div style="color:#a888c8;">key_idea</div>
+    </div>
+    <div style="text-align:center;">
+      <div style="font-size:13px;color:#ff8090;letter-spacing:3px;margin-bottom:18px;text-transform:uppercase;font-weight:500;">главное за 60 минут</div>
+      <div style="font-size:120px;font-weight:900;line-height:1;letter-spacing:-6px;background:linear-gradient(135deg,#ff5050 0%,#d860a0 50%,#b890d8 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:16px;">×10</div>
+      <div style="font-size:18px;color:#ffffff;line-height:1.4;font-weight:500;">ИИ <span style="color:#a888c8;text-decoration:line-through;">не заменяет</span><br/>живого человека.<br/>Он делает его <span style="color:#ff80b0;font-weight:800;">в 10 раз продуктивнее</span></div>
+    </div>
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;">
+      <div style="color:#a888c8;">Александр</div>
+      <div style="color:#ff80b0;">→ запомни</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- ──────── 03: ФИНАЛЬНАЯ ФРАЗА ──────── -->
+<div class="section-num" style="color:#d860a0;">— 03 / finale —</div>
+<div class="section-name" style="color:#e090c0;">финальная фраза (3 кодовых слова)</div>
+<div class="row">
+<div class="card wide" style="background:linear-gradient(180deg,#3a0a30 0%,#4a1850 50%,#5a2870 100%);">
+  <div class="noise"></div>
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:780px;height:280px;background:radial-gradient(ellipse,rgba(216,96,160,0.25) 0%,transparent 70%);filter:blur(20px);"></div>
+  <div style="position:absolute;top:60px;left:30px;right:30px;height:1px;background:linear-gradient(90deg,transparent,#ff5070 30%,#d860a0 50%,#b890d8 70%,transparent);"></div>
+  <div style="position:relative;z-index:2;padding:34px 40px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;">
+      <div style="color:#d860a0;">// 3 кодовых слова → 1 фраза</div>
+      <div style="color:#b890d8;">собери и забери гайды</div>
+    </div>
+    <div style="display:flex;justify-content:space-around;align-items:center;gap:20px;">
+      <div style="text-align:center;flex:1;">
+        <div class="mono" style="font-size:10px;color:#a888c8;letter-spacing:3px;margin-bottom:10px;">слово 1 · блок 2</div>
+        <div style="font-size:42px;font-weight:800;letter-spacing:-1.5px;background:linear-gradient(135deg,#ff5050,#ff80a0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">нейросети</div>
+      </div>
+      <div style="font-size:32px;color:#b890d8;font-weight:300;opacity:0.5;">+</div>
+      <div style="text-align:center;flex:1;">
+        <div class="mono" style="font-size:10px;color:#a888c8;letter-spacing:3px;margin-bottom:10px;">слово 2 · демо</div>
+        <div style="font-size:42px;font-weight:800;letter-spacing:-1.5px;background:linear-gradient(135deg,#ff80a0,#d860a0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">захватят</div>
+      </div>
+      <div style="font-size:32px;color:#b890d8;font-weight:300;opacity:0.5;">+</div>
+      <div style="text-align:center;flex:1;">
+        <div class="mono" style="font-size:10px;color:#a888c8;letter-spacing:3px;margin-bottom:10px;">слово 3 · оффер</div>
+        <div style="font-size:42px;font-weight:800;letter-spacing:-1.5px;background:linear-gradient(135deg,#d860a0,#b890d8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">мир</div>
+      </div>
+    </div>
+    <div style="text-align:center;">
+      <div class="mono" style="font-size:11px;color:#e090c0;letter-spacing:4px;margin-bottom:8px;">= итоговая фраза =</div>
+      <div style="font-size:24px;font-weight:600;color:#ffffff;letter-spacing:-0.5px;">«нейросети захватят мир»</div>
+      <div class="mono" style="font-size:10px;color:#a888c8;letter-spacing:3px;margin-top:8px;">→ 3 гайда + промокод 35%</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+</body>
+</html>
+
+
+
+<!-- ════════════════ ГРУППА 2: РАНЬШЕ vs СЕЙЧАС ════════════════ -->
+<div class="group-title">— group 02 / раньше vs сейчас —</div>
+
+
+<!-- ──────── 04: СТАТИСТИКА 88 / 50 / 4-6× ──────── -->
+<div class="section-num" style="color:#9070b8;">— 04 / numbers —</div>
+<div class="section-name" style="color:#7050a0;">факты 2025–2026</div>
+<div class="row">
+<div class="card wide" style="background:linear-gradient(160deg,#5a3878 0%,#7858a0 50%,#a888c8 100%);color:#2a1040;">
+  <div class="noise"></div>
+  <div style="position:relative;z-index:2;padding:36px 44px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
+    <div class="mono" style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:3px;">
+      <div style="color:#3a1058;">// market_data · 2025–2026</div>
+      <div style="border:1px solid rgba(74,26,112,0.4);padding:3px 10px;border-radius:20px;font-size:9px;color:#3a1058;letter-spacing:2px;background:rgba(255,255,255,0.12);">верифицировано</div>
+    </div>
+    <div style="display:flex;justify-content:space-around;align-items:flex-end;gap:30px;">
+      <div style="text-align:center;flex:1;">
+        <div style="font-size:88px;font-weight:900;line-height:1;letter-spacing:-4px;color:#2a0840;">88<span style="font-size:48px;font-weight:300;">%</span></div>
+        <div style="height:1px;width:80px;background:#3a1058;margin:8px auto;opacity:0.4;"></div>
+        <div style="font-size:13px;color:#2a1040;line-height:1.4;font-weight:500;">маркетологов уже<br/>используют ИИ в соцсетях</div>
+      </div>
+      <div style="text-align:center;flex:1;">
+        <div style="font-size:88px;font-weight:900;line-height:1;letter-spacing:-4px;color:#2a0840;">½</div>
+        <div style="height:1px;width:80px;background:#3a1058;margin:8px auto;opacity:0.4;"></div>
+        <div style="font-size:13px;color:#2a1040;line-height:1.4;font-weight:500;">из них фиксируют<br/>рост эффективности</div>
+      </div>
+      <div style="text-align:center;flex:1;">
+        <div style="font-size:88px;font-weight:900;line-height:1;letter-spacing:-4px;color:#2a0840;">4–6<span style="font-size:48px;font-weight:300;">×</span></div>
+        <div style="height:1px;width:80px;background:#3a1058;margin:8px auto;opacity:0.4;"></div>
+        <div style="font-size:13px;color:#2a1040;line-height:1.4;font-weight:500;">быстрее путь<br/>от идеи до запуска</div>
+      </div>
+    </div>
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;">
+      <div style="color:#4a2068;">источники: HubSpot · Statista · Sprout Social</div>
+      <div style="color:#3a1058;font-weight:700;">2025–26</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<!-- ──────── 05: СРАВНЕНИЕ ЦЕПОЧЕК РАНЬШЕ vs СЕЙЧАС ──────── -->
+<div class="section-num" style="color:#ff5050;">— 05 / before vs now —</div>
+<div class="section-name" style="color:#ff8080;">проверка одной гипотезы</div>
+<div class="row">
+<div class="card xl" style="background:linear-gradient(160deg,#0d0408 0%,#1f0510 50%,#2a0815 100%);">
+  <div class="noise"></div>
+  <div style="position:relative;z-index:2;padding:36px 40px;height:100%;display:flex;flex-direction:column;">
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;margin-bottom:24px;">
+      <div style="color:#ff5050;">// тест одной гипотезы</div>
+      <div style="color:#a888c8;">временная разница</div>
+    </div>
+
+    <!-- РАНЬШЕ -->
+    <div style="margin-bottom:20px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+        <div class="mono" style="font-size:11px;color:#ff5050;letter-spacing:3px;font-weight:700;">РАНЬШЕ</div>
+        <div style="height:1px;flex:1;background:linear-gradient(90deg,#ff5050,transparent);"></div>
+        <div class="mono" style="font-size:14px;color:#ff5050;font-weight:700;letter-spacing:1px;">~ 1 НЕДЕЛЯ</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+        <div style="background:rgba(255,80,80,0.12);border:1px solid rgba(255,80,80,0.3);padding:6px 10px;border-radius:6px;font-size:11px;color:#ff8080;font-weight:500;">идея</div>
+        <span style="color:#ff5050;opacity:0.5;">→</span>
+        <div style="background:rgba(255,80,80,0.12);border:1px solid rgba(255,80,80,0.3);padding:6px 10px;border-radius:6px;font-size:11px;color:#ff8080;font-weight:500;">текст</div>
+        <span style="color:#ff5050;opacity:0.5;">→</span>
+        <div style="background:rgba(255,80,80,0.12);border:1px solid rgba(255,80,80,0.3);padding:6px 10px;border-radius:6px;font-size:11px;color:#ff8080;font-weight:500;">визуал</div>
+        <span style="color:#ff5050;opacity:0.5;">→</span>
+        <div style="background:rgba(255,80,80,0.12);border:1px solid rgba(255,80,80,0.3);padding:6px 10px;border-radius:6px;font-size:11px;color:#ff8080;font-weight:500;">согласовать</div>
+        <span style="color:#ff5050;opacity:0.5;">→</span>
+        <div style="background:rgba(255,80,80,0.12);border:1px solid rgba(255,80,80,0.3);padding:6px 10px;border-radius:6px;font-size:11px;color:#ff8080;font-weight:500;">монтаж</div>
+        <span style="color:#ff5050;opacity:0.5;">→</span>
+        <div style="background:rgba(255,80,80,0.12);border:1px solid rgba(255,80,80,0.3);padding:6px 10px;border-radius:6px;font-size:11px;color:#ff8080;font-weight:500;">выгрузить</div>
+        <span style="color:#ff5050;opacity:0.5;">→</span>
+        <div style="background:rgba(255,80,80,0.12);border:1px solid rgba(255,80,80,0.3);padding:6px 10px;border-radius:6px;font-size:11px;color:#ff8080;font-weight:500;">ждать</div>
+        <span style="color:#ff5050;opacity:0.5;">→</span>
+        <div style="background:rgba(255,80,80,0.12);border:1px solid rgba(255,80,80,0.3);padding:6px 10px;border-radius:6px;font-size:11px;color:#ff8080;font-weight:500;">выводы</div>
+      </div>
+      <div style="font-size:13px;color:#a888c8;margin-top:10px;font-style:italic;">→ за неделю: 1 гипотеза</div>
+    </div>
+
+    <!-- VS разделитель -->
+    <div style="display:flex;align-items:center;gap:14px;margin:8px 0 20px;">
+      <div style="height:1px;flex:1;background:linear-gradient(90deg,transparent,#b890d8 50%,transparent);"></div>
+      <div class="mono" style="font-size:14px;color:#b890d8;letter-spacing:6px;font-weight:700;">VS</div>
+      <div style="height:1px;flex:1;background:linear-gradient(90deg,transparent,#b890d8 50%,transparent);"></div>
+    </div>
+
+    <!-- СЕЙЧАС -->
+    <div>
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+        <div class="mono" style="font-size:11px;color:#b890d8;letter-spacing:3px;font-weight:700;">СЕЙЧАС · С ИИ</div>
+        <div style="height:1px;flex:1;background:linear-gradient(90deg,#b890d8,transparent);"></div>
+        <div class="mono" style="font-size:14px;color:#b890d8;font-weight:700;letter-spacing:1px;">~ 1 ВЕЧЕР</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+        <div style="background:rgba(184,144,216,0.15);border:1px solid rgba(184,144,216,0.4);padding:6px 10px;border-radius:6px;font-size:11px;color:#d8b8e8;font-weight:500;">5 идей</div>
+        <span style="color:#b890d8;opacity:0.5;">→</span>
+        <div style="background:rgba(184,144,216,0.15);border:1px solid rgba(184,144,216,0.4);padding:6px 10px;border-radius:6px;font-size:11px;color:#d8b8e8;font-weight:500;">5 сценариев</div>
+        <span style="color:#b890d8;opacity:0.5;">→</span>
+        <div style="background:rgba(184,144,216,0.15);border:1px solid rgba(184,144,216,0.4);padding:6px 10px;border-radius:6px;font-size:11px;color:#d8b8e8;font-weight:500;">5 видео</div>
+        <span style="color:#b890d8;opacity:0.5;">→</span>
+        <div style="background:rgba(184,144,216,0.15);border:1px solid rgba(184,144,216,0.4);padding:6px 10px;border-radius:6px;font-size:11px;color:#d8b8e8;font-weight:500;">запуск</div>
+        <span style="color:#b890d8;opacity:0.5;">→</span>
+        <div style="background:rgba(184,144,216,0.15);border:1px solid rgba(184,144,216,0.4);padding:6px 10px;border-radius:6px;font-size:11px;color:#d8b8e8;font-weight:500;">аналитика к утру</div>
+        <span style="color:#b890d8;opacity:0.5;">→</span>
+        <div style="background:linear-gradient(135deg,#a040b8,#6b2890);padding:6px 10px;border-radius:6px;font-size:11px;color:#fff;font-weight:700;">масштабируем что зашло</div>
+      </div>
+      <div style="font-size:13px;color:#d8b8e8;margin-top:10px;font-style:italic;">→ за вечер: 5 гипотез · к утру: первая статистика</div>
+    </div>
+
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;margin-top:auto;padding-top:16px;">
+      <div style="color:#a888c8;">скорость × 7</div>
+      <div style="color:#ff8080;">→ выигрывает не команда — выигрывает стек</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<!-- ════════════════ ГРУППА 3: UGC + ИИ ════════════════ -->
+<div class="group-title">— group 03 / ugc + ии —</div>
+
+
+<!-- ──────── 06: ЧТО ТАКОЕ UGC ──────── -->
+<div class="section-num" style="color:#ff5050;">— 06 / definition —</div>
+<div class="section-name" style="color:#ff8080;">что такое ugc</div>
+<div class="row">
+<div class="card" style="background:linear-gradient(160deg,#0d0408 0%,#1f0510 60%,#2a0815 100%);">
+  <div class="noise"></div>
+  <div style="position:absolute;top:30%;left:50%;transform:translate(-50%,-50%);width:340px;height:240px;background:radial-gradient(ellipse,rgba(255,80,80,0.25) 0%,transparent 70%);filter:blur(25px);"></div>
+  <div style="position:relative;z-index:2;padding:30px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;">
+      <div style="color:#ff5050;">// dictionary</div>
+      <div style="color:#ff8080;">№ 001</div>
+    </div>
+    <div style="text-align:center;">
+      <div style="font-size:11px;color:#a888c8;letter-spacing:3px;margin-bottom:14px;text-transform:uppercase;font-weight:500;">user generated content</div>
+      <div style="font-size:64px;font-weight:800;line-height:1;letter-spacing:-3px;background:linear-gradient(135deg,#ff5050 0%,#d860a0 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:18px;">UGC</div>
+      <div style="font-size:15px;color:#ffffff;line-height:1.55;font-weight:400;">контент от <span style="color:#ff80a0;font-weight:700;">живых людей</span>,<br/>а не от брендов.<br/><br/>человек в кадре говорит честно,<br/>показывает продукт,<br/>делится опытом.</div>
+    </div>
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;">
+      <div style="color:#a888c8;">"попробовала — вот результат"</div>
+      <div style="color:#ff5050;">→ верят</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- ──────── 07: СТАТИСТИКА UGC ──────── -->
+<div class="section-num" style="color:#ff6090;">— 07 / why it works —</div>
+<div class="section-name" style="color:#ff8090;">почему ugc работает лучше рекламы</div>
+<div class="row">
+<div class="card wide" style="background:linear-gradient(160deg,#1a0814 0%,#3a0a30 60%,#4a1448 100%);">
+  <div class="noise"></div>
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,80,140,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,80,140,0.04) 1px,transparent 1px);background-size:24px 24px;"></div>
+  <div style="position:relative;z-index:2;padding:36px 44px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;">
+      <div style="color:#ff80b0;">// trust_metrics</div>
+      <div style="color:#a888c8;">UGC vs Brand Ads</div>
+    </div>
+    <div style="display:flex;justify-content:space-around;align-items:center;gap:40px;">
+      <div style="text-align:center;flex:1;">
+        <div class="mono" style="font-size:10px;color:#ff8090;letter-spacing:3px;margin-bottom:8px;">ДОВЕРИЕ</div>
+        <div style="font-size:96px;font-weight:900;line-height:1;letter-spacing:-4px;background:linear-gradient(135deg,#ff5070,#ff80b0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">2.4<span style="font-size:48px;font-weight:300;">×</span></div>
+        <div style="height:1px;width:100px;background:#ff5070;margin:10px auto;opacity:0.4;"></div>
+        <div style="font-size:13px;color:#fff;line-height:1.4;font-weight:500;">UGC достовернее<br/>для аудитории</div>
+      </div>
+      <div style="width:1px;height:200px;background:linear-gradient(180deg,transparent,rgba(216,96,160,0.4),transparent);"></div>
+      <div style="text-align:center;flex:1;">
+        <div class="mono" style="font-size:10px;color:#ff8090;letter-spacing:3px;margin-bottom:8px;">КЛИКАБЕЛЬНОСТЬ</div>
+        <div style="font-size:96px;font-weight:900;line-height:1;letter-spacing:-4px;background:linear-gradient(135deg,#d860a0,#b890d8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">3–4<span style="font-size:48px;font-weight:300;">×</span></div>
+        <div style="height:1px;width:100px;background:#d860a0;margin:10px auto;opacity:0.4;"></div>
+        <div style="font-size:13px;color:#fff;line-height:1.4;font-weight:500;">CTR выше,<br/>чем у "правильной" рекламы</div>
+      </div>
+    </div>
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;">
+      <div style="color:#a888c8;">источники: Nielsen · Stackla · EnTribe</div>
+      <div style="color:#ff80b0;">→ живой человек продаёт лучше</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- ──────── 08: ТАЙМЛАЙН 2022 → 2026 ──────── -->
+<div class="section-num" style="color:#d860a0;">— 08 / timeline —</div>
+<div class="section-name" style="color:#e090c0;">эволюция ии в контенте</div>
+<div class="row">
+<div class="card xl" style="background:linear-gradient(180deg,#3a0a30 0%,#4a1850 50%,#5a2870 100%);">
+  <div class="noise"></div>
+  <div style="position:relative;z-index:2;padding:36px 44px;height:100%;display:flex;flex-direction:column;">
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;margin-bottom:30px;">
+      <div style="color:#d860a0;">// ai_in_content_evolution</div>
+      <div style="color:#b890d8;">3 эпохи · 4 года</div>
+    </div>
+
+    <!-- Линия таймлайна -->
+    <div style="position:relative;height:2px;background:linear-gradient(90deg,#ff5050 0%,#d860a0 50%,#b890d8 100%);margin:50px 40px 50px;">
+      <div style="position:absolute;left:0%;top:-7px;width:14px;height:14px;border-radius:50%;background:#ff5050;box-shadow:0 0 14px #ff5050;"></div>
+      <div style="position:absolute;left:50%;top:-7px;transform:translateX(-50%);width:14px;height:14px;border-radius:50%;background:#d860a0;box-shadow:0 0 14px #d860a0;"></div>
+      <div style="position:absolute;right:0%;top:-7px;width:14px;height:14px;border-radius:50%;background:#b890d8;box-shadow:0 0 14px #b890d8;"></div>
+    </div>
+
+    <!-- 3 эпохи -->
+    <div style="display:flex;justify-content:space-between;gap:20px;">
+      <div style="flex:1;text-align:left;">
+        <div class="mono" style="font-size:13px;color:#ff5050;letter-spacing:2px;font-weight:700;margin-bottom:8px;">2022–2023</div>
+        <div style="font-size:16px;color:#fff;font-weight:600;margin-bottom:10px;line-height:1.3;">ИИ как<br/>текстовый помощник</div>
+        <div style="font-size:12px;color:#ffb0b0;line-height:1.5;">«сделай мне пост»<br/>«придумай заголовок»<br/><span style="color:#a888c8;font-style:italic;">базовый копирайтинг</span></div>
+      </div>
+      <div style="flex:1;text-align:left;">
+        <div class="mono" style="font-size:13px;color:#d860a0;letter-spacing:2px;font-weight:700;margin-bottom:8px;">2024</div>
+        <div style="font-size:16px;color:#fff;font-weight:600;margin-bottom:10px;line-height:1.3;">ИИ заходит<br/>в видео</div>
+        <div style="font-size:12px;color:#e8a0d0;line-height:1.5;">Runway · Kling · ElevenLabs<br/>нарезка · субтитры · картинки<br/><span style="color:#a888c8;font-style:italic;">первые рабочие модели</span></div>
+      </div>
+      <div style="flex:1;text-align:left;">
+        <div class="mono" style="font-size:13px;color:#b890d8;letter-spacing:2px;font-weight:700;margin-bottom:8px;">2025–2026</div>
+        <div style="font-size:16px;color:#fff;font-weight:600;margin-bottom:10px;line-height:1.3;">ИИ закрывает<br/>всю цепочку</div>
+        <div style="font-size:12px;color:#d8b8e8;line-height:1.5;">HeyGen · Captions · Pika · Claude<br/>от сценария до аналитики<br/><span style="color:#fff;font-weight:700;">→ мы здесь</span></div>
+      </div>
+    </div>
+
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;margin-top:auto;padding-top:20px;">
+      <div style="color:#a888c8;">от помощника → к стеку</div>
+      <div style="color:#b890d8;">мы — в третьей эпохе</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<!-- ════════════════ ГРУППА 4: РОЛИ ИИ В UGC-ЦЕПОЧКЕ ════════════════ -->
+<div class="group-title">— group 04 / роли ии —</div>
+
+
+<!-- ──────── 09: ЦЕПОЧКА UGC ──────── -->
+<div class="section-num" style="color:#9070b8;">— 09 / pipeline —</div>
+<div class="section-name" style="color:#7050a0;">цепочка ugc — что закрывает ии</div>
+<div class="row">
+<div class="card xl" style="background:linear-gradient(180deg,#f0e8f8 0%,#fafafe 100%);color:#2a0840;border:1px solid #d8c8e8;">
+  <div class="noise" style="opacity:0.06;"></div>
+  <div style="position:relative;z-index:2;padding:36px 40px;height:100%;display:flex;flex-direction:column;">
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;margin-bottom:24px;">
+      <div style="color:#6b2890;">// ugc_pipeline · ai_coverage</div>
+      <div style="color:#9070b8;">6 этапов</div>
+    </div>
+    <div style="font-size:20px;font-weight:700;color:#2a0840;line-height:1.3;margin-bottom:32px;">От <span style="color:#ff5050;">идеи</span> до <span style="color:#6b2890;">аналитики</span> — ИИ закрывает каждый этап</div>
+
+    <div style="flex:1;display:flex;justify-content:space-between;align-items:center;gap:8px;">
+
+      <div style="flex:1;text-align:center;">
+        <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#ff5050,#cc2030);box-shadow:0 0 20px rgba(255,80,80,0.4);display:flex;align-items:center;justify-content:center;font-size:14px;color:#fff;font-weight:700;margin:0 auto 14px;">01</div>
+        <div style="font-size:14px;font-weight:700;color:#2a0840;margin-bottom:4px;">Идея</div>
+        <div class="mono" style="font-size:9px;color:#cc2030;letter-spacing:1px;">Claude · GPT</div>
+      </div>
+
+      <div style="flex:0;color:#d8c8e8;font-size:18px;">→</div>
+
+      <div style="flex:1;text-align:center;">
+        <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#ff80a0,#c8408a);box-shadow:0 0 18px rgba(255,128,160,0.3);display:flex;align-items:center;justify-content:center;font-size:14px;color:#fff;font-weight:700;margin:0 auto 14px;">02</div>
+        <div style="font-size:14px;font-weight:700;color:#2a0840;margin-bottom:4px;">Сценарий</div>
+        <div class="mono" style="font-size:9px;color:#c8408a;letter-spacing:1px;">Claude · Gemini</div>
+      </div>
+
+      <div style="flex:0;color:#d8c8e8;font-size:18px;">→</div>
+
+      <div style="flex:1;text-align:center;">
+        <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#d860a0,#a040b8);box-shadow:0 0 18px rgba(216,96,160,0.4);display:flex;align-items:center;justify-content:center;font-size:14px;color:#fff;font-weight:700;margin:0 auto 14px;">03</div>
+        <div style="font-size:14px;font-weight:700;color:#2a0840;margin-bottom:4px;">Съёмка</div>
+        <div class="mono" style="font-size:9px;color:#a040b8;letter-spacing:1px;">MJ · Flux · HeyGen</div>
+      </div>
+
+      <div style="flex:0;color:#d8c8e8;font-size:18px;">→</div>
+
+      <div style="flex:1;text-align:center;">
+        <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#a040b8,#6b2890);box-shadow:0 0 20px rgba(160,64,184,0.4);display:flex;align-items:center;justify-content:center;font-size:14px;color:#fff;font-weight:700;margin:0 auto 14px;">04</div>
+        <div style="font-size:14px;font-weight:700;color:#2a0840;margin-bottom:4px;">Монтаж</div>
+        <div class="mono" style="font-size:9px;color:#6b2890;letter-spacing:1px;">Runway · Kling · Pika</div>
+      </div>
+
+      <div style="flex:0;color:#d8c8e8;font-size:18px;">→</div>
+
+      <div style="flex:1;text-align:center;">
+        <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#7050a0,#4a1858);box-shadow:0 0 18px rgba(112,80,160,0.3);display:flex;align-items:center;justify-content:center;font-size:14px;color:#fff;font-weight:700;margin:0 auto 14px;">05</div>
+        <div style="font-size:14px;font-weight:700;color:#2a0840;margin-bottom:4px;">Публикация</div>
+        <div class="mono" style="font-size:9px;color:#4a1858;letter-spacing:1px;">Captions · Buffer</div>
+      </div>
+
+      <div style="flex:0;color:#d8c8e8;font-size:18px;">→</div>
+
+      <div style="flex:1;text-align:center;">
+        <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#3a1858,#1a0838);box-shadow:0 0 18px rgba(58,24,88,0.4);display:flex;align-items:center;justify-content:center;font-size:14px;color:#fff;font-weight:700;margin:0 auto 14px;">06</div>
+        <div style="font-size:14px;font-weight:700;color:#2a0840;margin-bottom:4px;">Аналитика</div>
+        <div class="mono" style="font-size:9px;color:#1a0838;letter-spacing:1px;">GPT · связки</div>
+      </div>
+    </div>
+
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;margin-top:auto;padding-top:24px;">
+      <div style="color:#7050a0;">раньше: целый отдел</div>
+      <div style="color:#4a1870;font-weight:700;">сейчас: 1 человек + стек</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<!-- ──────── 10/11/12: ТРИ РОЛИ ИИ ──────── -->
+<div class="section-num" style="color:#ff5050;">— 10–12 / three roles —</div>
+<div class="section-name" style="color:#ff8080;">три роли ии в ugc</div>
+<div class="row">
+
+<!-- РОЛЬ 1: СЦЕНАРИСТ -->
+<div class="card tall" style="background:linear-gradient(160deg,#0d0408 0%,#2a0815 60%,#3a1020 100%);">
+  <div class="noise"></div>
+  <div style="position:absolute;top:30%;left:50%;transform:translate(-50%,-50%);width:340px;height:200px;background:radial-gradient(ellipse,rgba(255,80,80,0.2) 0%,transparent 70%);filter:blur(25px);"></div>
+  <div style="position:relative;z-index:2;padding:30px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
+    <div>
+      <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;margin-bottom:20px;">
+        <div style="color:#ff5050;">// role_01</div>
+        <div style="color:#ff8080;">сценарий</div>
+      </div>
+      <div style="font-size:11px;color:#ff8080;letter-spacing:3px;margin-bottom:10px;font-weight:500;">РОЛЬ № 1</div>
+      <div style="font-size:30px;font-weight:800;line-height:1.05;letter-spacing:-1px;color:#fff;margin-bottom:6px;">Сценарист<br/>и режиссёр</div>
+      <div style="font-size:13px;color:#a888c8;line-height:1.5;font-style:italic;">убирает «ну... мне понравилось, советую»</div>
+    </div>
+    <div>
+      <div style="height:1px;background:linear-gradient(90deg,#ff5050,transparent);margin-bottom:14px;opacity:0.4;"></div>
+      <div style="font-size:12px;color:#ffb0b0;line-height:1.7;margin-bottom:14px;">
+        ✦ острый хук на 3 сек<br/>
+        ✦ структура: проблема → результат<br/>
+        ✦ 3–4 формулировки на каждый блок<br/>
+        ✦ скелет, который ты наполнишь живым опытом
+      </div>
+      <div class="mono" style="display:flex;gap:6px;flex-wrap:wrap;">
+        <span style="background:rgba(255,80,80,0.15);border:1px solid rgba(255,80,80,0.3);padding:3px 8px;border-radius:4px;font-size:10px;color:#ff8080;letter-spacing:1px;">Claude</span>
+        <span style="background:rgba(255,80,80,0.15);border:1px solid rgba(255,80,80,0.3);padding:3px 8px;border-radius:4px;font-size:10px;color:#ff8080;letter-spacing:1px;">ChatGPT</span>
+        <span style="background:rgba(255,80,80,0.15);border:1px solid rgba(255,80,80,0.3);padding:3px 8px;border-radius:4px;font-size:10px;color:#ff8080;letter-spacing:1px;">Gemini</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- РОЛЬ 2: ОПЕРАТОР И МОНТАЖЁР -->
+<div class="card tall" style="background:linear-gradient(160deg,#1a0814 0%,#3a0a30 60%,#4a1448 100%);">
+  <div class="noise"></div>
+  <div style="position:absolute;top:30%;left:50%;transform:translate(-50%,-50%);width:340px;height:200px;background:radial-gradient(ellipse,rgba(216,96,160,0.25) 0%,transparent 70%);filter:blur(25px);"></div>
+  <div style="position:relative;z-index:2;padding:30px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
+    <div>
+      <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;margin-bottom:20px;">
+        <div style="color:#d860a0;">// role_02</div>
+        <div style="color:#ff80b0;">съёмка + монтаж</div>
+      </div>
+      <div style="font-size:11px;color:#ff80b0;letter-spacing:3px;margin-bottom:10px;font-weight:500;">РОЛЬ № 2</div>
+      <div style="font-size:30px;font-weight:800;line-height:1.05;letter-spacing:-1px;color:#fff;margin-bottom:6px;">Оператор<br/>и монтажёр</div>
+      <div style="font-size:13px;color:#a888c8;line-height:1.5;font-style:italic;">B-roll, фоны, продукт в действии — без студии</div>
+    </div>
+    <div>
+      <div style="height:1px;background:linear-gradient(90deg,#d860a0,transparent);margin-bottom:14px;opacity:0.4;"></div>
+      <div style="font-size:12px;color:#e8b8d0;line-height:1.7;margin-bottom:14px;">
+        ✦ статичные изображения, упаковка, сцены<br/>
+        ✦ короткие видеофрагменты, эффекты<br/>
+        ✦ озвучка, как у живого человека<br/>
+        ✦ визуальный контекст, где его не хватает
+      </div>
+      <div class="mono" style="display:flex;gap:6px;flex-wrap:wrap;">
+        <span style="background:rgba(216,96,160,0.15);border:1px solid rgba(216,96,160,0.3);padding:3px 8px;border-radius:4px;font-size:10px;color:#ff80b0;letter-spacing:1px;">Midjourney</span>
+        <span style="background:rgba(216,96,160,0.15);border:1px solid rgba(216,96,160,0.3);padding:3px 8px;border-radius:4px;font-size:10px;color:#ff80b0;letter-spacing:1px;">Flux</span>
+        <span style="background:rgba(216,96,160,0.15);border:1px solid rgba(216,96,160,0.3);padding:3px 8px;border-radius:4px;font-size:10px;color:#ff80b0;letter-spacing:1px;">Runway</span>
+        <span style="background:rgba(216,96,160,0.15);border:1px solid rgba(216,96,160,0.3);padding:3px 8px;border-radius:4px;font-size:10px;color:#ff80b0;letter-spacing:1px;">Kling</span>
+        <span style="background:rgba(216,96,160,0.15);border:1px solid rgba(216,96,160,0.3);padding:3px 8px;border-radius:4px;font-size:10px;color:#ff80b0;letter-spacing:1px;">Pika</span>
+        <span style="background:rgba(216,96,160,0.15);border:1px solid rgba(216,96,160,0.3);padding:3px 8px;border-radius:4px;font-size:10px;color:#ff80b0;letter-spacing:1px;">ElevenLabs</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- РОЛЬ 3: АНАЛИТИК -->
+<div class="card tall" style="background:linear-gradient(160deg,#3a0a30 0%,#5a2080 60%,#7050a0 100%);">
+  <div class="noise"></div>
+  <div style="position:absolute;top:30%;left:50%;transform:translate(-50%,-50%);width:340px;height:200px;background:radial-gradient(ellipse,rgba(184,144,216,0.3) 0%,transparent 70%);filter:blur(25px);"></div>
+  <div style="position:relative;z-index:2;padding:30px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
+    <div>
+      <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;margin-bottom:20px;">
+        <div style="color:#b890d8;">// role_03</div>
+        <div style="color:#d8b8e8;">аналитика</div>
+      </div>
+      <div style="font-size:11px;color:#d8b8e8;letter-spacing:3px;margin-bottom:10px;font-weight:500;">РОЛЬ № 3</div>
+      <div style="font-size:30px;font-weight:800;line-height:1.05;letter-spacing:-1px;color:#fff;margin-bottom:6px;">Аналитик</div>
+      <div style="font-size:13px;color:#d8b8e8;line-height:1.5;font-style:italic;">не тонешь в контенте — видишь, что тянет</div>
+    </div>
+    <div>
+      <div style="height:1px;background:linear-gradient(90deg,#b890d8,transparent);margin-bottom:14px;opacity:0.4;"></div>
+      <div style="font-size:12px;color:#e8d8f0;line-height:1.7;margin-bottom:14px;">
+        ✦ досмотры, клики, конверсии по каждому ролику<br/>
+        ✦ закономерности: какой хук зашёл, формат, длина<br/>
+        ✦ топ роликов недели → масштабировать<br/>
+        ✦ гипотезы для следующего теста на основе данных
+      </div>
+      <div class="mono" style="display:flex;gap:6px;flex-wrap:wrap;">
+        <span style="background:rgba(184,144,216,0.15);border:1px solid rgba(184,144,216,0.4);padding:3px 8px;border-radius:4px;font-size:10px;color:#d8b8e8;letter-spacing:1px;">GPT-связки</span>
+        <span style="background:rgba(184,144,216,0.15);border:1px solid rgba(184,144,216,0.4);padding:3px 8px;border-radius:4px;font-size:10px;color:#d8b8e8;letter-spacing:1px;">n8n</span>
+        <span style="background:rgba(184,144,216,0.15);border:1px solid rgba(184,144,216,0.4);padding:3px 8px;border-radius:4px;font-size:10px;color:#d8b8e8;letter-spacing:1px;">Make</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+
+<!-- ──────── 13: СТРУКТУРА UGC-СЦЕНАРИЯ ──────── -->
+<div class="section-num" style="color:#6b2890;">— 13 / scenario —</div>
+<div class="section-name" style="color:#5a2080;">скелет ugc-ролика на 30 сек</div>
+<div class="row">
+<div class="card wide" style="background:linear-gradient(170deg,#c8b8d8 0%,#e0d0e8 50%,#f0e8f4 100%);color:#2a0840;">
+  <div class="noise" style="opacity:0.08;"></div>
+  <div style="position:relative;z-index:2;padding:36px 40px;height:100%;display:flex;flex-direction:column;">
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;margin-bottom:20px;">
+      <div style="color:#6b2890;">// ugc_scenario_blueprint</div>
+      <div style="color:#7050a0;">5 блоков · 30 сек</div>
+    </div>
+    <div style="font-size:18px;font-weight:700;color:#2a0840;line-height:1.3;margin-bottom:24px;">Что вы получаете на выходе из <span style="color:#a040b8;">Claude</span></div>
+
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:space-around;">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#ff5050,#cc2030);box-shadow:0 0 12px rgba(255,80,80,0.4);display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;font-weight:700;flex-shrink:0;">01</div>
+        <div style="flex:1;">
+          <div style="font-size:14px;font-weight:700;color:#2a0840;">Хук</div>
+          <div style="font-size:12px;color:#5a2080;">первые 3 секунды — удержать палец</div>
+        </div>
+        <div class="mono" style="font-size:10px;color:#cc2030;font-weight:700;">0–3 сек</div>
+      </div>
+      <div style="width:1px;height:10px;margin-left:46px;background:linear-gradient(180deg,#ff5050,#d860a0);"></div>
+      <div style="display:flex;align-items:center;gap:14px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#ff80a0,#c8408a);box-shadow:0 0 10px rgba(255,128,160,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;font-weight:700;flex-shrink:0;">02</div>
+        <div style="flex:1;">
+          <div style="font-size:14px;font-weight:700;color:#2a0840;">Проблема</div>
+          <div style="font-size:12px;color:#5a2080;">с чем сталкивался человек до</div>
+        </div>
+        <div class="mono" style="font-size:10px;color:#c8408a;font-weight:700;">3–10 сек</div>
+      </div>
+      <div style="width:1px;height:10px;margin-left:46px;background:linear-gradient(180deg,#d860a0,#a040b8);"></div>
+      <div style="display:flex;align-items:center;gap:14px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#d860a0,#a040b8);box-shadow:0 0 12px rgba(216,96,160,0.4);display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;font-weight:700;flex-shrink:0;">03</div>
+        <div style="flex:1;">
+          <div style="font-size:14px;font-weight:700;color:#2a0840;">Переход</div>
+          <div style="font-size:12px;color:#5a2080;">как нашёл продукт или услугу</div>
+        </div>
+        <div class="mono" style="font-size:10px;color:#a040b8;font-weight:700;">10–18 сек</div>
+      </div>
+      <div style="width:1px;height:10px;margin-left:46px;background:linear-gradient(180deg,#a040b8,#6b2890);"></div>
+      <div style="display:flex;align-items:center;gap:14px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#a040b8,#6b2890);box-shadow:0 0 14px rgba(160,64,184,0.4);display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;font-weight:700;flex-shrink:0;">04</div>
+        <div style="flex:1;">
+          <div style="font-size:14px;font-weight:700;color:#2a0840;">Результат</div>
+          <div style="font-size:12px;color:#5a2080;">конкретный, а не "всё хорошо"</div>
+        </div>
+        <div class="mono" style="font-size:10px;color:#6b2890;font-weight:700;">18–26 сек</div>
+      </div>
+      <div style="width:1px;height:10px;margin-left:46px;background:linear-gradient(180deg,#6b2890,#3a1858);"></div>
+      <div style="display:flex;align-items:center;gap:14px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#7050a0,#3a1858);box-shadow:0 0 10px rgba(112,80,160,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;font-weight:700;flex-shrink:0;">05</div>
+        <div style="flex:1;">
+          <div style="font-size:14px;font-weight:700;color:#2a0840;">Призыв</div>
+          <div style="font-size:12px;color:#5a2080;">один простой шаг</div>
+        </div>
+        <div class="mono" style="font-size:10px;color:#3a1858;font-weight:700;">26–30 сек</div>
+      </div>
+    </div>
+
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;margin-top:18px;">
+      <div style="color:#7050a0;">+ 3–4 формулировки на каждый блок</div>
+      <div style="color:#4a1870;font-weight:700;">→ выбираешь свою</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<!-- ════════════════ ГРУППА 5: КЕЙС ════════════════ -->
+<div class="group-title">— group 05 / кейс —</div>
+
+
+<!-- ──────── 14: РОСТ 7к → 84к ──────── -->
+<div class="section-num" style="color:#ff5050;">— 14 / case —</div>
+<div class="section-name" style="color:#ff8080;">кейс · 7к → 84к за неделю</div>
+<div class="row">
+<div class="card xl" style="background:linear-gradient(160deg,#0d0408 0%,#1f0510 50%,#3a0a30 100%);">
+  <div class="noise"></div>
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,80,140,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,80,140,0.04) 1px,transparent 1px);background-size:24px 24px;"></div>
+  <div style="position:absolute;top:50%;left:70%;transform:translate(-50%,-50%);width:340px;height:240px;background:radial-gradient(ellipse,rgba(255,80,80,0.2) 0%,transparent 70%);filter:blur(30px);"></div>
+  <div style="position:relative;z-index:2;padding:36px 44px;height:100%;display:flex;flex-direction:column;">
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;margin-bottom:24px;">
+      <div style="color:#ff5050;">// case_study · fashion_blog</div>
+      <div style="display:flex;gap:4px;align-items:center;">
+        <div style="width:6px;height:6px;border-radius:50%;background:#ff3030;box-shadow:0 0 8px #ff5050;"></div>
+        <span style="color:#ff5050;letter-spacing:2px;">VERIFIED</span>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:30px;flex:1;">
+      <!-- Левая часть: рост подписчиков -->
+      <div style="flex:1;">
+        <div style="font-size:11px;color:#ff8080;letter-spacing:3px;margin-bottom:14px;font-weight:500;">РОСТ ПОДПИСЧИКОВ</div>
+        <div style="display:flex;align-items:flex-end;gap:14px;margin-bottom:18px;">
+          <div>
+            <div class="mono" style="font-size:10px;color:#a888c8;letter-spacing:2px;margin-bottom:6px;">БЫЛО</div>
+            <div style="font-size:54px;font-weight:800;line-height:1;letter-spacing:-2px;color:#ff8080;">7K</div>
+          </div>
+          <div style="font-size:32px;color:#ff5050;font-weight:300;padding-bottom:8px;">→</div>
+          <div>
+            <div class="mono" style="font-size:10px;color:#ffb0b0;letter-spacing:2px;margin-bottom:6px;">СТАЛО</div>
+            <div style="font-size:84px;font-weight:900;line-height:1;letter-spacing:-3px;background:linear-gradient(135deg,#ff5050,#d860a0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">84K</div>
+          </div>
+        </div>
+        <div style="font-size:13px;color:#fff;line-height:1.5;font-weight:500;margin-bottom:8px;">+ <span style="color:#ff80a0;font-weight:800;">77 000</span> подписчиков за <span style="color:#ff80a0;font-weight:800;">7 дней</span></div>
+        <div style="font-size:12px;color:#a888c8;line-height:1.5;font-style:italic;">блог стоял 2 месяца — не успевала в тренды</div>
+
+        <!-- Mini chart -->
+        <svg style="width:100%;height:60px;margin-top:14px;" viewBox="0 0 300 60">
+          <defs>
+            <linearGradient id="growth" x1="0" x2="1">
+              <stop offset="0%" stop-color="#ff8080" stop-opacity="0.1"/>
+              <stop offset="100%" stop-color="#ff5050" stop-opacity="0.6"/>
+            </linearGradient>
+          </defs>
+          <path d="M 0 50 L 30 48 L 60 47 L 90 46 L 120 44 L 150 38 L 180 28 L 210 18 L 240 10 L 270 6 L 300 4 L 300 60 L 0 60 Z" fill="url(#growth)"/>
+          <path d="M 0 50 L 30 48 L 60 47 L 90 46 L 120 44 L 150 38 L 180 28 L 210 18 L 240 10 L 270 6 L 300 4" stroke="#ff5050" stroke-width="2" fill="none"/>
+          <circle cx="0" cy="50" r="3" fill="#ff8080"/>
+          <circle cx="300" cy="4" r="4" fill="#ff5050" style="filter:drop-shadow(0 0 4px #ff5050);"/>
+        </svg>
+      </div>
+
+      <!-- Разделитель -->
+      <div style="width:1px;background:linear-gradient(180deg,transparent,rgba(255,80,80,0.3),transparent);"></div>
+
+      <!-- Правая часть: оффер -->
+      <div style="flex:1;display:flex;flex-direction:column;justify-content:center;">
+        <div class="mono" style="font-size:10px;color:#ff8080;letter-spacing:3px;margin-bottom:10px;font-weight:500;">+ ЕЩЁ ЧЕРЕЗ НЕДЕЛЮ</div>
+        <div style="font-size:16px;color:#fff;line-height:1.4;margin-bottom:14px;">Ей в директ пишет менеджер<br/>европейского fashion-бренда:</div>
+        <div style="background:linear-gradient(135deg,rgba(255,80,80,0.15),rgba(216,96,160,0.15));border:1px solid rgba(255,80,80,0.3);border-radius:12px;padding:16px 18px;margin-bottom:14px;">
+          <div style="font-size:36px;font-weight:900;letter-spacing:-1px;background:linear-gradient(135deg,#ff5050,#d860a0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1;margin-bottom:6px;">$10 000</div>
+          <div style="font-size:13px;color:#ffb0b0;line-height:1.4;">за 10 видео + 10 каруселей<br/>с одеждой бренда</div>
+        </div>
+        <div style="font-size:11px;color:#a888c8;line-height:1.5;font-style:italic;">съёмочный день в Европе<br/>с такой командой = от 9 000€</div>
+      </div>
+    </div>
+
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;margin-top:auto;padding-top:20px;border-top:1px solid rgba(255,80,80,0.15);">
+      <div style="color:#a888c8;">стек: LLM (тренды) · 20 сценариев · аватар · клинг</div>
+      <div style="color:#ff5050;font-weight:700;">→ за 1 вечер</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<!-- ════════════════ ГРУППА 6: ПОЧЕМУ СЕЙЧАС + ВОЗРАЖЕНИЯ ════════════════ -->
+<div class="group-title">— group 06 / тайминг + страхи —</div>
+
+
+<!-- ──────── 15: КРИВАЯ ВНЕДРЕНИЯ ──────── -->
+<div class="section-num" style="color:#9070b8;">— 15 / adoption curve —</div>
+<div class="section-name" style="color:#7050a0;">кривая внедрения · где мы и где они</div>
+<div class="row">
+<div class="card xl" style="background:linear-gradient(180deg,#3a0a30 0%,#4a1850 50%,#5a2870 100%);">
+  <div class="noise"></div>
+  <div style="position:relative;z-index:2;padding:36px 44px;height:100%;display:flex;flex-direction:column;">
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;margin-bottom:24px;">
+      <div style="color:#d860a0;">// adoption_curve · ai_in_content</div>
+      <div style="color:#b890d8;">2026</div>
+    </div>
+    <div style="font-size:18px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:32px;">Окно ещё открыто. <span style="color:#a888c8;font-weight:400;">Вопрос — когда вы в него прыгнете</span></div>
+
+    <!-- SVG-кривая -->
+    <div style="flex:1;position:relative;">
+      <svg viewBox="0 0 700 200" style="width:100%;height:200px;">
+        <defs>
+          <linearGradient id="curveFill" x1="0" x2="1">
+            <stop offset="0%" stop-color="#ff5050" stop-opacity="0.0"/>
+            <stop offset="40%" stop-color="#d860a0" stop-opacity="0.4"/>
+            <stop offset="80%" stop-color="#b890d8" stop-opacity="0.5"/>
+            <stop offset="100%" stop-color="#b890d8" stop-opacity="0.0"/>
+          </linearGradient>
+        </defs>
+        <!-- bell curve -->
+        <path d="M 0 180 C 100 178, 180 175, 230 140 C 280 105, 330 60, 400 50 C 470 60, 520 105, 570 140 C 620 175, 650 178, 700 180 L 700 200 L 0 200 Z" fill="url(#curveFill)"/>
+        <path d="M 0 180 C 100 178, 180 175, 230 140 C 280 105, 330 60, 400 50 C 470 60, 520 105, 570 140 C 620 175, 650 178, 700 180" stroke="#d8b8e8" stroke-width="2" fill="none" opacity="0.8"/>
+
+        <!-- метки фаз -->
+        <line x1="80" y1="178" x2="80" y2="200" stroke="#a888c8" stroke-width="1" opacity="0.4"/>
+        <line x1="230" y1="140" x2="230" y2="200" stroke="#a888c8" stroke-width="1" opacity="0.4"/>
+        <line x1="400" y1="50" x2="400" y2="200" stroke="#a888c8" stroke-width="1" opacity="0.4"/>
+        <line x1="570" y1="140" x2="570" y2="200" stroke="#a888c8" stroke-width="1" opacity="0.4"/>
+        <line x1="650" y1="178" x2="650" y2="200" stroke="#a888c8" stroke-width="1" opacity="0.4"/>
+
+        <!-- РФ метка -->
+        <circle cx="280" cy="105" r="9" fill="#ff5050" style="filter:drop-shadow(0 0 8px #ff5050);"/>
+        <circle cx="280" cy="105" r="14" fill="none" stroke="#ff5050" stroke-width="1" opacity="0.5"/>
+        <text x="280" y="92" text-anchor="middle" fill="#ff8080" font-size="11" font-weight="700" font-family="JetBrains Mono">РФ</text>
+
+        <!-- Запад метка -->
+        <circle cx="500" cy="115" r="9" fill="#b890d8" style="filter:drop-shadow(0 0 8px #b890d8);"/>
+        <circle cx="500" cy="115" r="14" fill="none" stroke="#b890d8" stroke-width="1" opacity="0.5"/>
+        <text x="500" y="102" text-anchor="middle" fill="#d8b8e8" font-size="11" font-weight="700" font-family="JetBrains Mono">USA / EU</text>
+      </svg>
+
+      <!-- Названия фаз -->
+      <div style="display:flex;justify-content:space-between;margin-top:6px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1px;color:#a888c8;text-align:center;">
+        <div style="flex:1;">innovators<br/><span style="color:#ff8080;">2.5%</span></div>
+        <div style="flex:1;">early<br/>adopters</div>
+        <div style="flex:1;">early<br/>majority</div>
+        <div style="flex:1;">late<br/>majority</div>
+        <div style="flex:1;">laggards<br/><span style="color:#7050a0;">опоздали</span></div>
+      </div>
+    </div>
+
+    <div style="display:flex;justify-content:space-between;gap:20px;margin-top:18px;">
+      <div style="flex:1;background:rgba(255,80,80,0.1);border-left:2px solid #ff5050;padding:10px 14px;border-radius:0 6px 6px 0;">
+        <div class="mono" style="font-size:10px;color:#ff8080;letter-spacing:2px;margin-bottom:4px;">РФ · СЕЙЧАС</div>
+        <div style="font-size:12px;color:#fff;line-height:1.4;">рынок ещё не перегрет —<br/>можно строить стек первыми</div>
+      </div>
+      <div style="flex:1;background:rgba(184,144,216,0.1);border-left:2px solid #b890d8;padding:10px 14px;border-radius:0 6px 6px 0;">
+        <div class="mono" style="font-size:10px;color:#d8b8e8;letter-spacing:2px;margin-bottom:4px;">USA / EU · СЕЙЧАС</div>
+        <div style="font-size:12px;color:#fff;line-height:1.4;">массовый рынок —<br/>обсуждают модели, не "стоит ли"</div>
+      </div>
+    </div>
+
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;margin-top:auto;padding-top:18px;">
+      <div style="color:#a888c8;">через год-два «не использую ИИ» = «не пользуюсь интернетом»</div>
+      <div style="color:#ff8080;font-weight:700;">→ окно закроется</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<!-- ──────── 16: ДВЕ КРАЙНОСТИ ──────── -->
+<div class="section-num" style="color:#ff5050;">— 16 / two extremes —</div>
+<div class="section-name" style="color:#ff8080;">две крайности — обе неправильные</div>
+<div class="row">
+<div class="card xl" style="background:linear-gradient(180deg,#0d0408 0%,#1f0510 50%,#2a0815 100%);">
+  <div class="noise"></div>
+  <div style="position:relative;z-index:2;padding:36px 40px;height:100%;display:flex;flex-direction:column;">
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;margin-bottom:24px;">
+      <div style="color:#ff5050;">// extremes</div>
+      <div style="color:#a888c8;">золотая середина → у вас</div>
+    </div>
+
+    <div style="flex:1;display:flex;gap:20px;align-items:stretch;">
+      <!-- Левая крайность -->
+      <div style="flex:1;background:rgba(255,80,80,0.06);border:1px solid rgba(255,80,80,0.2);border-radius:12px;padding:24px;display:flex;flex-direction:column;">
+        <div class="mono" style="font-size:10px;color:#ff8080;letter-spacing:3px;margin-bottom:10px;">КРАЙНОСТЬ № 1</div>
+        <div style="font-size:22px;font-weight:800;color:#fff;line-height:1.2;margin-bottom:14px;letter-spacing:-0.5px;">Только руками,<br/>никакого ИИ</div>
+        <div style="font-size:13px;color:#ffb0b0;line-height:1.55;flex:1;">
+          ✦ звучит благородно<br/>
+          ✦ человек выгорает<br/>
+          ✦ не вытягивает объём<br/>
+          ✦ контент теряется в ленте<br/>
+          ✦ конкуренты тестят 10 гипотез/нед.
+        </div>
+        <div class="mono" style="font-size:10px;color:#ff5050;letter-spacing:2px;margin-top:14px;border-top:1px solid rgba(255,80,80,0.2);padding-top:10px;">→ принципиальное проигрывание</div>
+      </div>
+
+      <!-- VS -->
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+        <div class="mono" style="font-size:14px;color:#b890d8;letter-spacing:6px;font-weight:700;writing-mode:vertical-rl;transform:rotate(180deg);">VS</div>
+      </div>
+
+      <!-- Правая крайность -->
+      <div style="flex:1;background:rgba(184,144,216,0.06);border:1px solid rgba(184,144,216,0.2);border-radius:12px;padding:24px;display:flex;flex-direction:column;">
+        <div class="mono" style="font-size:10px;color:#d8b8e8;letter-spacing:3px;margin-bottom:10px;">КРАЙНОСТЬ № 2</div>
+        <div style="font-size:22px;font-weight:800;color:#fff;line-height:1.2;margin-bottom:14px;letter-spacing:-0.5px;">Чистый<br/>нейрослоп</div>
+        <div style="font-size:13px;color:#d8b8e8;line-height:1.55;flex:1;">
+          ✦ одинаковые гладкие лица<br/>
+          ✦ мотивашки ни о чём<br/>
+          ✦ рот шевелится — мысли нет<br/>
+          ✦ "революция" / "прорыв" × 100<br/>
+          ✦ алгоритмы перестали толкать
+        </div>
+        <div class="mono" style="font-size:10px;color:#b890d8;letter-spacing:2px;margin-top:14px;border-top:1px solid rgba(184,144,216,0.2);padding-top:10px;">→ доверие падает стабильно</div>
+      </div>
+    </div>
+
+    <!-- Золотая середина -->
+    <div style="background:linear-gradient(135deg,rgba(255,80,80,0.1),rgba(184,144,216,0.1));border:1px solid rgba(216,96,160,0.3);border-radius:10px;padding:14px 20px;margin-top:18px;display:flex;justify-content:space-between;align-items:center;gap:20px;">
+      <div>
+        <div class="mono" style="font-size:10px;color:#d860a0;letter-spacing:3px;margin-bottom:4px;">→ ВЫ ЗДЕСЬ</div>
+        <div style="font-size:15px;color:#fff;font-weight:600;line-height:1.3;">голос, история, решение — <span style="color:#ff80b0;">человек</span><br/>сценарист, монтажёр, аналитик — <span style="color:#b890d8;">ИИ</span></div>
+      </div>
+      <div class="mono" style="font-size:14px;color:#fff;font-weight:700;letter-spacing:2px;text-align:right;">масштаб<br/><span style="background:linear-gradient(90deg,#ff5050,#b890d8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">без выгорания</span></div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<!-- ──────── 17: 5 СТРАХОВ ──────── -->
+<div class="section-num" style="color:#6b2890;">— 17 / fears —</div>
+<div class="section-name" style="color:#5a2080;">5 страхов · честный разбор</div>
+<div class="row">
+<div class="card xl" style="background:linear-gradient(170deg,#c8b8d8 0%,#e0d0e8 50%,#f0e8f4 100%);color:#2a0840;">
+  <div class="noise" style="opacity:0.08;"></div>
+  <div style="position:relative;z-index:2;padding:36px 40px;height:100%;display:flex;flex-direction:column;">
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;margin-bottom:20px;">
+      <div style="color:#6b2890;">// objections</div>
+      <div style="color:#7050a0;">5 страхов</div>
+    </div>
+    <div style="font-size:18px;font-weight:700;color:#2a0840;line-height:1.3;margin-bottom:20px;">Какой из этих ближе всего <span style="color:#a040b8;">к вашему</span>?</div>
+
+    <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+      <!-- 1 -->
+      <div style="background:rgba(255,255,255,0.4);border-left:3px solid #ff5050;border-radius:0 8px 8px 0;padding:12px 16px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+          <div class="mono" style="font-size:10px;color:#cc2030;letter-spacing:2px;font-weight:700;">№ 01 · ПЛАСТИК</div>
+          <div style="font-size:14px;">😰</div>
+        </div>
+        <div style="font-size:13px;font-weight:700;color:#2a0840;margin-bottom:4px;">«Контент станет пластиковым»</div>
+        <div style="font-size:11px;color:#5a2080;line-height:1.4;">→ пластик — когда ИИ <b>заменяет</b>. Вы остаётесь в кадре — ИИ только усиливает.</div>
+      </div>
+      <!-- 2 -->
+      <div style="background:rgba(255,255,255,0.4);border-left:3px solid #d860a0;border-radius:0 8px 8px 0;padding:12px 16px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+          <div class="mono" style="font-size:10px;color:#a040b8;letter-spacing:2px;font-weight:700;">№ 02 · СТИЛЬ</div>
+          <div style="font-size:14px;">🎭</div>
+        </div>
+        <div style="font-size:13px;font-weight:700;color:#2a0840;margin-bottom:4px;">«Потеряю свой стиль»</div>
+        <div style="font-size:11px;color:#5a2080;line-height:1.4;">→ стиль — это <b>что и как вы говорите</b>. ИИ забирает монтаж и десятый вариант текста.</div>
+      </div>
+      <!-- 3 -->
+      <div style="background:rgba(255,255,255,0.4);border-left:3px solid #a040b8;border-radius:0 8px 8px 0;padding:12px 16px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+          <div class="mono" style="font-size:10px;color:#7050a0;letter-spacing:2px;font-weight:700;">№ 03 · ЧЕСТНОСТЬ</div>
+          <div style="font-size:14px;">🤔</div>
+        </div>
+        <div style="font-size:13px;font-weight:700;color:#2a0840;margin-bottom:4px;">«Это обман аудитории»</div>
+        <div style="font-size:11px;color:#5a2080;line-height:1.4;">→ аудитории нужен <b>полезный и настоящий</b> опыт. Какой редактор — им неважно.</div>
+      </div>
+      <!-- 4 -->
+      <div style="background:rgba(255,255,255,0.4);border-left:3px solid #6b2890;border-radius:0 8px 8px 0;padding:12px 16px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+          <div class="mono" style="font-size:10px;color:#5a2080;letter-spacing:2px;font-weight:700;">№ 04 · СЛОЖНО</div>
+          <div style="font-size:14px;">🌀</div>
+        </div>
+        <div style="font-size:13px;font-weight:700;color:#2a0840;margin-bottom:4px;">«100 сервисов — не знаю куда»</div>
+        <div style="font-size:11px;color:#5a2080;line-height:1.4;">→ нужен стек из <b>4–5 инструментов</b>. Остальное — шум.</div>
+      </div>
+      <!-- 5 НОВЫЙ -->
+      <div style="grid-column:span 2;background:linear-gradient(135deg,rgba(160,64,184,0.15),rgba(107,40,144,0.1));border-left:3px solid #4a1870;border-radius:0 8px 8px 0;padding:12px 18px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+          <div class="mono" style="font-size:10px;color:#4a1870;letter-spacing:2px;font-weight:700;">№ 05 · «У МЕНЯ И ТАК РАБОТАЕТ»</div>
+          <div style="font-size:14px;">⏱️</div>
+        </div>
+        <div style="font-size:13px;font-weight:700;color:#2a0840;margin-bottom:4px;">«Зачем мне ещё что-то?»</div>
+        <div style="font-size:11px;color:#3a1058;line-height:1.4;">→ если работает — ИИ не заменит, а <b>удвоит</b>. Конкуренты обгонят не потому что лучше — потому что быстрее.</div>
+      </div>
+    </div>
+
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;margin-top:16px;">
+      <div style="color:#7050a0;">напишите номер в чат</div>
+      <div style="color:#4a1870;font-weight:700;">→ разберём вживую</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<!-- ════════════════ ГРУППА 7: ОФФЕР ════════════════ -->
+<div class="group-title">— group 07 / оффер —</div>
+
+
+<!-- ──────── 18: ДВА ФОРМАТА ──────── -->
+<div class="section-num" style="color:#ff5050;">— 18 / two formats —</div>
+<div class="section-name" style="color:#ff8080;">два формата · точка входа</div>
+<div class="row">
+<div class="card xl" style="background:linear-gradient(160deg,#0d0408 0%,#1f0510 50%,#3a0a30 100%);">
+  <div class="noise"></div>
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,80,140,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,80,140,0.04) 1px,transparent 1px);background-size:24px 24px;"></div>
+  <div style="position:relative;z-index:2;padding:36px 40px;height:100%;display:flex;flex-direction:column;">
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;margin-bottom:24px;">
+      <div style="color:#ff5050;">// formats · choose_your_path</div>
+      <div style="color:#a888c8;">точка А → точка Б</div>
+    </div>
+
+    <div style="flex:1;display:flex;gap:20px;align-items:stretch;">
+      <!-- БЕСПЛАТНАЯ ГРУППА -->
+      <div style="flex:1;background:linear-gradient(180deg,rgba(255,128,128,0.05),rgba(255,128,128,0.01));border:1px solid rgba(255,128,128,0.25);border-radius:14px;padding:24px;display:flex;flex-direction:column;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+          <div class="mono" style="font-size:10px;color:#ff8080;letter-spacing:3px;">// free_tier</div>
+          <div style="background:rgba(255,128,128,0.15);border:1px solid rgba(255,128,128,0.3);padding:3px 10px;border-radius:20px;font-family:'JetBrains Mono',monospace;font-size:10px;color:#ffb0b0;letter-spacing:1px;">FREE</div>
+        </div>
+        <div style="font-size:24px;font-weight:800;color:#fff;line-height:1.1;letter-spacing:-0.5px;margin-bottom:6px;">Бесплатная<br/>группа</div>
+        <div style="font-size:12px;color:#a888c8;line-height:1.5;font-style:italic;margin-bottom:18px;">точка входа · посмотреть, потрогать</div>
+        <div style="font-size:13px;color:#ffd0d0;line-height:1.7;flex:1;">
+          ✦ актуальные новости по ИИ<br/>
+          ✦ разборы новых инструментов<br/>
+          ✦ интересные кейсы<br/>
+          ✦ только то, что можно применять сегодня<br/>
+          ✦ без инфошума
+        </div>
+        <div style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(255,128,128,0.2);">
+          <div style="font-size:32px;font-weight:900;color:#ff8080;letter-spacing:-1px;line-height:1;">0 ₽</div>
+          <div class="mono" style="font-size:10px;color:#a888c8;letter-spacing:2px;margin-top:6px;">→ без обязательств</div>
+        </div>
+      </div>
+
+      <!-- ПРИВАТКА -->
+      <div style="flex:1.2;background:linear-gradient(180deg,rgba(216,96,160,0.12),rgba(160,64,184,0.05));border:2px solid rgba(216,96,160,0.5);border-radius:14px;padding:24px;display:flex;flex-direction:column;position:relative;box-shadow:0 0 30px rgba(216,96,160,0.15);">
+        <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#ff5050,#d860a0);padding:4px 14px;border-radius:20px;font-family:'JetBrains Mono',monospace;font-size:9px;color:#fff;letter-spacing:2px;font-weight:700;box-shadow:0 4px 12px rgba(216,96,160,0.4);">⭐ РЕКОМЕНДУЮ</div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+          <div class="mono" style="font-size:10px;color:#ff80b0;letter-spacing:3px;">// premium_community</div>
+          <div style="background:rgba(216,96,160,0.2);border:1px solid rgba(216,96,160,0.4);padding:3px 10px;border-radius:20px;font-family:'JetBrains Mono',monospace;font-size:10px;color:#ffb0d8;letter-spacing:1px;">PRIVATE</div>
+        </div>
+        <div style="font-size:24px;font-weight:800;color:#fff;line-height:1.1;letter-spacing:-0.5px;margin-bottom:6px;">Приватное<br/>сообщество</div>
+        <div style="font-size:12px;color:#d8b8e8;line-height:1.5;font-style:italic;margin-bottom:18px;">не новости — практика</div>
+        <div style="font-size:13px;color:#fff;line-height:1.7;flex:1;">
+          ✦ глубокие разборы инструментов и моделей<br/>
+          ✦ эксклюзивные гайды и закрытые материалы<br/>
+          ✦ бесплатные доступы и триалы на сервисы<br/>
+          ✦ воркшопы — поэтапные стримы вживую<br/>
+          ✦ постоянная поддержка: «давай разберём»
+        </div>
+        <div style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(216,96,160,0.3);display:flex;justify-content:space-between;align-items:flex-end;">
+          <div>
+            <div style="font-size:36px;font-weight:900;background:linear-gradient(135deg,#ff5050,#d860a0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-1px;line-height:1;">4 500 ₽</div>
+            <div class="mono" style="font-size:10px;color:#ffb0d8;letter-spacing:2px;margin-top:6px;">в месяц · отписка в 1 клик</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="mono" style="font-size:9px;color:#a888c8;letter-spacing:2px;">эквивалент</div>
+            <div style="font-size:11px;color:#d8b8e8;line-height:1.3;">~ 2 кофе<br/>в неделю</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;margin-top:18px;">
+      <div style="color:#a888c8;">личная рассрочка вместо курса за 100к</div>
+      <div style="color:#ff80b0;font-weight:700;">→ можно начать с бесплатной</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<!-- ──────── 19: БОНУСЫ + ДЕДЛАЙН ──────── -->
+<div class="section-num" style="color:#d860a0;">— 19 / bonuses —</div>
+<div class="section-name" style="color:#e090c0;">бонусы для тех, кто здесь сегодня</div>
+<div class="row">
+<div class="card xl" style="background:linear-gradient(180deg,#3a0a30 0%,#4a1850 50%,#5a2870 100%);">
+  <div class="noise"></div>
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(216,96,160,0.2) 0%,transparent 70%);filter:blur(30px);"></div>
+  <div style="position:relative;z-index:2;padding:36px 40px;height:100%;display:flex;flex-direction:column;">
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;margin-bottom:24px;">
+      <div style="color:#d860a0;">// bonuses · today_only</div>
+      <div style="display:flex;gap:4px;align-items:center;">
+        <div style="width:6px;height:6px;border-radius:50%;background:#ff5050;box-shadow:0 0 8px #ff5050;"></div>
+        <span style="color:#ff8080;letter-spacing:2px;">ДО 21:00 · 31 МАЯ</span>
+      </div>
+    </div>
+
+    <div style="font-size:18px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:24px;">Если пишете кодовую фразу <span style="background:linear-gradient(90deg,#ff5050,#b890d8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:800;">«нейросети захватят мир»</span> в личку:</div>
+
+    <div style="flex:1;display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;">
+      <!-- 3 ГАЙДА -->
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(184,144,216,0.25);border-radius:12px;padding:20px;display:flex;flex-direction:column;">
+        <div class="mono" style="font-size:10px;color:#ff80b0;letter-spacing:3px;margin-bottom:10px;">БОНУС 1</div>
+        <div style="font-size:42px;font-weight:900;letter-spacing:-2px;background:linear-gradient(135deg,#ff5050,#ff80a0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1;margin-bottom:8px;">3 гайда</div>
+        <div style="font-size:12px;color:#fff;line-height:1.5;font-weight:500;flex:1;">
+          ✦ ключевые слова и фразы ИИ<br/>
+          ✦ актуальные модели нейросетей<br/>
+          ✦ ускоренный промптинг (Claude/GPT/Gemini)
+        </div>
+        <div class="mono" style="font-size:10px;color:#a888c8;letter-spacing:2px;margin-top:12px;padding-top:10px;border-top:1px solid rgba(184,144,216,0.2);">→ моментально, в личку</div>
+      </div>
+
+      <!-- СКИДКА 35% -->
+      <div style="background:linear-gradient(135deg,rgba(255,80,80,0.15),rgba(216,96,160,0.1));border:2px solid rgba(255,80,80,0.4);border-radius:12px;padding:20px;display:flex;flex-direction:column;position:relative;">
+        <div style="position:absolute;top:-10px;right:14px;background:#ff3030;padding:3px 10px;border-radius:20px;font-family:'JetBrains Mono',monospace;font-size:9px;color:#fff;letter-spacing:2px;font-weight:700;">HOT</div>
+        <div class="mono" style="font-size:10px;color:#ffb0b0;letter-spacing:3px;margin-bottom:10px;">БОНУС 2</div>
+        <div style="font-size:48px;font-weight:900;letter-spacing:-2px;background:linear-gradient(135deg,#ff3030,#ff80a0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1;margin-bottom:6px;">−35%</div>
+        <div style="font-size:13px;color:#fff;line-height:1.4;font-weight:600;margin-bottom:8px;">скидка на первый месяц приватки</div>
+        <div style="font-size:11px;color:#ffd0d0;line-height:1.4;flex:1;">4500 ₽ → <span style="color:#fff;font-weight:700;">~ 2925 ₽</span> за первый месяц</div>
+        <div class="mono" style="font-size:10px;color:#ff8080;letter-spacing:2px;margin-top:12px;padding-top:10px;border-top:1px solid rgba(255,80,80,0.25);">→ сгорает 31.05 в 21:00</div>
+      </div>
+
+      <!-- КУРС К ИЮЛЮ -->
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(184,144,216,0.25);border-radius:12px;padding:20px;display:flex;flex-direction:column;">
+        <div class="mono" style="font-size:10px;color:#d8b8e8;letter-spacing:3px;margin-bottom:10px;">БОНУС 3 · К ИЮЛЮ</div>
+        <div style="font-size:24px;font-weight:800;color:#fff;letter-spacing:-0.5px;line-height:1.1;margin-bottom:8px;">Курс<br/><span style="background:linear-gradient(135deg,#b890d8,#d8b8e8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">AI UGC ADS</span></div>
+        <div style="font-size:11px;color:#d8b8e8;line-height:1.5;font-style:italic;flex:1;">от А до Я: идея → сценарий → съёмка → монтаж → запуск → аналитика<br/><br/><span style="color:#fff;font-weight:700;">только для участников приватки</span></div>
+        <div class="mono" style="font-size:10px;color:#b890d8;letter-spacing:2px;margin-top:12px;padding-top:10px;border-top:1px solid rgba(184,144,216,0.2);">→ войдёт в подписку</div>
+      </div>
+    </div>
+
+    <!-- РЕФЕРАЛКА -->
+    <div style="background:linear-gradient(135deg,rgba(160,64,184,0.15),rgba(107,40,144,0.1));border:1px solid rgba(160,64,184,0.3);border-radius:10px;padding:14px 20px;margin-top:18px;display:flex;justify-content:space-between;align-items:center;gap:20px;">
+      <div style="flex:1;">
+        <div class="mono" style="font-size:10px;color:#d8b8e8;letter-spacing:3px;margin-bottom:4px;">+ РЕФЕРАЛЬНАЯ ПРОГРАММА (только для приваткеров)</div>
+        <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;">До <span style="color:#ff80b0;font-weight:800;">50%</span> от подписки реферала <span style="color:#a888c8;font-weight:400;">— ежемесячно, пока он подписан</span></div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:36px;font-weight:900;background:linear-gradient(135deg,#a040b8,#ff80b0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-1px;line-height:1;">×2</div>
+        <div class="mono" style="font-size:9px;color:#d8b8e8;letter-spacing:2px;margin-top:4px;">пассивный поток</div>
+      </div>
+    </div>
+
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:3px;margin-top:14px;">
+      <div style="color:#a888c8;">один шаг · без давления</div>
+      <div style="color:#ff80b0;font-weight:700;">→ пиши в личку прямо сейчас</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div style="text-align:center;font-size:13px;color:#4a1870;margin:40px auto 60px;letter-spacing:4px;font-weight:500;">— end of stream visuals · 19 cards —</div>
+
+</body>
+</html>
